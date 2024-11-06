@@ -25,6 +25,7 @@
 
 
 ## Let's Analyze the Fluid Flow in a Bottle
+
 <div id ="left" >
 
 - Fluid Flow Microscopic Scale
@@ -84,3 +85,70 @@
   </p>
 </div>
 
+
+## Fluid as Continuum
+ 
+Description of the Fluid via Navier-Stokes-Equation
+<div class = "r-stack" >
+  <img 
+    class="fragment fade-in-then-out"
+    src="./assets/fv001.png"
+    data-fragment-index="1"
+    height= "450"
+  />
+  <img 
+    class="fragment fade-in-then-out"
+    src="./assets/fv002.png"
+    data-fragment-index="2"
+    height= "450"
+  />
+  <img 
+    class="fragment fade-in-then-out"
+    src="./assets/fv003.png"
+    data-fragment-index="3"
+    height= "450"
+  />
+  <img 
+    class="fragment fade-in-then-out"
+    src="./assets/fv004.png"
+    data-fragment-index="4"
+    height= "450"
+  />
+ <img 
+    class="fragment fade-in"
+    src="./assets/fv0066.png"
+    data-fragment-index="5"
+    height= "450"
+  />
+
+</div>
+<div style="margin-top:-125px; text-align: center;">
+
+`$$
+\begin{aligned}
+  \textcolor{blue}{\frac{\partial{}}{\partial{t}} \underline{u}} + 
+  \textcolor{orange}{\underline{u} \cdot \left( \nabla \cdot \underline{u} \right)}
+  & =
+  \textcolor{magenta}{\nu \nabla \cdot \left( \nabla \cdot \underline{u} \right)} -
+  \textcolor{green}{\frac{1}{\rho} \nabla p}
+  \\
+  \nabla \cdot \underline{u} 
+  & = 
+  0
+\end{aligned}
+$$`
+<!-- .element: class="fragment fade-in" data-fragment-index="5" -->
+
+</div>
+
+
+
+## What is a Good Mesh?
+
+
+### Hexaeder vs Triangulated
+
+
+
+##  Neural Networks
+### Introduction
