@@ -25,51 +25,50 @@
 
 
 ## Let's Analyze the Fluid Flow in a Bottle
-
 <div id ="left" >
 
 - Fluid Flow Microscopic Scale
-<!-- .element: class="fragment" data-fragment-index="0"-->
-- Molecules are in constant motion.
 <!-- .element: class="fragment" data-fragment-index="1"-->
+- Molecules are in constant motion.
+<!-- .element: class="fragment" data-fragment-index="2"-->
 - Molecules interacts with others.
-<!-- .element: class="fragment" data-fragment-index="2"-->
-- Molecules collid.
-<!-- .element: class="fragment" data-fragment-index="2"-->
-- Tracking every individual molecule is impossible!
 <!-- .element: class="fragment" data-fragment-index="3"-->
+- Molecules collid.
+<!-- .element: class="fragment" data-fragment-index="3"-->
+- Tracking every individual molecule is impossible!
+<!-- .element: class="fragment" data-fragment-index="4"-->
 </div>
 
 <div id ="right">
   <div class="r-stack">
       <img
       class="fragment fade-out"
-      data-fragment-index="0"
+      data-fragment-index="1"
       src="assets/water_bottle.png"
     />
     <img
       class="fragment current-visible"
-      data-fragment-index="0"
+      data-fragment-index="1"
       src="assets/water_bottle_zoom_particles_init.png"
     /> 
     <img
       class="fragment current-visible"
-      data-fragment-index="1"
+      data-fragment-index="2"
       src="assets/water_bottle_zoom_particles_init_shake.png"
     /> 
     <img
       class="fragment current-visible" 
-      data-fragment-index="2"
+      data-fragment-index="3"
       src="assets/water_bottle_zoom_particles_crash.png"
     />
     <img
       class="fragment current-visible"
-      data-fragment-index="3"
+      data-fragment-index="4"
       src="assets/water_bottle_zoom_particles_new.png"
     />
     <img
       class="fragment"
-      data-fragment-index="4"
+      data-fragment-index="5"
       src="assets/water_bottle_zoom_particles_many.png"
     />
   </div>
@@ -143,12 +142,173 @@ $$`
 
 
 
-## What is a Good Mesh?
+## Quadrilateral Mesh 
 
 
-### Hexaeder vs Triangulated
+## Indirect Meshing
+### Triangle Merge
+
+  <div id="left">
+    <ul>
+      <li class="fragment fade-in" data-fragment-index="0">Generate a Triangulated Mesh.</li>
+      <li class="fragment fade-in" data-fragment-index="1">Delete an Edge between two Triangles to Generate a Quad.</li>
+    </ul>
+  </div>
+
+  <div id="right">
+    <div class="r-stack">
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/indirect_meshing_01.png"
+        data-fragment-index="0"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/indirect_meshing_02.png"
+        data-fragment-index="1"
+      />
+      <video
+        class="fragment fade-in"
+        autoplay
+        loop
+        controls
+        src="./assets/IndirectMeshTransformation.mp4"
+        data-fragment-index="2"
+      >
+      </video>
+    </div>
+  </div>
 
 
+## Cross Fields for Quadrilateral Meshes
+### Introduction 
+<div id = "right">
+  <div class = "r-stack">
+    <img
+      class = "fragment fade-in-then-out"
+      src = "./assets/cross-field_01.png"
+      data-fragment-index = "0"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src = "./assets/cross-field_02.png"
+      data-fragment-index = "1"
+      />
+     <img
+      class = "fragment fade-in-then-out"
+      src = "./assets/cross-field_03.png"
+      data-fragment-index = "2"
+      />
+     <img
+      class = "fragment fade-in-then-out"
+      src = "./assets/cross-field_04.png"
+      data-fragment-index = "3"
+      />
+     <img
+      class = "fragment fade-in-then-out"
+      src = "./assets/cross-field_05.png"
+      data-fragment-index = "4"
+      />
+  </div>
+</div>
 
-##  Neural Networks
-### Introduction
+<div id = "left">
+
+- Define Geometry.
+<!-- .element: class="fragment" data-fragment-index="0" -->
+- Assume a Quadrilateral Mesh Structure.
+<!-- .element: class="fragment" data-fragment-index="1" -->
+- Abstract Mesh: Nodes as Line Intersections.
+<!-- .element: class="fragment" data-fragment-index="2" -->
+- Abstract Mesh: At Each Node Four Orthogonal Vectors.
+<!-- .element: class="fragment" data-fragment-index="3" -->
+- Calculate Normal and Tangent Vectors Along the Boundary.
+  <!-- .element: class="fragment" data-fragment-index="4"-->
+</div>
+
+
+## Cross Fields for Quadrilateral Meshes
+### Overall Approch
+
+<div id ="left">
+
+- Calculate Normal and Tangent Vectors Along the Boundary.
+<!-- .element: class="fragment" data-fragment-index="0"-->
+- Simplify Cross-Field to Frame-Field
+<!-- .element: class="fragment" data-fragment-index="1"-->
+ <img
+     class = "fragment fade-in"
+     src   = "./assets/cross-field_06.png"
+     data-fragment-index = "1"
+     />
+- Propagate Information from Boundary to the domain's interior. 
+<!-- .element: class="fragment" data-fragment-index="2"-->
+- Mapping Frame-Field to Cross-Field. 
+<!-- .element: class="fragment" data-fragment-index="3"-->
+</div>
+
+<div id = "right">
+  <div class = "r-stack">
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/cross-field_05.png"
+     data-fragment-index = "0"
+     />
+    <img
+     class = "fragment fade-in-then-out"
+     src   = "./assets/cross-field_07.png"
+     data-fragment-index = "1"
+     />
+    <img
+     class = "fragment fade-in-then-out"
+     src   = "./assets/cross-field_08.png"
+     data-fragment-index = "2"
+     />
+</div>
+</div>
+
+
+## Cross Fields for Quadrilateral Meshes
+### Irregularities Identification
+
+<div id = "left">
+
+- Singularities: Locations where Frame Field is not defined.
+<!-- .element: class="fragment" data-fragment-index="0"-->
+- Predefined Boundary Corners with Zero Continuity.
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- Marks Locations Where the Mesh needs Special Treatment
+<!-- .element: class="fragment" data-fragment-index="2"-->
+  
+</div>
+
+<div id = "right">
+  <div class = "r-stack">
+ <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/cross-field_09.png"
+     data-fragment-index = "0"
+     height = "200"
+    />
+ <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/cross-field_10.png"
+     data-fragment-index = "1"
+      height = "200"
+        />
+<img
+     class = "fragment fade-in-then-out"
+     src = "./assets/cross-field_11.png"
+     data-fragment-index = "2"
+       height = "200"
+       />
+ <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/cross-field_12.png"
+     data-fragment-index = "3"
+       height = "200"
+       />
+ </div>
+</div>
+
+
