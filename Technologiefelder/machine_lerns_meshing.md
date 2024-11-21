@@ -1,7 +1,7 @@
 <style>
 
 #left {
-  left:-8.33%;
+    left:-8.33%;
   text-align: left;
   float: left;
   width:50%;
