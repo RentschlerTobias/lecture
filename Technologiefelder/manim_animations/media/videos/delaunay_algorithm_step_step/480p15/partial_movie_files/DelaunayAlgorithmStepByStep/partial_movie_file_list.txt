@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/1185818338_3649372508_1503137400.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_1959358871_1988096094.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_1959358871_3877665679.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_1959358871_1044482783.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_3890345977_4210697271.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_3890345977_3957199924.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_3890345977_3225689235.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_3890345977_703457779.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_3890345977_519073132.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_algorithm_step_step/480p15/partial_movie_files/DelaunayAlgorithmStepByStep/624642324_3890345977_1220269853.mp4'

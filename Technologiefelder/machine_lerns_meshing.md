@@ -141,6 +141,44 @@ $$`
 </div>
 
 
+## Triangulated Mesh
+
+<div id="right">
+    <div class="r-stack">
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/triangulation_01.png"
+        data-fragment-index="0"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/triangulation_02.png"
+        data-fragment-index="2"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/triangulation_03.png"
+        data-fragment-index="3"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/triangulation_04.png"
+        data-fragment-index="4"
+      />
+       <img
+        class="fragment fade-in-then-out"
+        src="./assets/triangulation_05.png"
+        data-fragment-index="5"
+      />
+         <img
+        class="fragment fade-in-then-out"
+        src="./assets/triangulation_05.png"
+        data-fragment-index="5"
+      />
+</div>
+  </div>
+
+
 
 ## Quadrilateral Mesh 
 
@@ -222,7 +260,7 @@ $$`
 <!-- .element: class="fragment" data-fragment-index="2" -->
 - Abstract Mesh: At Each Node Four Orthogonal Vectors.
 <!-- .element: class="fragment" data-fragment-index="3" -->
-- Calculate Normal and Tangent Vectors Along the Boundary.
+- Crosses Known Along the Boundary.
   <!-- .element: class="fragment" data-fragment-index="4"-->
 </div>
 
@@ -251,20 +289,25 @@ $$`
   <div class = "r-stack">
     <img
      class = "fragment fade-in-then-out"
-     src = "./assets/cross-field_05.png"
+     src = "./assets/domain_partition_01.png"
      data-fragment-index = "0"
      />
     <img
      class = "fragment fade-in-then-out"
-     src   = "./assets/cross-field_07.png"
+     src = "./assets/domain_partition_02.png"
      data-fragment-index = "1"
      />
     <img
      class = "fragment fade-in-then-out"
-     src   = "./assets/cross-field_08.png"
+     src = "./assets/domain_partition_03.png"
      data-fragment-index = "2"
      />
-</div>
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_04.png"
+     data-fragment-index = "3"
+     />
+  </div>
 </div>
 
 

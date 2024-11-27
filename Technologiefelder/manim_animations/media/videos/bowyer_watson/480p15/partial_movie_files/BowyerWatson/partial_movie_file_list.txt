@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/1185818338_2268332985_344964825.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_3890345977_2563998986.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_1959358871_68804582.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_3890345977_3130383232.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_1959358871_2773492420.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_3890345977_2016580599.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_1959358871_1132071480.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_3890345977_4114484084.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_1959358871_1867309925.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_3890345977_577648127.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_1959358871_942709891.mp4'
+file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/bowyer_watson/480p15/partial_movie_files/BowyerWatson/624642324_3890345977_2636591482.mp4'
