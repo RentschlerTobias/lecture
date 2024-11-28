@@ -141,6 +141,7 @@ $$`
 </div>
 
 
+
 ## Triangulated Mesh
 
 <div id="right">
@@ -318,8 +319,12 @@ $$`
 
 - Singularities: Locations where Frame Field is not defined.
 <!-- .element: class="fragment" data-fragment-index="0"-->
-- Predefined Boundary Corners with Zero Continuity.
-<!-- .element: class="fragment" data-fragment-index="1"-->
+- <img
+     class = "fragment fade-in"
+     src   = "./assets/Streamline_02.png"
+     data-fragment-index = "0"
+     height= "300"
+     /> 
 - Marks Locations Where the Mesh needs Special Treatment
 <!-- .element: class="fragment" data-fragment-index="2"-->
   
@@ -329,9 +334,8 @@ $$`
   <div class = "r-stack">
  <img
      class = "fragment fade-in-then-out"
-     src = "./assets/cross-field_09.png"
+     src = "./assets/Streamline_01.png"
      data-fragment-index = "0"
-     height = "200"
     />
  <img
      class = "fragment fade-in-then-out"
@@ -341,9 +345,8 @@ $$`
         />
 <img
      class = "fragment fade-in-then-out"
-     src = "./assets/cross-field_11.png"
+     src = "./assets/Streamlines_03.png"
      data-fragment-index = "2"
-       height = "200"
        />
  <img
      class = "fragment fade-in-then-out"
