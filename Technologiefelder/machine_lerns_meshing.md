@@ -144,6 +144,28 @@ $$`
 
 ## Triangulated Mesh
 
+
+### Delaunay Triangulation
+
+<div id = 'left'>
+
+- Subdivides the convex hull of a point-cloud into triangles.
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- Circumcircles of the triangles do not contain any of the points.
+<!-- .element: class="fragment" data-fragment-index="2"-->
+</div>
+<div id="right">
+    <div class="r-stack">
+      <img
+        class="fragment fade-in"
+        src="./assets/triangulation_01.png"
+        data-fragment-index="0"
+      />
+</div>
+</div>
+
+
+### Bowyer-Watson Algorithm
 <div id="right">
     <div class="r-stack">
       <img
@@ -182,6 +204,33 @@ $$`
 
 
 ## Quadrilateral Mesh 
+
+
+### Triangulation vs Quadrilateral Methods
+
+<div id = 'left'>
+
+- Quadrilateral mesh generation difficult task
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- Geometrical "stiff" structure
+<!-- .element: class="fragment" data-fragment-index="2"-->
+- Inserting Node
+<!-- .element: class="fragment" data-fragment-index="3"-->
+  - 2D: Possible, but not good
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  - 3D: Impossible!
+<!-- .element: class="fragment" data-fragment-index="5"-->
+</div>
+
+<div id= 'right'>
+  <div class = 'r-stack'>
+      <img
+        class="fragment fade-in"
+        src="./assets/tri_vs_quad_insert.png"
+        data-fragment-index="1"
+      />
+</div>
+</div>
 
 
 ## Indirect Meshing
@@ -356,5 +405,55 @@ $$`
        />
  </div>
 </div>
+
+
+
+## Neural Networks
+
+
+### Neural Networks (NN) vs Graph Neural Networks (GNN)
+
+<div id = 'left'>
+
+### NN
+- Euclidean data
+<!-- .element: class="fragment" data-fragment-index="1"-->
+<img
+  class = "fragment fade-in"
+  src ="./assets/euclidean_data.png"
+  data-fragment-index = "1"
+  />
+</div>
+
+<div id = 'right'>
+
+### GNN
+- Non-Euclidean data
+<!-- .element: class="fragment" data-fragment-index="1"-->
+<img
+  class = "fragment fade-in"
+  src ="./assets/non_euclidean_data.png"
+  data-fragment-index = "1"
+  />
+
+</div>
+
+
+## Graph Neutral Network Indirect Meshing
+
+<img
+  class = "fragment fade-in"
+  src ="./assets/indirect_meshing_02.png"
+  data-fragment-index = "1"
+  />
+<img
+  class = "fragment fade-in"
+  src ="./assets/gnn_indirect_meshng.png"
+  data-fragment-index = "2"
+  />
+
+
+## Overall Approch
+
 
 
