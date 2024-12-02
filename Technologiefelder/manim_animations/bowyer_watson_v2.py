@@ -1,95 +1,192 @@
 from manim import *
+import numpy as np
 
 class BowyerWatsonVisualization(Scene):
     def construct(self):
-        # Step 1: Create a coordinate system
+        # Create axes for the [0, 1] x [0, 1] domain
         axes = Axes(
-            x_range=[0, 1.5, 0.2],
-            y_range=[0, 1.5, 0.2],
-            axis_config={"include_numbers": True},
-            tips=False,
-        )
-        axes_labels = axes.get_axis_labels(x_label="x", y_label="y")
-        self.play(Create(axes), Write(axes_labels))
+            x_range=[-0.1, 1.1, 0.1],
+            y_range=[-0.1, 1.1, 0.1],
+            x_length=6,
+            y_length=6,
+            axis_config={"include_numbers": True, "decimal_number_config": {"num_decimal_places": 1}},
+        ).to_edge(DOWN)
+        self.play(Create(axes))
         self.wait(1)
 
-        # Step 2: Highlight the domain
-        domain = Rectangle(
-            width=1, height=1, color=BLUE, fill_opacity=0.1
-        ).move_to(axes.c2p(0.5, 0.5))
-        domain_label = Text("Domain", font_size=24).next_to(domain, UP)
-        self.play(Create(domain), Write(domain_label))
+        # Generate random points in [0, 1] x [0, 1]
+        num_points = 4  # You can change the number of points here
+        point_array = np.random.rand(num_points, 2)
+        point_list = point_array.tolist()
+
+        # Draw points
+        point_dots = []
+        for point in point_list:
+            dot = Dot(axes.coords_to_point(*point), color=WHITE)
+            point_dots.append(dot)
+            self.play(FadeIn(dot), run_time=0.3)
+
         self.wait(1)
 
-        # Step 3: Add the super-triangle
-        super_triangle = Polygon(
-            axes.c2p(-0.5, -0.5),
-            axes.c2p(1.5, -0.5),
-            axes.c2p(0.5, 1.5),
-            color=GREEN,
-        )
+        # Create super triangle that contains all points
+        super_triangle_vertices = [
+            [-1, -1],
+            [2, -1],
+            [0.5, 2],
+        ]
+
+        super_triangle_points = [axes.coords_to_point(*v) for v in super_triangle_vertices]
+
+        super_triangle = Polygon(*super_triangle_points, stroke_color=BLUE)
         self.play(Create(super_triangle))
         self.wait(1)
 
-        # Step 4: Add the first node and highlight it
-        point1 = Dot(axes.c2p(0.5, 0.5), color=RED)
-        point1_label = Text("Point 1", font_size=18).next_to(point1, UP)
-        self.play(FadeIn(point1), Write(point1_label))
-        self.wait(1)
+        # Initialize triangulation with super triangle
+        triangulation = [super_triangle_vertices]
+        triangle_mobs = [super_triangle]
 
-        # Step 5: Triangulation visualization
-        # Initial triangles
-        triangle1 = Polygon(
-            axes.c2p(-0.5, -0.5),
-            axes.c2p(1.5, -0.5),
-            axes.c2p(0.5, 0.5),
-            color=YELLOW,
-            fill_opacity=0.2,
-        )
-        triangle2 = Polygon(
-            axes.c2p(1.5, -0.5),
-            axes.c2p(0.5, 1.5),
-            axes.c2p(0.5, 0.5),
-            color=YELLOW,
-            fill_opacity=0.2,
-        )
-        triangle3 = Polygon(
-            axes.c2p(0.5, 1.5),
-            axes.c2p(-0.5, -0.5),
-            axes.c2p(0.5, 0.5),
-            color=YELLOW,
-            fill_opacity=0.2,
-        )
-        self.play(Create(triangle1), Create(triangle2), Create(triangle3))
-        self.wait(1)
+        # Start Bowyer-Watson algorithm visualization
+        for point_index, point in enumerate(point_list):
+            # Highlight current point
+            current_dot = point_dots[point_index]
+            self.play(current_dot.animate.set_color(YELLOW), run_time=0.3)
+            self.wait(0.3)
 
-        # Highlight the circumcircle of a "bad triangle"
-        circumcircle = Circle(
-            radius=0.7, color=RED
-        ).move_to(axes.c2p(0.5, 0.5))
-        self.play(Create(circumcircle))
-        self.wait(1)
+            # Find bad triangles
+            bad_triangles = []
+            bad_triangle_mobs = []
+            circumcircles = []
 
-        # Highlight and remove edges of bad triangles
-        edge1 = Line(axes.c2p(-0.5, -0.5), axes.c2p(1.5, -0.5), color=RED)
-        edge2 = Line(axes.c2p(1.5, -0.5), axes.c2p(0.5, 1.5), color=RED)
-        edge3 = Line(axes.c2p(0.5, 1.5), axes.c2p(-0.5, -0.5), color=RED)
-        self.play(Create(edge1), Create(edge2), Create(edge3))
-        self.wait(1)
-        self.play(FadeOut(edge1), FadeOut(edge2), FadeOut(edge3))
-        self.wait(1)
+            for tri_index, triangle in enumerate(triangulation):
+                a, b, c = triangle
+                cc_center, cc_radius = self.get_circumcircle(a, b, c)
+                circle_center_point = axes.coords_to_point(*cc_center)
+                circumcircle = Circle(
+                    radius=cc_radius * axes.get_unit_size()[0],
+                    color=GREEN,
+                    stroke_opacity=0.5,
+                ).move_to(circle_center_point)
+                self.play(Create(circumcircle), run_time=0.3)
 
-        # Add new edges one by one
-        new_edge1 = Line(axes.c2p(-0.5, -0.5), axes.c2p(0.5, 0.5), color=GREEN)
-        new_edge2 = Line(axes.c2p(1.5, -0.5), axes.c2p(0.5, 0.5), color=GREEN)
-        new_edge3 = Line(axes.c2p(0.5, 1.5), axes.c2p(0.5, 0.5), color=GREEN)
-        self.play(Create(new_edge1))
-        self.wait(0.5)
-        self.play(Create(new_edge2))
-        self.wait(0.5)
-        self.play(Create(new_edge3))
-        self.wait(1)
+                dist = np.linalg.norm(np.array(point) - np.array(cc_center))
+                if dist < cc_radius:
+                    bad_triangles.append(triangle)
+                    bad_triangle_mobs.append(triangle_mobs[tri_index])
+                    self.play(
+                        triangle_mobs[tri_index].animate.set_fill(RED, opacity=0.5),
+                        run_time=0.3,
+                    )
+                else:
+                    self.play(FadeOut(circumcircle), run_time=0.3)
 
-        # Finalize the visualization
-        self.play(FadeOut(circumcircle), Write(Text("Triangulation Complete").shift(2 * UP)))
+                circumcircles.append(circumcircle)
+
+            # Remove circumcircles
+            for circumcircle in circumcircles:
+                if circumcircle.get_parent() is not None:
+                    self.remove(circumcircle)
+
+            # Find the boundary of the polygonal hole
+            edges = []
+            for triangle in bad_triangles:
+                edges.extend(
+                    [(triangle[i], triangle[(i + 1) % 3]) for i in range(3)]
+                )
+
+            edge_counts = {}
+            for edge in edges:
+                sorted_edge = tuple(sorted(edge, key=lambda x: (x[0], x[1])))
+                edge_counts[sorted_edge] = edge_counts.get(sorted_edge, 0) + 1
+
+            polygon = [edge for edge, count in edge_counts.items() if count == 1]
+
+            # Highlight boundary edges
+            boundary_edges = []
+            for edge in polygon:
+                start_point = axes.coords_to_point(*edge[0])
+                end_point = axes.coords_to_point(*edge[1])
+                edge_mob = Line(start_point, end_point, color=YELLOW)
+                boundary_edges.append(edge_mob)
+                self.play(Create(edge_mob), run_time=0.3)
+
+            # Remove bad triangles from triangulation
+            for bad_triangle_mob in bad_triangle_mobs:
+                self.play(FadeOut(bad_triangle_mob), run_time=0.3)
+                triangle_mobs.remove(bad_triangle_mob)
+            for bad_triangle in bad_triangles:
+                triangulation.remove(bad_triangle)
+
+            # Re-triangulate the polygonal hole
+            new_triangles = []
+            new_triangle_mobs = []
+            for edge in polygon:
+                new_triangle_vertices = [edge[0], edge[1], point]
+                new_triangles.append(new_triangle_vertices)
+                triangle_points = [
+                    axes.coords_to_point(*v) for v in new_triangle_vertices
+                ]
+                new_triangle_mob = Polygon(
+                    *triangle_points,
+                    stroke_color=BLUE,
+                    fill_color=WHITE,
+                    fill_opacity=0.3,
+                )
+                new_triangle_mobs.append(new_triangle_mob)
+                self.play(Create(new_triangle_mob), run_time=0.3)
+
+            triangulation.extend(new_triangles)
+            triangle_mobs.extend(new_triangle_mobs)
+
+            # Remove boundary edges
+            for edge_mob in boundary_edges:
+                self.play(FadeOut(edge_mob), run_time=0.3)
+
+            # Reset the color of the current point
+            self.play(current_dot.animate.set_color(WHITE), run_time=0.3)
+
+        # Remove triangles containing vertices from original super triangle
+        triangles_to_remove = []
+        triangles_to_remove_mobs = []
+        super_triangle_vertices_set = set(tuple(v) for v in super_triangle_vertices)
+        for i, triangle in enumerate(triangulation):
+            if any(tuple(vertex) in super_triangle_vertices_set for vertex in triangle):
+                triangles_to_remove.append(triangle)
+                triangles_to_remove_mobs.append(triangle_mobs[i])
+
+        for triangle_mob in triangles_to_remove_mobs:
+            self.play(FadeOut(triangle_mob), run_time=0.3)
+            triangle_mobs.remove(triangle_mob)
+
+        # Remove super triangle
+        self.play(FadeOut(super_triangle), run_time=0.3)
+
         self.wait(2)
+
+    def get_circumcircle(self, a, b, c):
+        # Compute the circumcenter and radius of the triangle abc
+        ax, ay = a
+        bx, by = b
+        cx, cy = c
+
+        d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by))
+        if abs(d) < 1e-10:
+            # Points are colinear or too close together
+            center = [(ax + bx + cx) / 3, (ay + by + cy) / 3]
+            radius = 1e10
+            return center, radius
+
+        ux = (
+            (ax ** 2 + ay ** 2) * (by - cy)
+            + (bx ** 2 + by ** 2) * (cy - ay)
+            + (cx ** 2 + cy ** 2) * (ay - by)
+        ) / d
+        uy = (
+            (ax ** 2 + ay ** 2) * (cx - bx)
+            + (bx ** 2 + by ** 2) * (ax - cx)
+            + (cx ** 2 + cy ** 2) * (bx - ax)
+        ) / d
+
+        center = [ux, uy]
+        radius = np.sqrt((ux - ax) ** 2 + (uy - ay) ** 2)
+
+        return center, radius
