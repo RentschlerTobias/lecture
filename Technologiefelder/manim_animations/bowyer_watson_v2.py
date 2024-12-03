@@ -3,29 +3,33 @@ import numpy as np
 
 class BowyerWatsonVisualization(Scene):
     def construct(self):
-        # Create axes for the [0, 1] x [0, 1] domain
+        self.camera.save_png = True
+        self.num_img = 0 
+        self.camera.background_color = WHITE 
         axes = Axes(
-            x_range=[-0.1, 1.1, 0.1],
-            y_range=[-0.1, 1.1, 0.1],
-            x_length=6,
+            x_range=[-1.2, 2.2, 1.0],
+            y_range=[-1.2, 2.0, 1.0],
+            x_length=8,
             y_length=6,
-            axis_config={"include_numbers": True, "decimal_number_config": {"num_decimal_places": 1}},
+            axis_config={"include_numbers": True, "decimal_number_config": {"num_decimal_places": 1},"color":BLACK},
         ).to_edge(DOWN)
         self.play(Create(axes))
         self.wait(1)
 
         # Generate random points in [0, 1] x [0, 1]
-        num_points = 4  # You can change the number of points here
-        point_array = np.random.rand(num_points, 2)
+        num_points = 14  # You can change the number of points here
+        #point_array = np.random.rand(num_points, 2)
+        #point_array = np.array([[0.0,0.5],[1.0,0.5],[0.75,0.8],[0.75,0.2]])        # Draw points
+        point_array = np.array([[0.0,0.5],[1.0,0.5],[0.75,1.0],[0.75,0.0]])        # Draw points
         point_list = point_array.tolist()
 
-        # Draw points
         point_dots = []
         for point in point_list:
-            dot = Dot(axes.coords_to_point(*point), color=WHITE)
+            dot = Dot(axes.coords_to_point(*point), color=BLACK)
             point_dots.append(dot)
             self.play(FadeIn(dot), run_time=0.3)
-
+        #self.capture_mobject_frame(output_file=f"frames/bowyer_watson_algo_{num_image}.png")
+        #self.num_img  +=1
         self.wait(1)
 
         # Create super triangle that contains all points
@@ -39,6 +43,8 @@ class BowyerWatsonVisualization(Scene):
 
         super_triangle = Polygon(*super_triangle_points, stroke_color=BLUE)
         self.play(Create(super_triangle))
+        #self.capture_mobject_frame(output_file=f"frames/bowyer_watson_algo_{num_image}.png")
+        #self.num_img  +=1
         self.wait(1)
 
         # Initialize triangulation with super triangle
@@ -50,7 +56,9 @@ class BowyerWatsonVisualization(Scene):
             # Highlight current point
             current_dot = point_dots[point_index]
             self.play(current_dot.animate.set_color(YELLOW), run_time=0.3)
-            self.wait(0.3)
+           # self.capture_mobject_frame(output_file=f"frames/bowyer_watson_algo_{num_image}.png")
+            #self.num_img  +=1
+            self.wait(1.0)
 
             # Find bad triangles
             bad_triangles = []
@@ -61,10 +69,15 @@ class BowyerWatsonVisualization(Scene):
                 a, b, c = triangle
                 cc_center, cc_radius = self.get_circumcircle(a, b, c)
                 circle_center_point = axes.coords_to_point(*cc_center)
+                # Transform circumcircle radius to the screen space
+                x_unit_length = axes.x_length / (axes.x_range[1] - axes.x_range[0])
+                y_unit_length = axes.y_length / (axes.y_range[1] - axes.y_range[0])
+                average_unit_length = (x_unit_length + y_unit_length) / 2
+
                 circumcircle = Circle(
-                    radius=cc_radius * axes.get_unit_size()[0],
-                    color=GREEN,
-                    stroke_opacity=0.5,
+                radius=cc_radius * average_unit_length,
+                color=GREEN,
+                stroke_opacity=0.5,
                 ).move_to(circle_center_point)
                 self.play(Create(circumcircle), run_time=0.3)
 
@@ -72,21 +85,17 @@ class BowyerWatsonVisualization(Scene):
                 if dist < cc_radius:
                     bad_triangles.append(triangle)
                     bad_triangle_mobs.append(triangle_mobs[tri_index])
+                   # self.play(Create(circumcircle), run_time=0.3)
                     self.play(
                         triangle_mobs[tri_index].animate.set_fill(RED, opacity=0.5),
                         run_time=0.3,
                     )
                 else:
-                    self.play(FadeOut(circumcircle), run_time=0.3)
+                        self.play(FadeOut(circumcircle), run_time=0.3)
 
                 circumcircles.append(circumcircle)
 
-            # Remove circumcircles
-            for circumcircle in circumcircles:
-                if circumcircle.get_parent() is not None:
-                    self.remove(circumcircle)
-
-            # Find the boundary of the polygonal hole
+    # Remove circumcircles
             edges = []
             for triangle in bad_triangles:
                 edges.extend(
@@ -95,9 +104,8 @@ class BowyerWatsonVisualization(Scene):
 
             edge_counts = {}
             for edge in edges:
-                sorted_edge = tuple(sorted(edge, key=lambda x: (x[0], x[1])))
+                sorted_edge = tuple(map(tuple, sorted(edge, key=lambda x: (x[0], x[1]))))
                 edge_counts[sorted_edge] = edge_counts.get(sorted_edge, 0) + 1
-
             polygon = [edge for edge, count in edge_counts.items() if count == 1]
 
             # Highlight boundary edges
@@ -108,7 +116,11 @@ class BowyerWatsonVisualization(Scene):
                 edge_mob = Line(start_point, end_point, color=YELLOW)
                 boundary_edges.append(edge_mob)
                 self.play(Create(edge_mob), run_time=0.3)
-
+#            for circumcircle in circumcircles:
+#                if circumcircle in self.mobjects:
+#                    self.remove(circumcircle)
+            # Find the boundary of the polygonal hole
+ 
             # Remove bad triangles from triangulation
             for bad_triangle_mob in bad_triangle_mobs:
                 self.play(FadeOut(bad_triangle_mob), run_time=0.3)
@@ -142,8 +154,11 @@ class BowyerWatsonVisualization(Scene):
                 self.play(FadeOut(edge_mob), run_time=0.3)
 
             # Reset the color of the current point
-            self.play(current_dot.animate.set_color(WHITE), run_time=0.3)
-
+            self.play(current_dot.animate.set_color(BLACK), run_time=0.3)
+            for circumcircle in circumcircles:
+                if circumcircle in self.mobjects:
+                    self.remove(circumcircle)
+ 
         # Remove triangles containing vertices from original super triangle
         triangles_to_remove = []
         triangles_to_remove_mobs = []

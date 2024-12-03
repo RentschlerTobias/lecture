@@ -153,50 +153,176 @@ $$`
 <!-- .element: class="fragment" data-fragment-index="1"-->
 - Circumcircles of the triangles do not contain any of the points.
 <!-- .element: class="fragment" data-fragment-index="2"-->
+- Maximize the smallest interior angle.
+<!-- .element: class="fragment" data-fragment-index="3"-->
+<div class="r-stack">
+  <img
+          class="fragment fade-in-then-out"
+          src="./assets/delaunay_angle_maximization_01.jpg"
+          data-fragment-index="4"
+        />
+  <img
+          class="fragment fade-in-then-out"
+          src="./assets/delaunay_angle_maximization_02.jpg"
+          data-fragment-index="5"
+        />
+</div>
 </div>
 <div id="right">
     <div class="r-stack">
-      <img
+    <img
+        class="fragment fade-in-then-out"
+        src="./assets/delaunay_triangulation_01.png"
+        data-fragment-index="1"
+      />
+<img
         class="fragment fade-in"
-        src="./assets/triangulation_01.png"
-        data-fragment-index="0"
+        src="./assets/delaunay_triangulation_02.png"
+        data-fragment-index="2"
       />
 </div>
+
 </div>
 
 
 ### Bowyer-Watson Algorithm
+ <div id="left">
+  <pre>
+    <code  data-trim data-noescape>
+function BowyerWatson(pointList)
+    add superTriangle to triangulation
+    </code>
+  </pre>
+<!-- .element: class="fragment" data-fragment-index="1"-->
+  <pre>
+    <code  data-trim data-noescape>
+   for point in pointList: 
+      for triangle in triangulation: 
+        if point is inside circumcircle:
+          add triangle to badTriangles
+    </code>
+  </pre>
+<!-- .element: class="fragment" data-fragment-index="2"-->
+  <pre>
+    <code  data-trim data-noescape>
+     for edge in badTriangles:
+        if edge not in other badTriangles:
+          add edge to polygon
+   </code>
+  </pre>
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  <pre>
+    <code  data-trim data-noescape>
+     for each triangle in badTriangles:
+        remove triangle from triangulation
+   </code>
+  </pre>
+<!-- .element: class="fragment" data-fragment-index="5"-->
+  <pre>
+    <code  data-trim data-noescape>
+    reTriangulate(polygonalHole)
+    for edge in superTriangle 
+      remove edge
+    </code>
+  </pre>
+<!-- .element: class="fragment" data-fragment-index="6"-->
+</div>
 <div id="right">
     <div class="r-stack">
       <img
         class="fragment fade-in-then-out"
-        src="./assets/triangulation_01.png"
-        data-fragment-index="0"
-      />
+        src="./assets/bowyer_watson_01.jpg"
+        data-fragment-index="1"
+    />
       <img
         class="fragment fade-in-then-out"
-        src="./assets/triangulation_02.png"
+        src="./assets/bowyer_watson_02.jpg"
         data-fragment-index="2"
       />
       <img
         class="fragment fade-in-then-out"
-        src="./assets/triangulation_03.png"
+        src="./assets/bowyer_watson_03.jpg"
         data-fragment-index="3"
       />
       <img
         class="fragment fade-in-then-out"
-        src="./assets/triangulation_04.png"
+        src="./assets/bowyer_watson_04.jpg"
         data-fragment-index="4"
       />
-       <img
+      <img
         class="fragment fade-in-then-out"
-        src="./assets/triangulation_05.png"
+        src="./assets/bowyer_watson_05.jpg"
         data-fragment-index="5"
       />
-         <img
+      <img
         class="fragment fade-in-then-out"
-        src="./assets/triangulation_05.png"
-        data-fragment-index="5"
+        src="./assets/bowyer_watson_06.jpg"
+        data-fragment-index="6"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_07.jpg"
+        data-fragment-index="7"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_08.jpg"
+        data-fragment-index="8"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_09.jpg"
+        data-fragment-index="9"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_10.jpg"
+        data-fragment-index="10"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_11.jpg"
+        data-fragment-index="11"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_12.jpg"
+        data-fragment-index="12"
+      />
+<img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_13.jpg"
+        data-fragment-index="13"
+      />
+<img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_14.jpg"
+        data-fragment-index="14"
+      />
+<img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_15.jpg"
+        data-fragment-index="15"
+      />
+<img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_16.jpg"
+        data-fragment-index="16"
+      />
+<img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_17.jpg"
+        data-fragment-index="17"
+      />
+<img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_18.jpg"
+        data-fragment-index="18"
+      />
+<img
+        class="fragment fade-in-then-out"
+        src="./assets/bowyer_watson_19.jpg"
+        data-fragment-index="19"
       />
 </div>
   </div>
@@ -265,6 +391,57 @@ $$`
       >
       </video>
     </div>
+  </div>
+
+
+## Indirect Meshing
+### Perfect Matching Voronoi Graph
+
+<div id="left">
+
+- Generate triangulated Delaunay mesh
+<!-- .element: class="fragment" data-fragment-index="0"-->
+- Condition: 
+<!-- .element: class="fragment" data-fragment-index="0"-->
+  - $n_{\mathrm{triangle}} == \mathrm{even} $
+<!-- .element: class="fragment" data-fragment-index="0"-->
+  - $n_{\mathrm{nodes,b}} == \mathrm{even}$
+<!-- .element: class="fragment" data-fragment-index="0"-->
+- Generate Voronoi-Graph
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- Find perfect matching graph
+<!-- .element: class="fragment" data-fragment-index="2"-->
+</div>
+
+  <div id="right">
+    <div class="r-stack">
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/indirect_meshing_03.png"
+        data-fragment-index="0"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/indirect_meshing_04.png"
+        data-fragment-index="1"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/indirect_meshing_05.png"
+        data-fragment-index="2"
+      />
+      <img
+        class="fragment fade-in-then-out"
+        src="./assets/indirect_meshing_06.png"
+        data-fragment-index="3"
+      /> 
+   <img
+        class="fragment fade-in-then-out"
+        src="./assets/indirect_meshing_07.png"
+        data-fragment-index="4"
+      /> 
+
+  </div>
   </div>
 
 
@@ -371,7 +548,7 @@ $$`
 - <img
      class = "fragment fade-in"
      src   = "./assets/Streamline_02.png"
-     data-fragment-index = "0"
+     data-fragment-index = "1"
      height= "300"
      /> 
 - Marks Locations Where the Mesh needs Special Treatment
@@ -386,12 +563,6 @@ $$`
      src = "./assets/Streamline_01.png"
      data-fragment-index = "0"
     />
- <img
-     class = "fragment fade-in-then-out"
-     src = "./assets/cross-field_10.png"
-     data-fragment-index = "1"
-      height = "200"
-        />
 <img
      class = "fragment fade-in-then-out"
      src = "./assets/Streamlines_03.png"
@@ -418,42 +589,142 @@ $$`
 ### NN
 - Euclidean data
 <!-- .element: class="fragment" data-fragment-index="1"-->
-<img
-  class = "fragment fade-in"
-  src ="./assets/euclidean_data.png"
-  data-fragment-index = "1"
-  />
-</div>
+  <div class = "r-stack">
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_01.png"
+      data-fragment-index = "1"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_02.png"
+      data-fragment-index = "2"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_03.png"
+      data-fragment-index = "3"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_04.png"
+      data-fragment-index = "4"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_05.png"
+      data-fragment-index = "5"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_06.png"
+      data-fragment-index = "6"
+      />
+         <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_07.png"
+      data-fragment-index = "7"
+      />
 
+   <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_08.png"
+      data-fragment-index = "8"
+      />
+
+   <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_09.png"
+      data-fragment-index = "9"
+      />
+
+   <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_10.png"
+      data-fragment-index = "10"
+      />
+
+   <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/euclidean_data_11.png"
+      data-fragment-index = "11"
+      />
+
+   <img
+      class = "fragment fade-in"
+      src ="./assets/euclidean_data_12.png"
+      data-fragment-index = "12"
+      />
+  </div>
+</div>
 <div id = 'right'>
 
 ### GNN
 - Non-Euclidean data
 <!-- .element: class="fragment" data-fragment-index="1"-->
-<img
-  class = "fragment fade-in"
-  src ="./assets/non_euclidean_data.png"
-  data-fragment-index = "1"
-  />
+  <div class = "r-stack">
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/non_euclidean_data_01.png"
+      data-fragment-index = "13"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/non_euclidean_data_02.png"
+      data-fragment-index = "14"
+      />
+    <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/non_euclidean_data_03.png"
+      data-fragment-index = "14"
+      />
+      <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/non_euclidean_data_04.png"
+      data-fragment-index = "15"
+      />
 
+   <img
+      class = "fragment fade-in-then-out"
+      src ="./assets/non_euclidean_data_05.png"
+      data-fragment-index = "16"
+      />
+
+   <img
+      class = "fragment fade-in"
+      src ="./assets/non_euclidean_data_06.png"
+      data-fragment-index = "17"
+      />
+
+  </div>
 </div>
 
 
 ## Graph Neutral Network Indirect Meshing
+<div class = "r-stack">
+  <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/gnn_indirect_meshng.png"
+    data-fragment-index = "1"
+    />
+  <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/gnn_indirect_meshing_01.png"
+    data-fragment-index = "2"
+    />
+  <img
+    class = "fragment fade-in"
+    src ="./assets/gnn_indirect_meshing_02.png"
+    data-fragment-index = "3"
+    />
 
-<img
-  class = "fragment fade-in"
-  src ="./assets/indirect_meshing_02.png"
-  data-fragment-index = "1"
-  />
-<img
-  class = "fragment fade-in"
-  src ="./assets/gnn_indirect_meshng.png"
-  data-fragment-index = "2"
-  />
-
-
-## Overall Approch
-
-
-
+</div>
+<ul>
+    <span
+      class="fragment fade-in"
+      data-fragment-index="4"
+      style="font-size: 0.8em;"
+    >
+      $\hat{A} = \sigma(ZZ^\top) = (n_\text{nodes} \times f_\text{latent}) \times (f_\text{latent} \times n_\text{nodes}) = n_\text{nodes} \times n_\text{nodes}$
+    </span>
+</ul>

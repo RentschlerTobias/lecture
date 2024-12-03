@@ -1,205 +1,202 @@
-
 from manim import *
 import numpy as np
 
-
-class Triangle:
-    def __init__(self, p1, p2, p3):
-        self.points = [p1, p2, p3]
-        self.edges = [(p1, p2), (p2, p3), (p3, p1)]
-        self.circumcircle = self.compute_circumcircle()
-
-    def compute_circumcircle(self):
-        # Coordinates of the points
-        ax, ay = self.points[0][0], self.points[0][1]
-        bx, by = self.points[1][0], self.points[1][1]
-        cx, cy = self.points[2][0], self.points[2][1]
-
-        d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by))
-        if d == 0:
-            # Points are colinear; circumcircle is undefined
-            return None
-
-        ux = ((ax**2 + ay**2)*(by - cy) + (bx**2 + by**2)
-              * (cy - ay) + (cx**2 + cy**2)*(ay - by)) / d
-        uy = ((ax**2 + ay**2)*(cx - bx) + (bx**2 + by**2)
-              * (ax - cx) + (cx**2 + cy**2)*(bx - ax)) / d
-
-        center = np.array([ux, uy, 0])
-
-        radius = np.linalg.norm(center - self.points[0])
-
-        return (center, radius)
-
-    def contains_point_in_circumcircle(self, p):
-        if self.circumcircle is None:
-            return False
-        center, radius = self.circumcircle
-        dist = np.linalg.norm(center - p)
-        return dist <= radius
-
-
-def bowyer_watson(points):
-    # Super-triangle that encompasses all the points
-    xmin = min(p[0] for p in points)
-    xmax = max(p[0] for p in points)
-    ymin = min(p[1] for p in points)
-    ymax = max(p[1] for p in points)
-
-    dx = xmax - xmin
-    dy = ymax - ymin
-    delta_max = max(dx, dy)
-    midx = (xmax + xmin) / 2
-    midy = (ymax + ymin) / 2
-
-    # Create a super-triangle
-    p1 = np.array([midx - 20 * delta_max, midy - delta_max, 0])
-    p2 = np.array([midx, midy + 20 * delta_max, 0])
-    p3 = np.array([midx + 20 * delta_max, midy - delta_max, 0])
-
-    # Initialize the triangulation with the super-triangle
-    triangulation = [Triangle(p1, p2, p3)]
-    steps = []
-
-    for point in points:
-        bad_triangles = []
-        for triangle in triangulation:
-            if triangle.contains_point_in_circumcircle(point):
-                bad_triangles.append(triangle)
-
-        polygon = []
-        for triangle in bad_triangles:
-            for edge in triangle.edges:
-                is_shared = False
-                for other_triangle in bad_triangles:
-                    if other_triangle == triangle:
-                        continue
-                    if edge in other_triangle.edges or (edge[1], edge[0]) in other_triangle.edges:
-                        is_shared = True
-                        break
-                if not is_shared:
-                    polygon.append(edge)
-
-        for triangle in bad_triangles:
-            triangulation.remove(triangle)
-
-        new_triangles = []
-        for edge in polygon:
-            new_triangle = Triangle(edge[0], edge[1], point)
-            new_triangles.append(new_triangle)
-            triangulation.append(new_triangle)
-
-        steps.append({
-            'point': point,
-            'bad_triangles': bad_triangles.copy(),
-            'polygon': polygon.copy(),
-            'new_triangles': new_triangles.copy(),
-            'triangulation': triangulation.copy()
-        })
-
-    final_triangulation = []
-    for triangle in triangulation:
-        if (p1 in triangle.points) or (p2 in triangle.points) or (p3 in triangle.points):
-            continue
-        final_triangulation.append(triangle)
-
-    return final_triangulation, steps
-
-
-class DelaunayTriangulation(Scene):
+class BowyerWatsonVisualization(Scene):
     def construct(self):
-        # Define the points
-        points = [
-            np.array([-2, -1, 0]),
-            np.array([0, 2, 0]),
-            np.array([2, -1, 0]),
-            np.array([-1, 0, 0]),
-            np.array([1, 0, 0]),
-            np.array([0, -1.5, 0]),
-            np.array([1.5, 1, 0]),
-            np.array([-1.5, 1, 0])
+        self.camera.save_png = True
+        self.num_img = 0 
+#        self.camera.background_color = WHITE 
+        axes = Axes(
+            x_range=[-2.0, 3.0, 1.0],
+            y_range=[-2.0, 2.0, 1.0],
+            x_length=8,
+            y_length=6,
+            axis_config={"include_numbers": True, "decimal_number_config": {"num_decimal_places": 1}},
+        ).to_edge(DOWN)
+        self.play(Create(axes))
+        self.wait(1)
+
+        # Generate random points in [0, 1] x [0, 1]
+        num_points = 4  # You can change the number of points here
+        point_array = np.random.rand(num_points, 2)
+        point_list = point_array.tolist()
+
+        # Draw points
+        point_dots = []
+        for point in point_list:
+            dot = Dot(axes.coords_to_point(*point), color=WHITE)
+            point_dots.append(dot)
+            self.play(FadeIn(dot), run_time=0.3)
+        #self.capture_mobject_frame(output_file=f"frames/bowyer_watson_algo_{num_image}.png")
+        #self.num_img  +=1
+        self.wait(1)
+
+        # Create super triangle that contains all points
+        super_triangle_vertices = [
+            [-1, -1],
+            [2, -1],
+            [0.5, 2],
         ]
 
-        # Draw the points
-        point_dots = [Dot(point, color=WHITE) for point in points]
-        self.play(*[FadeIn(dot) for dot in point_dots])
+        super_triangle_points = [axes.coords_to_point(*v) for v in super_triangle_vertices]
 
-        # Compute the triangulation and steps
-        final_triangulation, steps = bowyer_watson(points)
+        super_triangle = Polygon(*super_triangle_points, stroke_color=BLUE)
+        self.play(Create(super_triangle))
+        #self.capture_mobject_frame(output_file=f"frames/bowyer_watson_algo_{num_image}.png")
+        #self.num_img  +=1
+        self.wait(1)
 
-        # Animate each step
-        for step in steps:
-            point = step['point']
-            bad_triangles = step['bad_triangles']
-            polygon = step['polygon']
-            new_triangles = step['new_triangles']
+        # Initialize triangulation with super triangle
+        triangulation = [super_triangle_vertices]
+        triangle_mobs = [super_triangle]
 
-            # Highlight the point being inserted
-            point_dot = Dot(point, color=YELLOW)
-            self.play(GrowFromCenter(point_dot))
+        # Start Bowyer-Watson algorithm visualization
+        for point_index, point in enumerate(point_list):
+            # Highlight current point
+            current_dot = point_dots[point_index]
+            self.play(current_dot.animate.set_color(YELLOW), run_time=0.3)
+           # self.capture_mobject_frame(output_file=f"frames/bowyer_watson_algo_{num_image}.png")
+            #self.num_img  +=1
+            self.wait(1.0)
 
-            # Highlight bad triangles
-            bad_triangles_mobjects = []
+            # Find bad triangles
+            bad_triangles = []
+            bad_triangle_mobs = []
+            circumcircles = []
+
+            for tri_index, triangle in enumerate(triangulation):
+                a, b, c = triangle
+                cc_center, cc_radius = self.get_circumcircle(a, b, c)
+                circle_center_point = axes.coords_to_point(*cc_center)
+                # Transform circumcircle radius to the screen space
+                x_unit_length = axes.x_length / (axes.x_range[1] - axes.x_range[0])
+                y_unit_length = axes.y_length / (axes.y_range[1] - axes.y_range[0])
+                average_unit_length = (x_unit_length + y_unit_length) / 2
+
+                circumcircle = Circle(
+                radius=cc_radius * average_unit_length,
+                color=GREEN,
+                stroke_opacity=0.5,
+                ).move_to(circle_center_point)
+                self.play(Create(circumcircle), run_time=0.3)
+
+                dist = np.linalg.norm(np.array(point) - np.array(cc_center))
+                if dist < cc_radius:
+                    bad_triangles.append(triangle)
+                    bad_triangle_mobs.append(triangle_mobs[tri_index])
+                    self.play(
+                        triangle_mobs[tri_index].animate.set_fill(RED, opacity=0.5),
+                        run_time=0.3,
+                    )
+                else:
+                        self.play(FadeOut(circumcircle), run_time=0.3)
+
+                circumcircles.append(circumcircle)
+
+    # Remove circumcircles
+            for circumcircle in circumcircles:
+                if circumcircle in self.mobjects:
+                    self.remove(circumcircle)
+            # Find the boundary of the polygonal hole
+            edges = []
             for triangle in bad_triangles:
-                triangle_mobject = Polygon(
-                    *[vertex for vertex in triangle.points], color=RED, fill_opacity=0.5)
-                bad_triangles_mobjects.append(triangle_mobject)
-            self.play(*[FadeIn(triangle_mobject)
-                      for triangle_mobject in bad_triangles_mobjects])
+                edges.extend(
+                    [(triangle[i], triangle[(i + 1) % 3]) for i in range(3)]
+                )
 
-            # Show circumcircles of bad triangles
-            circles = []
-            for triangle in bad_triangles:
-                if triangle.circumcircle is not None:
-                    center, radius = triangle.circumcircle
-                    circle = Circle(radius=radius, color=BLUE).move_to(center)
-                    circles.append(circle)
-            self.play(*[ShowCreation(circle) for circle in circles])
+            edge_counts = {}
+            for edge in edges:
+                sorted_edge = tuple(map(tuple, sorted(edge, key=lambda x: (x[0], x[1]))))
+                edge_counts[sorted_edge] = edge_counts.get(sorted_edge, 0) + 1
+            polygon = [edge for edge, count in edge_counts.items() if count == 1]
 
-            # Remove bad triangles
-            self.play(*[FadeOut(triangle_mobject)
-                      for triangle_mobject in bad_triangles_mobjects])
-            self.play(*[FadeOut(circle) for circle in circles])
-
-            # Draw polygonal hole boundary
-            polygon_edges = []
+            # Highlight boundary edges
+            boundary_edges = []
             for edge in polygon:
-                edge_mobject = Line(edge[0], edge[1], color=GREEN)
-                polygon_edges.append(edge_mobject)
-            self.play(*[ShowCreation(edge) for edge in polygon_edges])
+                start_point = axes.coords_to_point(*edge[0])
+                end_point = axes.coords_to_point(*edge[1])
+                edge_mob = Line(start_point, end_point, color=YELLOW)
+                boundary_edges.append(edge_mob)
+                self.play(Create(edge_mob), run_time=0.3)
 
-            # Draw new triangles
-            new_triangles_mobjects = []
-            for triangle in new_triangles:
-                triangle_mobject = Polygon(
-                    *[vertex for vertex in triangle.points], color=WHITE, fill_opacity=0.5)
-                new_triangles_mobjects.append(triangle_mobject)
-            self.play(*[FadeIn(triangle_mobject)
-                      for triangle_mobject in new_triangles_mobjects])
+            # Remove bad triangles from triangulation
+            for bad_triangle_mob in bad_triangle_mobs:
+                self.play(FadeOut(bad_triangle_mob), run_time=0.3)
+                triangle_mobs.remove(bad_triangle_mob)
+            for bad_triangle in bad_triangles:
+                triangulation.remove(bad_triangle)
 
-            # Remove polygon edges
-            self.play(*[FadeOut(edge) for edge in polygon_edges])
+            # Re-triangulate the polygonal hole
+            new_triangles = []
+            new_triangle_mobs = []
+            for edge in polygon:
+                new_triangle_vertices = [edge[0], edge[1], point]
+                new_triangles.append(new_triangle_vertices)
+                triangle_points = [
+                    axes.coords_to_point(*v) for v in new_triangle_vertices
+                ]
+                new_triangle_mob = Polygon(
+                    *triangle_points,
+                    stroke_color=BLUE,
+                    fill_color=WHITE,
+                    fill_opacity=0.3,
+                )
+                new_triangle_mobs.append(new_triangle_mob)
+                self.play(Create(new_triangle_mob), run_time=0.3)
 
-            # Remove the inserted point highlight
-            self.play(FadeOut(point_dot))
+            triangulation.extend(new_triangles)
+            triangle_mobs.extend(new_triangle_mobs)
 
-        # Show the final triangulation
-        final_triangles_mobjects = []
-        for triangle in final_triangulation:
-            triangle_mobject = Polygon(
-                *[vertex for vertex in triangle.points], color=WHITE, fill_opacity=0.5)
-            final_triangles_mobjects.append(triangle_mobject)
-        self.play(*[FadeIn(triangle_mobject)
-                  for triangle_mobject in final_triangles_mobjects])
+            # Remove boundary edges
+            for edge_mob in boundary_edges:
+                self.play(FadeOut(edge_mob), run_time=0.3)
 
-        # Show circumcircles of final triangles
-        final_circles = []
-        for triangle in final_triangulation:
-            if triangle.circumcircle is not None:
-                center, radius = triangle.circumcircle
-                circle = Circle(radius=radius, color=BLUE).move_to(center)
-                final_circles.append(circle)
-        self.play(*[ShowCreation(circle) for circle in final_circles])
+            # Reset the color of the current point
+            self.play(current_dot.animate.set_color(WHITE), run_time=0.3)
 
-        # Keep the final scene for a few seconds
-        self.wait(3)
+        # Remove triangles containing vertices from original super triangle
+        triangles_to_remove = []
+        triangles_to_remove_mobs = []
+        super_triangle_vertices_set = set(tuple(v) for v in super_triangle_vertices)
+        for i, triangle in enumerate(triangulation):
+            if any(tuple(vertex) in super_triangle_vertices_set for vertex in triangle):
+                triangles_to_remove.append(triangle)
+                triangles_to_remove_mobs.append(triangle_mobs[i])
+
+        for triangle_mob in triangles_to_remove_mobs:
+            self.play(FadeOut(triangle_mob), run_time=0.3)
+            triangle_mobs.remove(triangle_mob)
+
+        # Remove super triangle
+        self.play(FadeOut(super_triangle), run_time=0.3)
+
+        self.wait(2)
+
+    def get_circumcircle(self, a, b, c):
+        # Compute the circumcenter and radius of the triangle abc
+        ax, ay = a
+        bx, by = b
+        cx, cy = c
+
+        d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by))
+        if abs(d) < 1e-10:
+            # Points are colinear or too close together
+            center = [(ax + bx + cx) / 3, (ay + by + cy) / 3]
+            radius = 1e10
+            return center, radius
+
+        ux = (
+            (ax ** 2 + ay ** 2) * (by - cy)
+            + (bx ** 2 + by ** 2) * (cy - ay)
+            + (cx ** 2 + cy ** 2) * (ay - by)
+        ) / d
+        uy = (
+            (ax ** 2 + ay ** 2) * (cx - bx)
+            + (bx ** 2 + by ** 2) * (ax - cx)
+            + (cx ** 2 + cy ** 2) * (bx - ax)
+        ) / d
+
+        center = [ux, uy]
+        radius = np.sqrt((ux - ax) ** 2 + (uy - ay) ** 2)
+
+        return center, radius

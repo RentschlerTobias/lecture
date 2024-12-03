@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_triangulation/1080p60/partial_movie_files/DelaunayTriangulation/3529212410_2268332985_2435499771.mp4'
-file 'file:/home/tadde/work/repos/lecture/Technologiefelder/manim_animations/media/videos/delaunay_triangulation/1080p60/partial_movie_files/DelaunayTriangulation/3040924799_3890345977_3285490657.mp4'
