@@ -700,6 +700,149 @@ function BowyerWatson(pointList)
 </div>
 
 
+## Graph Theory
+### Introduction
+<div style="font-size: 0.8em" >
+ <ul>
+    <li class="fragment" data-fragment-index="0">
+      <strong>What is a Graph?</strong>
+    </li>
+    <li class="fragment" data-fragment-index="1">
+      A graph \( G = (V, E) \) consists of:
+    </li>
+    <ul>
+      <li class="fragment" data-fragment-index="2">
+        <strong>Nodes (Vertices) \( V \):</strong> Represent entities or data points.
+      </li>
+      <li class="fragment" data-fragment-index="3">
+        <strong>Edges \( E \):</strong> Represent relationships or connections between nodes.
+      </li>
+    </ul>
+  </ul>
+
+  <ul>
+    <li class="fragment" data-fragment-index="4">
+      <strong>Node Features:</strong>
+    </li>
+    <li class="fragment" data-fragment-index="5">
+      Each node \( v_i \) has an associated feature vector \( \mathbf{x}_i \).
+    </li>
+    <li class="fragment" data-fragment-index="6">
+      The collection of all node features forms the <strong>Feature Matrix</strong> \( X \).
+    </li>
+  </ul>
+
+  <ul>
+    <li class="fragment" data-fragment-index="8">
+      <strong>Adjacency Matrix:</strong>
+    </li>
+    <li class="fragment" data-fragment-index="9">
+      The <strong>Adjacency Matrix</strong> \( A \) represents the connections between nodes.
+    </li>
+    <li class="fragment" data-fragment-index="10">
+      \( A \) is an \( n \times n \) matrix where:
+    </li>
+    <ul>
+      <li class="fragment" data-fragment-index="11">
+        \( A_{ij} = 1 \) if there is an edge from node \( i \) to node \( j \).
+      </li>
+      <li class="fragment" data-fragment-index="12">
+        \( A_{ij} = 0 \) otherwise.
+      </li>
+    </ul>
+  </ul>
+
+  <div class="fragment fade-in" data-fragment-index="13" style="text-align: center;">
+    \[
+    A = \begin{bmatrix}
+    A_{11} & A_{12} & \cdots & A_{1n} \\
+    A_{21} & A_{22} & \cdots & A_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    A_{n1} & A_{n2} & \cdots & A_{nn} \\
+    \end{bmatrix}
+    \]
+  </div>
+</div>
+
+
+## Graph Neutral Network Indirect Meshing
+### Introduction 
+
+<img
+    src ="./assets/gnn_indirect_meshng.png"
+    />
+
+
+## Edge Prediction
+### Example Citation Network 
+
+<div id = "left">
+<div class = "r-stack">
+<img
+    class = "fragment fade-in-then-out"
+    src ="./assets/citation_network_01.png"
+    data-fragment-index = "0"
+    />
+<img
+    class = "fragment fade-in"
+    src ="./assets/citation_network_02.png"
+    data-fragment-index = "1"
+    />
+
+  </div>
+</div>
+
+<div id="right" style="font-size: 0.8em; display: flex; flex-direction: column; align-items: center;">
+<div class = "r-stack">
+  <div
+    class="fragment fade-in-then-out"
+    data-fragment-index="0"
+    style="font-size: 0.8em; margin: 0 auto;"
+  >
+    <strong>Feature Matrix N:</strong><br>
+    $\begin{array}{c|cccc}
+    & \text{word 1} & \text{word 2} & \cdots & \text{word } m \\
+    \hline
+    \text{paper 1} & 1 & 0 & \cdots & 1 \\
+    \text{paper 2} & 0 & 1 & \cdots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    \text{paper } n & 1 & 1 & \cdots & 0 \\
+    \end{array}$
+  </div>
+  <div
+    class="fragment fade-in"
+    data-fragment-index="1"
+    style="font-size: 0.8em; margin: 0 auto;"
+  >
+    <strong>Feature Matrix N:</strong><br>
+    $\begin{array}{c|cccc}
+    & \text{word 1} & \text{word 2} & \cdots & \text{word } m \\
+    \hline
+    \text{\color{red}{paper 1}} & \color{red}{1} & \color{red}{0} & \color{red}{\cdots} & \color{red}{1} \\
+    \text{paper 2} & 0 & 1 & \cdots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    \text{\color{blue}{paper }}\color{blue}{n} & \color{blue}{1} & \color{blue}{1} & \color{blue}{\cdots} & \color{blue}{0} \\
+    \end{array}$
+
+  </div>
+  </div>
+<br>
+
+- Number of shared words 
+<!-- .element: class="fragment" data-fragment-index="2"-->
+  - $n_{shared,w} =(\mathbf{n}_i \times \mathbf{n}_j^T)$
+<!-- .element: class="fragment" data-fragment-index="2"-->
+- Probability of Citation Between Two Papers
+<!-- .element: class="fragment" data-fragment-index="3"-->
+  - $Z = \mathrm{GNN}(N,A) $
+  - $p_{i,j} = \sigma(\mathbf{z}_i \times \mathbf{z}_j^T)$
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  - $\hat{A} = \sigma(ZZ^\top) = (n \times z) \times (z \times n) = n \times n$
+<!-- .element: class="fragment" data-fragment-index="4"-->
+
+</div>
+
+
 ## Graph Neutral Network Indirect Meshing
 <div class = "r-stack">
   <img
@@ -719,12 +862,250 @@ function BowyerWatson(pointList)
     />
 
 </div>
-<ul>
+<div style="text-align: left;">
+    <span
+      class="fragment fade-in"
+      data-fragment-index="3"
+      style="font-size: 0.8em;"
+    >
+      $Z = \mathrm{GNN}(N,A)$
+    </span>
+</div>
+<div style="text-align: left;">
     <span
       class="fragment fade-in"
       data-fragment-index="4"
       style="font-size: 0.8em;"
     >
-      $\hat{A} = \sigma(ZZ^\top) = (n_\text{nodes} \times f_\text{latent}) \times (f_\text{latent} \times n_\text{nodes}) = n_\text{nodes} \times n_\text{nodes}$
+      $\hat{A} = \sigma(ZZ^\top) = (n_{\text{nodes}} \times f_{\text{latent}}) \times (f_{\text{latent}} \times n_{\text{nodes}}) = n_{\text{nodes}} \times n_{\text{nodes}}$
     </span>
-</ul>
+</div>
+
+
+## Graph Neutral Network Indirect Meshing
+### Loss Function
+
+<div id = "left">
+
+- Represent the quality of GNN with one value
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- Loss function
+<!-- .element: class="fragment" data-fragment-index="2"-->
+  - Boundary Loss
+<!-- .element: class="fragment" data-fragment-index="3"-->
+  - Element Loss
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  - Node Edge Count Loss
+<!-- .element: class="fragment" data-fragment-index="5"-->
+- Deleting Edge with the lowest predicted probability
+<!-- .element: class="fragment" data-fragment-index="6"-->
+- Use predicted probability to compute perfect matching Voronoi-Graph
+<!-- .element: class="fragment" data-fragment-index="7"-->
+</div>
+
+<div id = "right">
+<div class = "r-stack">
+ <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/gnn_indirect_meshing_loss_00.png"
+    data-fragment-index = "3"
+    />
+<img
+    class = "fragment fade-in-then-out"
+    src ="./assets/gnn_indirect_meshing_loss_01.png"
+    data-fragment-index = "4"
+    />
+ <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/gnn_indirect_meshing_loss_02.png"
+    data-fragment-index = "5"
+    />
+ <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/gnn_indirect_meshing_prediction.png"
+    data-fragment-index = "6"
+    />
+ <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/triGraph_vornoiGraph.png"
+    data-fragment-index = "7"
+    />
+ <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/triGraph_perfectMatching.png"
+    data-fragment-index = "8"
+    />
+ <img
+    class = "fragment fade-in-then-out"
+    src ="./assets/quadGraph.png"
+    data-fragment-index = "9"
+    />
+
+  </div>
+</div>
+
+
+## GNN Node Shifting
+
+
+## GNN Frame Field Prediction
+
+<div style="text-align: left;">
+    <span
+      class="fragment fade-in"
+      data-fragment-index="1"
+      style="font-size: 0.8em;"
+    >
+    1. Generate triangulated mesh.
+    </span>
+</div>
+<div style="text-align: left;">
+    <span
+      class="fragment fade-in"
+      data-fragment-index="2"
+      style="font-size: 0.8em;"
+    >
+  2. Compute crosses at the boundary.
+  </span>
+</div>
+<div style="text-align: left;">
+    <span
+      class="fragment fade-in"
+      data-fragment-index="3"
+      style="font-size: 0.8em;"
+    >
+  3. Mapping cross vector.
+  </span>
+</div>
+
+<div style="text-align: left;">
+    <span
+      class="fragment fade-in"
+      data-fragment-index="4"
+      style="font-size: 0.8em;"
+    >
+  4. Pass node feature Matrix N to GNN
+  </span>
+</div>
+<div id="bottom" style="position: absolute; bottom: -100; width: 100%; text-align: center;">
+<div class = "r-stack">
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_01.png"
+     data-fragment-index = "2"
+     height = "400"
+/>
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_02.png"
+     data-fragment-index = "3"
+     height = "400"
+ />
+ <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/gnn_domain_partition_01.png"
+     data-fragment-index = "4"
+     height = "400"
+  />
+  <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/gnn_domain_partition_02.png"
+     data-fragment-index = "5"
+     height = "400"
+      />
+</div>
+  </div>
+
+
+## GNN Frame Field Prediction
+### Evaluation
+
+<div id = "left">
+
+<div style="font-size: 0.8em;">
+
+- <strong>Dataset:</strong>
+<!-- .element: class="fragment" data-fragment-index="1"-->
+  - random scaling factor
+<!-- .element: class="fragment" data-fragment-index="2"-->
+  - random rotation factor
+<!-- .element: class="fragment" data-fragment-index="2"-->
+  - 10.000 Meshes
+<!-- .element: class="fragment" data-fragment-index="3"-->
+    - 7.000 Training
+<!-- .element: class="fragment" data-fragment-index="3"-->
+    - 2.000 Validation
+<!-- .element: class="fragment" data-fragment-index="3"-->
+    - 1.000 Test
+<!-- .element: class="fragment" data-fragment-index="3"-->
+- <strong>Evaluation:</strong>
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  - Mean angle: $\Delta_{\text{Angle}}$ [rad] = 0.0580
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  - Median angle: $\Delta_{\text{Angle}}$ [rad] = 0.0267
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  - Standard deviation: $\Delta_{\text{Angle}}$ [rad] = 0.0996
+<!-- .element: class="fragment" data-fragment-index="4"-->
+  - Max angle deviation: $\Delta_{\text{Angle,max}}$ [rad] = 3.1408
+<!-- .element: class="fragment" data-fragment-index="4"-->
+</div>
+</div>
+
+<div id = "right">
+<div class = "r-stack">
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/Angle_Deviations_Boxplot.png"
+     data-fragment-index = "4"
+     height = "400"
+  />
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/Angle_Deviations_histogram.png"
+     data-fragment-index = "5"
+     height = "400"
+  />
+
+  </div>
+</div>
+
+
+## GNN Frame Field Prediction
+
+<div id = "left">
+<div class = "r-stack">
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/predicted_frame_field.png"
+     data-fragment-index = "0"
+     height = "400"
+  />
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/predicted_frame_field.png"
+      data-fragment-index = "1"
+     height = "400"
+  />
+
+  </div>
+
+</div>
+
+<div id = "right">
+<div class = "r-stack">
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/true_frame_field.png"
+     data-fragment-index = "0"
+     height = "400"
+  />
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/Angle_Deviations_frame_field.png"
+     data-fragment-index = "1"
+     height = "400"
+  />
+
+  </div>
+
+</div>
