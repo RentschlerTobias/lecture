@@ -33,10 +33,12 @@
 <!-- .element: class="fragment" data-fragment-index="2"-->
 - Molecules interacts with others.
 <!-- .element: class="fragment" data-fragment-index="3"-->
-- Molecules collid.
+- Molecules collide.
 <!-- .element: class="fragment" data-fragment-index="3"-->
-- Tracking every individual molecule is impossible!
+  - Compute new motion.
 <!-- .element: class="fragment" data-fragment-index="4"-->
+- Tracking every individual molecule is impossible!
+<!-- .element: class="fragment" data-fragment-index="5"-->
 </div>
 
 <div id ="right">
@@ -74,13 +76,17 @@
   </div>
 </div>
 
-<div style="margin-top:450px; text-align: center;">
+<div style="margin-top:450px; text-align: center;" class="fragment" data-fragment-index="5">
   <p style="font-size: 1em;">
     \[
     \text{Number of molecules} = \left( \frac{\text{Volume} \times \text{Density}}{\text{Molar Mass}} \right) \times N_A
     \]
-    Approximately \(3.35 \times 10^{25}\) molecules
-    <!-- .element: class="fragment" data-fragment-index="3"-->
+  </p>
+  <p style="font-size: 1em;" class="fragment" data-fragment-index="5">
+    Approximately \(3.35 \times 10^{25}\) molecules per liter.
+  </p>
+  <p style="font-size: 1em;" class="fragment" data-fragment-index="6">
+    Comparison: Approximately \(1.386 \times 10^{21}\) liters on Earth.
   </p>
 </div>
 
@@ -217,15 +223,20 @@ function BowyerWatson(pointList)
         remove triangle from triangulation
    </code>
   </pre>
-<!-- .element: class="fragment" data-fragment-index="5"-->
+<!-- .element: class="fragment" data-fragment-index="4"-->
   <pre>
     <code  data-trim data-noescape>
     reTriangulate(polygonalHole)
+    </code>
+  </pre>
+<!-- .element: class="fragment" data-fragment-index="5"-->
+  <pre>
+    <code  data-trim data-noescape>
     for edge in superTriangle 
       remove edge
     </code>
   </pre>
-<!-- .element: class="fragment" data-fragment-index="6"-->
+<!-- .element: class="fragment" data-fragment-index="19"-->
 </div>
 <div id="right">
     <div class="r-stack">
@@ -324,8 +335,21 @@ function BowyerWatson(pointList)
         src="./assets/bowyer_watson_19.jpg"
         data-fragment-index="19"
       />
-</div>
   </div>
+  </div>
+
+
+### Bowyer-Watson Animation
+<div>
+  <video
+    class="fragment fade-in"
+    autoplay
+    controls
+    src="./assets/BowyerWatsonVisualization_14_nodes_white_bg.mp4"
+    data-fragment-index="1"
+    height = "500"
+  >
+</div>
 
 
 
@@ -561,7 +585,7 @@ function BowyerWatson(pointList)
  <img
      class = "fragment fade-in-then-out"
      src = "./assets/Streamline_01.png"
-     data-fragment-index = "0"
+     data-fragment-index = "1"
     />
 <img
      class = "fragment fade-in-then-out"
@@ -708,11 +732,11 @@ function BowyerWatson(pointList)
       <strong>What is a Graph?</strong>
     </li>
     <li class="fragment" data-fragment-index="1">
-      A graph \( G = (V, E) \) consists of:
+      A graph \( G = (N, E) \) consists of:
     </li>
     <ul>
       <li class="fragment" data-fragment-index="2">
-        <strong>Nodes (Vertices) \( V \):</strong> Represent entities or data points.
+        <strong>Nodes (Vertices) \( N \):</strong> Represent entities or data points.
       </li>
       <li class="fragment" data-fragment-index="3">
         <strong>Edges \( E \):</strong> Represent relationships or connections between nodes.
@@ -720,33 +744,18 @@ function BowyerWatson(pointList)
     </ul>
   </ul>
 
-  <ul>
+ <ul>
     <li class="fragment" data-fragment-index="4">
-      <strong>Node Features:</strong>
-    </li>
-    <li class="fragment" data-fragment-index="5">
-      Each node \( v_i \) has an associated feature vector \( \mathbf{x}_i \).
-    </li>
-    <li class="fragment" data-fragment-index="6">
-      The collection of all node features forms the <strong>Feature Matrix</strong> \( X \).
-    </li>
-  </ul>
-
-  <ul>
-    <li class="fragment" data-fragment-index="8">
-      <strong>Adjacency Matrix:</strong>
-    </li>
-    <li class="fragment" data-fragment-index="9">
       The <strong>Adjacency Matrix</strong> \( A \) represents the connections between nodes.
     </li>
-    <li class="fragment" data-fragment-index="10">
+    <li class="fragment" data-fragment-index="5">
       \( A \) is an \( n \times n \) matrix where:
     </li>
     <ul>
-      <li class="fragment" data-fragment-index="11">
+      <li class="fragment" data-fragment-index="6">
         \( A_{ij} = 1 \) if there is an edge from node \( i \) to node \( j \).
       </li>
-      <li class="fragment" data-fragment-index="12">
+      <li class="fragment" data-fragment-index="7">
         \( A_{ij} = 0 \) otherwise.
       </li>
     </ul>
@@ -1109,3 +1118,23 @@ function BowyerWatson(pointList)
   </div>
 
 </div>
+
+
+
+## Sources
+
+1. [ATIS Lecture: Numerical Simulation](https://atismer.github.io/lecture/NSO1/#/1/5/7)
+
+2. Kowalski, N., Ledoux, F., Frey, P. (2013).  
+   A PDE Based Approach to Multidomain Partitioning and Quadrilateral Meshing.  
+   In: Jiao, X., Weill, JC. (eds) Proceedings of the 21st International Meshing Roundtable.  
+   Springer, Berlin, Heidelberg.  
+   [https://doi.org/10.1007/978-3-642-33573-0_9](https://doi.org/10.1007/978-3-642-33573-0_9)
+
+3. Schneiders, R. Algorithms for Quadrilateral and Hexahedral Mesh Generation.  
+   [https://www.robertschneiders.de/papers/vki.pdf](https://www.robertschneiders.de/papers/vki.pdf)
+
+4. Kipf, T. N., Welling, M. (2016).  
+   Variational Graph Auto-Encoders.  
+   arXiv:1611.07308 [stat.ML].  
+   [https://doi.org/10.48550/arXiv.1611.07308](https://doi.org/10.48550/arXiv.1611.07308)
