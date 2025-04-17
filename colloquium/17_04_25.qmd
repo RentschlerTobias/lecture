@@ -83,7 +83,7 @@ $a) \ p_5 = p_6 − \rho g \Delta z \qquad b) \ p_5 = p_6 + \rho g \Delta z  \qq
 
 
 
-:::{.fragment .fade-in fragment-index=4}
+:::{.fragment .fade-in-then-out fragment-index=4}
 :::{.absolute top=350 left=50}
 
 ![](./assets/StatikDerFluide/Druck_04.png){width="80%" height="80%"}
