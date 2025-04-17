@@ -1,0 +1,500 @@
+---
+title: "Colloquium 17.04.2025"
+format: 
+   revealjs:
+      theme: solarized 
+      chalkboard: true
+css: styles.css  
+---
+
+
+
+
+# Ausschnitte aus der Vortragsübung
+
+# Live-Voting
+
+:::{.absolute top=100}
+https://ilias3.uni-stuttgart.de/vote/5TRI
+:::
+
+:::{.absolute top=150}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="70%" height="70%"}
+:::
+
+
+
+## Grundbegriffe
+
+:::{.fragment .fade-out fragment-index=3}
+:::{.absolute top=50 left=00}
+
+- Statik: 
+   - $\sum{\vec{F}} = m \cdot \vec{a} = \frac{\partial \left(m \vec{v}\right)}{\partial t} \stackrel{!}{=} 0$
+   - Keine relative bewegung zwischen den Fluidteilchen 
+- Druck: 
+   -  $p = \frac{F}{A} \left[\frac{N}{m^2} \hat{=}Pa \right]$
+   - Skalarer Wert => Richtungsunabhängig
+:::
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=1}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/Druck_01.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=2}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/Druck_02.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=3}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/Druck_03.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=3}
+:::{.absolute top=150 left=0}
+:::{.red-text}
+
+LIVE-VOTING:
+
+Bestimmen Sie den Druck $p_5$ , in Abhängigkeit von $p_6$, über das Kräftegleichgewicht in z-Richtung bei einer Körperhöhe von $\Delta z$.
+
+$a) \ p_5 = p_6 − \rho g \Delta z \qquad b) \ p_5 = p_6 + \rho g \Delta z  \qquad c) \ p_5 = p_6$
+
+:::
+:::
+:::
+
+
+
+
+:::{.fragment .fade-in fragment-index=4}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/Druck_04.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/Druck_05.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/hydrostatik_01.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/hydrostatik_02.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .fade-in}
+:::{.absolute top=300 left=50}
+
+![](./assets/StatikDerFluide/communicating_tubes.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .center .fade-in}
+:::{.absolute top=650 left=50}
+:::{.red-text}
+LIVE_VOTING: Wie verhält sich der Druck an den drei markierten Stellen?
+$a) \ p_1 > p_2 = p_3 < p_4  \qquad b) \  p_1 > p_2 = p_3 = p_4 \qquad c) \  p_1 = p_2 = p_3 = p_4$
+:::
+:::
+:::
+
+
+:::{.fragment .fade-in}
+:::{.absolute top=350 left=00}
+:::{.red-text}
+:::
+:::
+:::
+
+
+
+## Grundbegriffe
+- Druckverlauf: $p(h)$
+
+:::{.fragment .fade-out data-fragment-index="2"}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/druckverlauf_015.png)
+:::
+:::
+
+
+:::{.fragment .fade-out data-fragment-index="5"}
+:::{.fragment .center .fade-in data-fragment-index="1"}
+:::{.absolute top=650 left=50}
+:::{.red-text}
+LIVE_VOTING: Welcher Druck herrscht an der markierten Stelle?
+$a) \ p = p_0 - \rho g h \qquad b) \  p = \rho g h\qquad c) \ p = p_0 + \rho g h$
+:::
+:::
+:::
+:::
+
+:::{.fragment .center .fade-in data-fragment-index="5"}
+:::{.absolute top=650 left=50}
+:::{.red-text}
+LIVE_VOTING: Welcher Druck herrscht an der markierten Stelle?
+$a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \qquad c) \ p = p_0 + \rho g \left(h_2- h_1\right)$
+:::
+:::
+:::
+
+
+
+:::{.fragment .fade-in-then-out data-fragment-index="2"}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/druckverlauf_02.png)
+:::
+:::
+
+:::{.fragment .fade-in-then-out data-fragment-index="3"}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/druckverlauf_03.png)
+:::
+:::
+
+:::{.fragment .fade-in-then-out data-fragment-index="4"}
+:::{.absolute top=150 left=50}
+![](./assets/StatikDerFluide/druckverlauf_04.png)
+:::
+:::
+
+:::{.fragment .fade-in-then-out data-fragment-index="5"}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/druckverlauf_05.png)
+:::
+:::
+
+:::{.fragment .fade-in-then-out data-fragment-index="6"}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/druckverlauf_06.png)
+:::
+:::
+
+:::{.fragment .fade-in-then-out data-fragment-index="7"}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/druckverlauf_07.png)
+
+:::
+:::
+
+:::{.fragment .fade-in data-fragment-index="8"}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/druckverlauf_08.png)
+
+:::
+:::
+
+## Grundbegriffe
+
+- Druckkraft: $\vec{F} = -\int p\, d\vec{A} = -\int p\vec{n}\, dA$
+   - Vektor => Richtungsabhängig
+
+
+
+:::{.fragment .fade-in fragment-index=1}
+:::{.fragment .fade-out fragment-index=2}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/Druckkraft_02.png){width="80%" height="80%"}
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=1}
+:::{.fragment .fade-out fragment-index=2}
+:::{.absolute top=370 left=50}
+:::{.red-text}
+LIVE_VOTING: Wie groß ist die Kraft, die durch den Druck auf die Fläche ausgeübt wird?
+
+a) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 +\frac{2}{3} \rho g h \right) bh \end{equation}
+
+b) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 +\frac{1}{2} \rho g h \right) bh \end{equation}
+
+c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \rho g h \right) bh \end{equation}
+:::
+:::
+:::
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=2}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/Druckkraft_03.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/Druckkraft_04.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/Druckkraft_05.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/Druckkraft_06.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/Druckkraft_07.png){width="80%" height="80%"}
+
+:::
+:::
+
+:::{.fragment .fade-in}
+:::{.absolute top=550 left=50}
+
+\begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 +\frac{1}{2} \rho g h \right) bh \end{equation}
+
+:::
+:::
+
+
+# Work Progress
+
+# CSME: Frame Field Prediction
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+![](./assets/csme/domain_partition_01.png){width="50%" height="50%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+
+:::{.absolute top=150 left=50}
+![](./assets/csme/domain_partition_02.png){width="50%" height="50%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+![](./assets/csme/domain_partition_03.png){width="50%" height="50%"}
+
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+
+![](./assets/csme/domain_partition_04.png){width="50%" height="50%"}
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+
+![](./assets/csme/time_comparison.png)
+:::
+:::
+
+:::{.fragment .fade-in-then-out}
+:::{.absolute top=150 left=50}
+
+![](./assets/csme/time_comparison_gnn.png)
+:::
+:::
+
+
+
+## Streamline Integration
+
+:::{.columns}
+
+::: {.column}
+
+:::{.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index =1}
+![](./assets/current_progress/streamlines_colored_1.png)
+:::
+
+
+::: {.fragment .fade-in fragment-index =2}
+::: {.fragment .fade-out fragment-index =6}
+![](./assets/current_progress/streamlines_colored_2.png)
+:::
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index =6}
+![](./assets/current_progress/boundingBox_00.png)
+:::
+
+::: {.fragment .fade-in-then-out fragment-index =7}
+![](./assets/current_progress/boundingBox_01.png)
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index =8}
+![](./assets/current_progress/boundingBox_02.png)
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index =9}
+![](./assets/current_progress/boundingBox_03.png)
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index =10}
+![](./assets/current_progress/boundingBox_04.png)
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index =11}
+![](./assets/current_progress/boundingBox_05.png)
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index =12}
+![](./assets/current_progress/boundingBox_06.png)
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index =13}
+![](./assets/current_progress/boundingBox_07.png)
+:::
+
+::: {.fragment .fade-in-then-out fragment-index =14}
+![](./assets/current_progress/streamlines_colored_2.png)
+:::
+
+::: {.fragment .fade-in-then-out fragment-index =14}
+![](./assets/current_progress/faces.png)
+:::
+
+
+:::
+:::
+
+
+::: {.column}
+
+::: {.fragment .fade-in fragment-index =3}
+Get Intersections:
+$$\mathrm{ Streamline }=   \begin{bmatrix}   x_0 & y_0 \\\\   ... & ... \\\\  x_n & y_n  \end{bmatrix}  $$
+:::
+
+::: {.fragment .fade-in fragment-index =4}
+- Possible Intersections at 19 Streamlines:  
+$$ \binom{n}{2} = \frac{n(n - 1)}{2} = 171 $$ 
+:::
+
+::: {.fragment .fade-in fragment-index =5}
+- Intersection == Optimization Problem: 
+$\mathrm{Spline_1(s)} - \mathrm{Spline_2(t)} = 0$
+:::
+
+
+:::
+:::
+
+
+# Streamline Post Processing
+
+:::{.columns}
+
+::: {.column}
+
+:::{.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index =1}
+![](./assets/current_progress/streamline_simplification_01.png)
+:::
+
+::: {.fragment .fade-in-then-out fragment-index =2}
+![](./assets/current_progress/streamline_simplification_02.png)
+:::
+
+::: {.fragment .fade-in-then-out fragment-index =3}
+![](./assets/current_progress/streamline_simplification_03.png)
+:::
+
+::: {.fragment .fade-in-then-out fragment-index =4}
+![](./assets/current_progress/streamline_simplification_04.png)
+:::
+:::
+:::
+
+::: {.column}
+
+::: {.fragment .fade-in fragment-index =2}
+Combine Duplicated Streamlines if Streamlines are between two Singularities:
+$\gamma(x) = (1-x)\gamma_{ij}(s) +s*\gamma_{ji}(s) s \in [0,1]$
+:::
+
+::: {.fragment .fade-in fragment-index =3}
+Special Case if Streamline misses the actual Singularity
+:::
+
+::: {.fragment .fade-in fragment-index =4}
+Special special Case if BOTH Streamline misses the actual Singularity
+:::
+
+::: {.fragment .fade-in fragment-index =5}
+Problem to identify the actual traget of the streamline 
+:::
+
+:::
+:::

@@ -1,9 +1,0 @@
----
-title: "TS Vortragsübung Statik der Fluide 1"
----
-
-## Organisatorische
-
----
-# Statik der Fluid 1
-## Einleitung
