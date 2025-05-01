@@ -351,12 +351,59 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 
 # Aufgabe 1 a
 
+
+::: {.fragment .fade-in-then-out data-fragment-index="1"}
+:::{.absolute top=100 left=0}
+
 ![](./assets/StatikDerFluide/Aufgabe_1a.png)
+
+:::
+:::
+
+::: {.fragment .fade-in-then-out data-fragment-index="2"}
+:::{.absolute top=100 left=0}
+
+![](./assets/StatikDerFluide/Aufgabe_1a_live-voting.png)
+:::
+:::
+
+
+
+:::{.fragment .center .fade-in-then-out data-fragment-index="2"}
+:::{.absolute top=000 left=900}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
+:::
+:::
+
+
+
 
 # Aufgabe 1 b)
 
+::: {.fragment .fade-in-then-out data-fragment-index="1"}
+:::{.absolute top=100 left=0}
+
+![](./assets/StatikDerFluide/Aufgabe_1b_live-voting.png)
+:::
+:::
+
+:::{.fragment .center .fade-in-then-out data-fragment-index="1"}
+:::{.absolute top=000 left=900}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
+:::
+:::
+
+
 ::: {.fragment .fade-in}
 Fläche S1 Integration:
+:::
+
+
+::: {.fragment .fade-in data-fragment-index="2"}
+:::{.absolute top=200 left=0}
+
+![](./assets/StatikDerFluide/Aufgabe_1b_small.png){width="30%" height="30%"}
+:::
 :::
 
 ::: {.fragment .fade-in}
@@ -382,8 +429,26 @@ $$ \vec{F} = -(p_o +\rho g \tilde{h}) \vec{A} = \begin{pmatrix} 1 \\ 0 \end{pmat
 
 # Aufgabe 1 b)
 
-::: {.fragment .fade-in}
+
+::: {.fragment .fade-in-then-out data-fragment-index="1"}
+:::{.absolute top=100 left=0}
+
+![](./assets/StatikDerFluide/Aufgabe_1b_S2_live-voting.png){width="100%" height="100%"}
+:::
+:::
+
+
+
+::: {.fragment .fade-in data-fragment-index="2"}
 Fläche S2 Integration:
+:::
+
+
+::: {.fragment .fade-in data-fragment-index="2"}
+:::{.absolute top=400 left=0}
+
+![](./assets/StatikDerFluide/Aufgabe_1b_small.png){width="30%" height="30%"}
+:::
 :::
 
 ::: {.fragment .fade-in}
@@ -401,8 +466,23 @@ $$ \vec{F} = - \begin{pmatrix} 0 \\ 1 \end{pmatrix}\cdot  a^2  \cdot \left(p_o +
 
 # Aufgabe 1 b)
 
-::: {.fragment .fade-in}
+::: {.fragment .fade-in-then-out data-fragment-index="1"}
+:::{.absolute top=100 left=0}
+
+![](./assets/StatikDerFluide/Aufgabe_1b_S3_live-voting.png){width="100%" height="100%"}
+:::
+:::
+
+
+::: {.fragment .fade-in data-fragment-index="2"}
 Fläche S3 Integration:
+:::
+
+::: {.fragment .fade-in data-fragment-index="2"}
+:::{.absolute top=450 left=0}
+
+![](./assets/StatikDerFluide/Aufgabe_1b_small.png){width="30%" height="30%"}
+:::
 :::
 
 ::: {.fragment .fade-in}
