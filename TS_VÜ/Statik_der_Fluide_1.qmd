@@ -46,7 +46,7 @@ css: styles.css
 | Prüfungsaufgaben 2025F       | Mo. 21.07.2025 | 11:30–13:00   | V47.04  |
 
 
-## Live-Voting
+## Live Voting
 
 :::{.absolute top=100}
 https://ilias3.uni-stuttgart.de/vote/5TRI
@@ -92,6 +92,7 @@ https://ilias3.uni-stuttgart.de/vote/5TRI
 :::
 
 
+
 :::{.fragment .fade-in-then-out fragment-index=2}
 :::{.absolute top=350 left=50}
 
@@ -108,7 +109,7 @@ https://ilias3.uni-stuttgart.de/vote/5TRI
 :::
 :::
 
-:::{.fragment .fade-in-then-out}
+:::{.fragment .fade-in-then-out fragment-index=4}
 :::{.absolute top=350 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_01.png){width="80%" height="80%"}
@@ -116,7 +117,7 @@ https://ilias3.uni-stuttgart.de/vote/5TRI
 :::
 :::
 
-:::{.fragment .fade-in-then-out}
+:::{.fragment .fade-in-then-out fragment-index=5}
 :::{.absolute top=350 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_02.png){width="80%" height="80%"}
@@ -124,7 +125,7 @@ https://ilias3.uni-stuttgart.de/vote/5TRI
 :::
 :::
 
-:::{.fragment .fade-in-then-out}
+:::{.fragment .fade-in-then-out fragment-index=6}
 :::{.absolute top=350 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_03.png){width="80%" height="80%"}
@@ -135,7 +136,7 @@ https://ilias3.uni-stuttgart.de/vote/5TRI
 
 
 
-:::{.fragment .fade-in}
+:::{.fragment .fade-in fragment-index=7}
 :::{.absolute top=300 left=50}
 
 ![](./assets/StatikDerFluide/communicating_tubes.png){width="80%" height="80%"}
@@ -143,19 +144,23 @@ https://ilias3.uni-stuttgart.de/vote/5TRI
 :::
 :::
 
-:::{.fragment .center .fade-in}
+
+:::{.fragment .center .fade-in data-fragment-index="5"}
+:::{.absolute top=000 left=900}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
+:::
+:::
+
+
+
+
+:::{.fragment .center .fade-in fragment-index=7}
 :::{.absolute top=650 left=50}
 :::{.red-text}
-LIVE_VOTING: Wie verhält sich der Druck an den drei markierten Stellen?
+
+LIVE VOTING: Wie verhält sich der Druck an den drei markierten Stellen?
 $a) \ p_1 > p_2 = p_3 < p_4  \qquad b) \  p_1 > p_2 = p_3 = p_4 \qquad c) \  p_1 = p_2 = p_3 = p_4$
-:::
-:::
-:::
 
-
-:::{.fragment .fade-in}
-:::{.absolute top=350 left=00}
-:::{.red-text}
 :::
 :::
 :::
@@ -172,12 +177,18 @@ $a) \ p_1 > p_2 = p_3 < p_4  \qquad b) \  p_1 > p_2 = p_3 = p_4 \qquad c) \  p_1
 :::
 :::
 
+:::{.fragment .center .fade-in data-fragment-index="1"}
+:::{.absolute top=000 left=900}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
+:::
+:::
+
 
 :::{.fragment .fade-out data-fragment-index="5"}
 :::{.fragment .center .fade-in data-fragment-index="1"}
 :::{.absolute top=650 left=50}
 :::{.red-text}
-LIVE_VOTING: Welcher Druck herrscht an der markierten Stelle?
+LIVE VOTING: Welcher Druck herrscht an der markierten Stelle?
 $a) \ p = p_0 - \rho g h \qquad b) \  p = \rho g h\qquad c) \ p = p_0 + \rho g h$
 :::
 :::
@@ -187,7 +198,7 @@ $a) \ p = p_0 - \rho g h \qquad b) \  p = \rho g h\qquad c) \ p = p_0 + \rho g h
 :::{.fragment .center .fade-in data-fragment-index="5"}
 :::{.absolute top=650 left=50}
 :::{.red-text}
-LIVE_VOTING: Welcher Druck herrscht an der markierten Stelle?
+LIVE VOTING: Welcher Druck herrscht an der markierten Stelle?
 $a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \qquad c) \ p = p_0 + \rho g \left(h_2- h_1\right)$
 :::
 :::
@@ -261,11 +272,22 @@ $a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \
 :::
 :::
 
+
+
+:::{.fragment .center .fade-in-then-out data-fragment-index="1"}
+:::{.absolute top=000 left=900}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
+:::
+:::
+
+
+
+
 :::{.fragment .fade-in fragment-index=1}
 :::{.fragment .fade-out fragment-index=2}
 :::{.absolute top=370 left=50}
 :::{.red-text}
-LIVE_VOTING: Wie groß ist die Kraft, die durch den Druck auf die Fläche ausgeübt wird?
+LIVE VOTING: Wie groß ist die Kraft, die durch den Druck auf die Fläche ausgeübt wird?
 
 a) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 +\frac{2}{3} \rho g h \right) bh \end{equation}
 
@@ -277,7 +299,7 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 :::
 :::
 
-:::{.fragment .fade-in-then-out}
+:::{.fragment .fade-in-then-out fragment-index=2}
 :::{.absolute top=150 left=50}
 
 ![](./assets/StatikDerFluide/Druckkraft_03.png){width="80%" height="80%"}
