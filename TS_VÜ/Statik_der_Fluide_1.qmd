@@ -2,7 +2,7 @@
 title: "Vortragsübung Technische Strömungslehre"
 title-slide-attributes:
     data-background-image: ./assets/titel_la.png 
-    data-background-opacity: "0.8"
+    data-background-opacity: "0.6"
 author: "Tobias Rentschler"
 format: 
    revealjs:
@@ -11,7 +11,6 @@ format:
 css: styles.css  
 ---
 
-# Vortragsübung 1: Statik der Fluide
 
 # Organisation
 
@@ -57,8 +56,9 @@ https://ilias3.uni-stuttgart.de/vote/5TRI
 :::
 
 
+# Vortragsübung 1: Statik der Fluide
 
-## Grundbegriffe
+## Grundbegriffe Hydrostatik
 
 :::{.fragment .fade-in fragment-index=1}
 :::{.absolute top=50 left=00}
@@ -167,7 +167,7 @@ $a) \ p_1 > p_2 = p_3 < p_4  \qquad b) \  p_1 > p_2 = p_3 = p_4 \qquad c) \  p_1
 
 
 
-## Grundbegriffe
+## Grundbegriffe Hydrostatik
 - Druckverlauf: $p(h)$
 
 :::{.fragment .fade-out data-fragment-index="2"}
@@ -256,7 +256,7 @@ $a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \
 :::
 :::
 
-## Grundbegriffe
+## Grundbegriffe Hydrostatik
 
 - Druckkraft: $\vec{F} = -\int p\, d\vec{A} = -\int p\vec{n}\, dA$
    - Vektor => Richtungsabhängig
