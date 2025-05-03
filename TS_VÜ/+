@@ -45,32 +45,34 @@ css: styles.css
 | Prüfungsaufgaben 2025F       | Mo. 21.07.2025 | 11:30–13:00   | V47.04  |
 
 
-
-
-
 ## Live Voting
 
-<div style="display: flex; gap: 2rem; align-items: flex-start;">
+:::{.fragment .fade-in fragment-index=1}
+:::{.absolute top=50 left=00}
+:::{.incremental}
 
-<div style="width: 50%;">
+- Interaktivität in der Vortragsübung
+- Theorieblöcke durch Umfragen auflockern
+- Antwortmöglichkeiten direkt im Vortrag anzeigen
+- Erkennen von Verständnisproblemen in Echtzeit
+- Anonyme Beteiligung – keine falsche Scheu
 
-- Interaktivität in der Vortragsübung  
-- Theorieblöcke durch Umfragen auflockern  
-- Antwortmöglichkeiten direkt im Vortrag anzeigen  
-- Erkennen von Verständnisproblemen in Echtzeit  
-- Anonyme Beteiligung – keine falsche Scheu  
-- ![](./assets/StatikDerFluide/live_voting_ilias.png)
-</div>
-
-<div style="width: 50%;">
-
-- https://ilias3.uni-stuttgart.de/vote/5TRI
-- ![](./assets/StatikDerFluide/live_voting_qr.png)
-</div>
-
-</div>
+:::
+:::
+:::
 
 
+:::{.fragment .fade-in fragment-index=6}
+:::{.absolute top=400}
+https://ilias3.uni-stuttgart.de/vote/5TRI
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=6}
+:::{.absolute top=450}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="60%" height="60%"}
+:::
+:::
 
 # Vortragsübung 1: Statik der Fluide
 
