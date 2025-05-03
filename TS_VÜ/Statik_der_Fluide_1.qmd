@@ -149,10 +149,61 @@ css: styles.css
 :::
 :::
 
+:::{.fragment .fade-in-then-out fragment-index=7}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/hydrostatik_04.png){width="80%" height="80%"}
+
+:::
+:::
 
 
+:::{.fragment .fade-in-then-out fragment-index=8}
+:::{.absolute top=350 left=50}
 
-:::{.fragment .fade-in fragment-index=7}
+![](./assets/StatikDerFluide/hydrostatik_05.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=9}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/hydrostatik_06.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=10}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/hydrostatik_07.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=11}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/hydrostatik_08.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=12}
+:::{.absolute top=350 left=50}
+
+![](./assets/StatikDerFluide/hydrostatik_09.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=13}
 :::{.absolute top=300 left=50}
 
 ![](./assets/StatikDerFluide/communicating_tubes.png){width="80%" height="80%"}
