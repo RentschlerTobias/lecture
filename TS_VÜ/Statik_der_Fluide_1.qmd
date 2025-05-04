@@ -64,8 +64,9 @@ css: styles.css
 
 <div style="width: 50%;">
 
-- https://ilias3.uni-stuttgart.de/vote/5TRI
+- https://ilias3.uni-stuttgart.de/vote/J9TT
 - ![](./assets/StatikDerFluide/live_voting_qr.png)
+
 </div>
 
 </div>
@@ -202,8 +203,16 @@ css: styles.css
 :::
 :::
 
+:::{.fragment .fade-in-then-out fragment-index=13}
+:::{.absolute top=350 left=50}
 
-:::{.fragment .fade-in fragment-index=13}
+![](./assets/StatikDerFluide/hydrostatik_10.png){width="80%" height="80%"}
+
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=14}
 :::{.absolute top=300 left=50}
 
 ![](./assets/StatikDerFluide/communicating_tubes.png){width="80%" height="80%"}
@@ -212,7 +221,7 @@ css: styles.css
 :::
 
 
-:::{.fragment .center .fade-in data-fragment-index="5"}
+:::{.fragment .center .fade-in data-fragment-index="7"}
 :::{.absolute top=000 left=900}
 ![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
 :::
@@ -221,12 +230,12 @@ css: styles.css
 
 
 
-:::{.fragment .center .fade-in fragment-index=7}
+:::{.fragment .center .fade-in fragment-index=17}
 :::{.absolute top=650 left=50}
 :::{.red-text}
 
 LIVE VOTING: Wie verhält sich der Druck an den drei markierten Stellen?
-$a) \ p_1 > p_2 = p_3 < p_4  \qquad b) \  p_1 > p_2 = p_3 = p_4 \qquad c) \  p_1 = p_2 = p_3 = p_4$
+$a) \ p_1 > p_2 > p_3 > p_4  \qquad b) \  p_1 > p_2 = p_3 = p_4 \qquad c) \  p_1 = p_2 = p_3 = p_4$
 
 :::
 :::
@@ -244,25 +253,15 @@ $a) \ p_1 > p_2 = p_3 < p_4  \qquad b) \  p_1 > p_2 = p_3 = p_4 \qquad c) \  p_1
 :::
 :::
 
-:::{.fragment .center .fade-in data-fragment-index="1"}
+:::{.fragment .center .fade-in data-fragment-index="6"}
 :::{.absolute top=000 left=900}
 ![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
 :::
 :::
 
 
-:::{.fragment .fade-out data-fragment-index="5"}
-:::{.fragment .center .fade-in data-fragment-index="1"}
-:::{.absolute top=650 left=50}
-:::{.red-text}
-LIVE VOTING: Welcher Druck herrscht an der markierten Stelle?
-$a) \ p = p_0 - \rho g h \qquad b) \  p = \rho g h\qquad c) \ p = p_0 + \rho g h$
-:::
-:::
-:::
-:::
 
-:::{.fragment .center .fade-in data-fragment-index="5"}
+:::{.fragment .center .fade-in data-fragment-index="6"}
 :::{.absolute top=650 left=50}
 :::{.red-text}
 LIVE VOTING: Welcher Druck herrscht an der markierten Stelle?
@@ -293,21 +292,24 @@ $a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \
 :::
 :::
 
-:::{.fragment .fade-in-then-out data-fragment-index="5"}
+
+:::{.fragment .fade-in data-fragment-index="5"}
+:::{.fragment .fade-out data-fragment-index="7"}
 :::{.absolute top=150 left=50}
 
 ![](./assets/StatikDerFluide/druckverlauf_05.png)
 :::
 :::
+:::
 
-:::{.fragment .fade-in-then-out data-fragment-index="6"}
+:::{.fragment .fade-in-then-out data-fragment-index="7"}
 :::{.absolute top=150 left=50}
 
 ![](./assets/StatikDerFluide/druckverlauf_06.png)
 :::
 :::
 
-:::{.fragment .fade-in-then-out data-fragment-index="7"}
+:::{.fragment .fade-in-then-out data-fragment-index="8"}
 :::{.absolute top=150 left=50}
 
 ![](./assets/StatikDerFluide/druckverlauf_07.png)
@@ -315,7 +317,7 @@ $a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \
 :::
 :::
 
-:::{.fragment .fade-in data-fragment-index="8"}
+:::{.fragment .fade-in data-fragment-index="9"}
 :::{.absolute top=150 left=50}
 
 ![](./assets/StatikDerFluide/druckverlauf_08.png)
@@ -330,18 +332,26 @@ $a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \
 
 
 
-:::{.fragment .fade-in fragment-index=1}
-:::{.fragment .fade-out fragment-index=2}
+
+:::{.fragment .fade-in-then-out fragment-index=1}
 :::{.absolute top=150 left=50}
 
 ![](./assets/StatikDerFluide/Druckkraft_02.png){width="80%" height="80%"}
 :::
 :::
+
+
+:::{.fragment .fade-in fragment-index=2}
+:::{.fragment .fade-out fragment-index=4}
+:::{.absolute top=150 left=50}
+
+![](./assets/StatikDerFluide/Druckkraft_03.png){width="80%" height="80%"}
+
+:::
+:::
 :::
 
-
-
-:::{.fragment .center .fade-in-then-out data-fragment-index="1"}
+:::{.fragment .center .fade-in-then-out data-fragment-index="3"}
 :::{.absolute top=000 left=900}
 ![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
 :::
@@ -350,8 +360,7 @@ $a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \
 
 
 
-:::{.fragment .fade-in fragment-index=1}
-:::{.fragment .fade-out fragment-index=2}
+:::{.fragment .center .fade-in-then-out data-fragment-index="3"}
 :::{.absolute top=370 left=50}
 :::{.red-text}
 LIVE VOTING: Wie groß ist die Kraft, die durch den Druck auf die Fläche ausgeübt wird?
@@ -364,17 +373,9 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 :::
 :::
 :::
-:::
 
-:::{.fragment .fade-in-then-out fragment-index=2}
-:::{.absolute top=150 left=50}
 
-![](./assets/StatikDerFluide/Druckkraft_03.png){width="80%" height="80%"}
-
-:::
-:::
-
-:::{.fragment .fade-in-then-out}
+:::{.fragment .fade-in-then-out  data-fragment-index="4"}
 :::{.absolute top=150 left=50}
 
 ![](./assets/StatikDerFluide/Druckkraft_04.png){width="80%" height="80%"}
@@ -415,6 +416,9 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 
 :::
 :::
+
+
+# Aufgabe 1: Basiswissen
 
 # Aufgabe 1 a
 
@@ -497,13 +501,13 @@ $$ \vec{F} = -(p_o +\rho g \tilde{h}) \vec{A} = \begin{pmatrix} 1 \\ 0 \end{pmat
 # Aufgabe 1 b)
 
 
-::: {.fragment .fade-in-then-out data-fragment-index="1"}
-:::{.absolute top=100 left=0}
-
-![](./assets/StatikDerFluide/Aufgabe_1b_S2_live-voting.png){width="100%" height="100%"}
-:::
-:::
-
+<!-- ::: {.fragment .fade-in-then-out data-fragment-index="1"} -->
+<!-- :::{.absolute top=100 left=0} -->
+<!---->
+<!-- ![](./assets/StatikDerFluide/Aufgabe_1b_S2_live-voting.png){width="100%" height="100%"} -->
+<!-- ::: -->
+<!-- ::: -->
+<!---->
 
 
 ::: {.fragment .fade-in data-fragment-index="2"}
@@ -533,13 +537,13 @@ $$ \vec{F} = - \begin{pmatrix} 0 \\ 1 \end{pmatrix}\cdot  a^2  \cdot \left(p_o +
 
 # Aufgabe 1 b)
 
-::: {.fragment .fade-in-then-out data-fragment-index="1"}
-:::{.absolute top=100 left=0}
-
-![](./assets/StatikDerFluide/Aufgabe_1b_S3_live-voting.png){width="100%" height="100%"}
-:::
-:::
-
+<!-- ::: {.fragment .fade-in-then-out data-fragment-index="1"} -->
+<!-- :::{.absolute top=100 left=0} -->
+<!---->
+<!-- ![](./assets/StatikDerFluide/Aufgabe_1b_S3_live-voting.png){width="100%" height="100%"} -->
+<!-- ::: -->
+<!-- ::: -->
+<!---->
 
 ::: {.fragment .fade-in data-fragment-index="2"}
 Fläche S3 Integration:
@@ -553,7 +557,7 @@ Fläche S3 Integration:
 :::
 
 ::: {.fragment .fade-in}
-$$ \vec{F} = - \int_{A} p d\vec{A}= \begin{pmatrix} \sin(45°) \\ \cos(45°) \end{pmatrix} \int_{-(a+b)}^{-b} \left(p_0 - \rho g y \right) a \sqrt{2} dy $$
+$$ \vec{F} = - \int_{A} p d\vec{A}= - \begin{pmatrix} \sin(45°) \\ -\sin(45°) \end{pmatrix} \int_{-(a+b)}^{-b} \left(p_0 - \rho g y \right) a \sqrt{2} dy $$
 :::
 
 ::: {.fragment .fade-in}
@@ -565,7 +569,7 @@ Flächenschwerpunkt (mit $\tilde{h} = b +a/2$)
 :::
 
 ::: {.fragment .fade-in}
-$$ \vec{F} = -\left(p_0 - \rho g  \tilde{h}\right)\vec{A} =  \left(p_0 - \rho g  \tilde{h}\right)\vec{A} \begin{pmatrix} -\sin(45°) \\ \sin(45°) \end{pmatrix} \sqrt{2} a^2 $$
+$$ \vec{F} = -\left(p_0 - \rho g  \tilde{h}\right)\vec{A} =  \left(p_0 - \rho g  \tilde{h}\right) A \begin{pmatrix} -\sin(45°) \\ \sin(45°) \end{pmatrix} \sqrt{2} a^2 $$
 :::
 
 ::: {.fragment .fade-in}
@@ -588,7 +592,7 @@ $$  F_A =\sum{F_y} = F_{S2_y} + F_{S3y} $$
 :::
 
 ::: {.fragment .fade-in}
-$$  F_A =-a^2(p_0+\rho g b) +a^2 \left(p_0 +\rho g \left(b \frac{a}{2}\right)\right)$$
+$$  F_A =-a^2(p_0+\rho g b) +a^2 \left(p_0 +\rho g \left(b + \frac{a}{2}\right)\right)$$
 :::
 
 ::: {.fragment .fade-in}
@@ -614,8 +618,26 @@ $$  F_A = \rho_{\mathrm{Fluid}} g V =\frac{1}{2} a^2*a \rho_{\mathrm{Fluid}} g= 
 # Aufgabe 2 a)
 Wie groß ist das vom gesamten Schiff verdrängte Wasservolumen?
 
+:::{.fragment .fade-in fragment-index=1}
+:::{.fragment .fade-out fragment-index=3}
+:::{.absolute top=350 left=50}
 
-::: {.fragment .fade-in}
+![](./assets/StatikDerFluide/hydrostatik_a2_b_01.png){width="100%" height="100%"}
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=2}
+:::{.red-text}
+
+- a) $V_W = \frac{M}{\rho}$
+- b) $V_W = \frac{\rho}{M}$
+- c) $V_W = \frac{Mg}{\rho}$
+:::
+:::
+
+::: {.fragment .fade-in fragment-index=3}
 $V_W$: Berechnung über die Auftriebskraft
 :::
 
@@ -643,7 +665,7 @@ $V_W = \frac{M}{\rho}$
 # Aufgabe 2 b)
 
 :::{.fragment .fade-in fragment-index=1}
-:::{.fragment .fade-out fragment-index=2}
+:::{.fragment .fade-out fragment-index=3}
 :::{.absolute top=80 left=50}
 
 Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
@@ -652,8 +674,27 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 :::
 
+
 :::{.fragment .fade-in fragment-index=2}
 :::{.fragment .fade-out fragment-index=3}
+:::{.absolute top=130}
+
+:::{.red-text}
+
+- a) $\vec{F} = \begin{pmatrix} 0 \\ Mg \end{pmatrix}$
+- b) $\vec{F} = \begin{pmatrix} \rho g 3*h_1 L \\ Mg \end{pmatrix}$
+- c) $\vec{F} = \begin{pmatrix} 0 \\ \rho g (h_1+h_2) L \end{pmatrix}$
+
+
+:::
+:::
+:::
+:::
+
+
+
+:::{.fragment .fade-in fragment-index=3}
+:::{.fragment .fade-out fragment-index=4}
 :::{.absolute top=80 left=50}
 
 Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
@@ -709,16 +750,18 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 
 
 
-:::{.fragment .fade-in-then-out fragment-index=3}
-:::{.absolute top=350 left=50}
+:::{.fragment .fade-in fragment-index=1}
+:::{.fragment .fade-out fragment-index=4}
+:::{.absolute top=280 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_a2_b_01.png){width="100%" height="100%"}
 
 :::
 :::
+:::
 
 :::{.fragment .fade-in-then-out fragment-index=4}
-:::{.absolute top=350 left=50}
+:::{.absolute top=280 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_a2_b_02.png){width="100%" height="100%"}
 
@@ -727,7 +770,7 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 
 
 :::{.fragment .fade-in-then-out fragment-index=5}
-:::{.absolute top=350 left=50}
+:::{.absolute top=280 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_a2_b_03.png){width="100%" height="100%"}
 
@@ -735,7 +778,7 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 
 :::{.fragment .fade-in-then-out fragment-index=6}
-:::{.absolute top=350 left=50}
+:::{.absolute top=280 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_a2_b_04.png){width="100%" height="100%"}
 
@@ -743,7 +786,7 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 
 :::{.fragment .fade-in-then-out fragment-index=7}
-:::{.absolute top=350 left=50}
+:::{.absolute top=280 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_a2_b_05.png){width="100%" height="100%"}
 
@@ -751,7 +794,7 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 
 :::{.fragment .fade-in fragment-index=8}
-:::{.absolute top=350 left=50}
+:::{.absolute top=280 left=50}
 
 ![](./assets/StatikDerFluide/hydrostatik_a2_b_06.png){width="100%" height="100%"}
 
@@ -768,6 +811,44 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 - gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
 - Kontur: $y= \frac{x^3}{4h^2} -3 h_1$
 
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=2}
+:::{.fragment .fade-out fragment-index=3}
+:::{.absolute top=80 left=50}
+
+- gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
+- Kontur: $y= \frac{x^3}{4h^2} -3 h_1$
+- $F_x =  - \rho g \tilde{h} A_x$
+
+:::
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=3}
+:::{.fragment .fade-out fragment-index=4}
+:::{.absolute top=80 left=50}
+
+- gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
+- Kontur: $y= \frac{x^3}{4h^2} -3 h_1$
+- $F_x =  - \rho g \tilde{h} A_x = - \rho g \left(\frac{h_1+h_2}{2} \right)L\left(h_2-h_1\right)$
+
+:::
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=4}
+:::{.fragment .fade-out fragment-index=5}
+:::{.absolute top=80 left=50}
+
+- gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
+- Kontur: $y= \frac{x^3}{4h^2} -3 h_1$
+- $F_x =  - \rho g \tilde{h} A_x = - \rho g \left(\frac{h_1+h_2}{2} \right)L\left(h_2-h_1\right)$
+-  $F_x= - \rho g \frac{3h_1}{2}L_1h_1$ 
 :::
 :::
 :::
