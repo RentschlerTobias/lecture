@@ -805,7 +805,7 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 # Aufgabe 2 c)
 
 :::{.fragment .fade-in fragment-index=1}
-:::{.fragment .fade-out fragment-index=2}
+:::{.fragment .fade-out fragment-index=5}
 :::{.absolute top=80 left=50}
 
 - gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
@@ -815,8 +815,47 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 :::
 
+
+:::{.fragment .fade-in fragment-index=1}
+:::{.fragment .fade-out fragment-index=2}
+:::{.absolute top=280 left=50}
+
+![](./assets/StatikDerFluide/aufgabe_2c_01.png)
+:::
+:::
+:::
+
+
 :::{.fragment .fade-in fragment-index=2}
 :::{.fragment .fade-out fragment-index=3}
+:::{.absolute top=280 left=50}
+
+![](./assets/StatikDerFluide/aufgabe_2c_02.png)
+:::
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=3}
+:::{.fragment .fade-out fragment-index=4}
+:::{.absolute top=280 left=50}
+
+![](./assets/StatikDerFluide/aufgabe_2c_03.png)
+:::
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=4}
+:::{.absolute top=280 left=50}
+
+![](./assets/StatikDerFluide/aufgabe_2c_04.png)
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=5}
+:::{.fragment .fade-out fragment-index=6}
 :::{.absolute top=80 left=50}
 
 - gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
@@ -828,8 +867,9 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 
 
-:::{.fragment .fade-in fragment-index=3}
-:::{.fragment .fade-out fragment-index=4}
+
+:::{.fragment .fade-in fragment-index=6}
+:::{.fragment .fade-out fragment-index=7}
 :::{.absolute top=80 left=50}
 
 - gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
@@ -841,15 +881,28 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 
 
-:::{.fragment .fade-in fragment-index=4}
-:::{.fragment .fade-out fragment-index=5}
+:::{.fragment .fade-in fragment-index=7}
 :::{.absolute top=80 left=50}
 
 - gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
 - Kontur: $y= \frac{x^3}{4h^2} -3 h_1$
 - $F_x =  - \rho g \tilde{h} A_x = - \rho g \left(\frac{h_1+h_2}{2} \right)L\left(h_2-h_1\right)$
--  $F_x= - \rho g \frac{3h_1}{2}L_1h_1$ 
+-  $F_x= - \rho g \frac{3h_1}{2}Lh_1$ 
 :::
 :::
+
+
+# Aufgabe 2 c)
+
+
+:::{.fragment .fade-in fragment-index=7}
+:::{.absolute top=80 left=50}
+
+- gesucht: $F_x, F_y$ zwischen $y=-h_1$ und $y=-h_2$
+- Kontur: $y= \frac{x^3}{4h^2} -3 h_1$
+- $F_y =  - \rho g V_W = \rho g \left(\frac{h_1+h_2}{2} \right)L\left(h_2-h_1\right)$
+-  $F_x= - \rho g \frac{3h_1}{2}Lh_1$ 
 :::
+:::
+
 
