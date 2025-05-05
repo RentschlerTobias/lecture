@@ -33,3 +33,34 @@
 .red-text {
   color: red;
 }
+
+
+#title-slide {
+  color: #222 !important;
+}
+#title-slide h1 {
+  color: #222 !important;
+}
+
+#title-slide .author {
+  color: #222 !important;
+}
+
+#title-slide p {
+  color: #222 !important;
+}
+
+#title-slide::after {
+  content: '';
+  background-image: url('./assets/StatikDerFluide/live_voting_qr.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 200px;
+  left: 50%;           /* Positioniert den linken Rand bei 50% der Folienbreite */
+  transform: translateX(-50%); /* Verschiebt das Element um die Hälfte seiner Breite nach links */
+  z-index: 10;
+}

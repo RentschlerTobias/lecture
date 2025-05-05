@@ -1,14 +1,15 @@
 ---
 title: "Vortragsübung Technische Strömungslehre"
 title-slide-attributes:
-    data-background-image: ./assets/titel_la.png 
-    data-background-opacity: "0.6"
+   data-background-image: ./assets/titel_la.png 
+   data-background-opacity: "0.8"
 author: "Tobias Rentschler"
 format: 
    revealjs:
       theme: solarized 
       chalkboard: true
 css: styles.css  
+
 ---
 
 
@@ -19,7 +20,6 @@ css: styles.css
    - Diskussionsforum
    - Online-Sprechstunde
       - sprechstunde@ihs.uni-stuttgart.de
-   - Aufzeichnungen früherer Vortragsübungen
 
 - 10 Vortragsübungen
    - Verantwortlich: Frau Ma und Herr Rentschler
@@ -75,6 +75,13 @@ css: styles.css
 
 # Vortragsübung 1: Statik der Fluide
 
+## Übersicht Theorieblock
+
+- Statik
+- Druck
+- Druckverlauf
+- Druckkraft
+
 ## Grundbegriffe Hydrostatik
 
 :::{.fragment .fade-in fragment-index=1}
@@ -82,7 +89,7 @@ css: styles.css
 
 - Statik: 
    - $\sum{\vec{F}} = m \cdot \vec{a} = \frac{\partial \left(m \vec{v}\right)}{\partial t} \stackrel{!}{=} 0$
-      - Keine relative bewegung zwischen den Fluidteilchen 
+      - Keine relative Bewegung zwischen den Fluidteilchen 
 
 :::
 :::
@@ -420,7 +427,7 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 
 # Aufgabe 1: Basiswissen
 
-# Aufgabe 1 a
+## Aufgabe 1 a)
 
 
 ::: {.fragment .fade-in-then-out data-fragment-index="1"}
@@ -449,7 +456,7 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 
 
 
-# Aufgabe 1 b)
+## Aufgabe 1 b)
 
 ::: {.fragment .fade-in-then-out data-fragment-index="1"}
 :::{.absolute top=100 left=0}
@@ -498,7 +505,7 @@ $$ \vec{F} = -(p_o +\rho g \tilde{h}) \vec{A} = \begin{pmatrix} 1 \\ 0 \end{pmat
 :::
 
 
-# Aufgabe 1 b)
+## Aufgabe 1 b)
 
 
 <!-- ::: {.fragment .fade-in-then-out data-fragment-index="1"} -->
@@ -535,7 +542,7 @@ $$ \vec{F} = - \begin{pmatrix} 0 \\ 1 \end{pmatrix}\cdot  a^2  \cdot \left(p_o +
 :::
 
 
-# Aufgabe 1 b)
+## Aufgabe 1 b)
 
 <!-- ::: {.fragment .fade-in-then-out data-fragment-index="1"} -->
 <!-- :::{.absolute top=100 left=0} -->
@@ -577,7 +584,7 @@ $$ \vec{F} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}a^2  \left(p_0 - \rho g  \left
 :::
 
 
-# Aufgabe 1 c)
+## Aufgabe 1 c)
 
 ::: {.fragment .fade-in}
 Berechnen Sie die Auftriebskraft des Teilkörpers anhand der Druckkräfte.
@@ -600,7 +607,7 @@ $$  F_A =\rho g \frac{a^3}{2}$$
 :::
 
 
-# Aufgabe 1 d)
+## Aufgabe 1 d)
 
 ::: {.fragment .fade-in}
 Berechnen Sie die Auftriebskraft des Teilkörpers anhand des verdrängten Volumens.
@@ -615,7 +622,9 @@ $$  F_A = \rho_{\mathrm{Fluid}} g V =\frac{1}{2} a^2*a \rho_{\mathrm{Fluid}} g= 
 :::
 
 
-# Aufgabe 2 a)
+# Aufgabe 2: Auszüge aus Altklausur 
+
+## Aufgabe 2 a)
 Wie groß ist das vom gesamten Schiff verdrängte Wasservolumen?
 
 :::{.fragment .fade-in fragment-index=1}
@@ -625,7 +634,7 @@ Wie groß ist das vom gesamten Schiff verdrängte Wasservolumen?
 ![](./assets/StatikDerFluide/hydrostatik_a2_b_01.png){width="100%" height="100%"}
 
 :::
-:::
+::: 
 :::
 
 :::{.fragment .fade-in fragment-index=2}
@@ -670,7 +679,7 @@ $V_W \rho= M$
 $V_W = \frac{M}{\rho}$
 :::
 
-# Aufgabe 2 b)
+## Aufgabe 2 b)
 
 :::{.fragment .fade-in fragment-index=1}
 :::{.fragment .fade-out fragment-index=3}
@@ -820,7 +829,7 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 
 
-# Aufgabe 2 c)
+## Aufgabe 2 c)
 
 :::{.fragment .fade-in fragment-index=1}
 :::{.fragment .fade-out fragment-index=5}
@@ -920,7 +929,7 @@ Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.
 :::
 
 
-# Aufgabe 2 c)
+## Aufgabe 2 c)
 
 
 :::{.fragment .fade-in fragment-index=1}
