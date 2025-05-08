@@ -1,0 +1,112 @@
+---
+title: "Vortragsübung Technische Strömungslehre"
+title-slide-attributes:
+   data-background-image: ./assets/titel_la.png 
+   data-background-opacity: "0.8"
+author: "Tobias Rentschler"
+format: 
+   revealjs:
+      theme: solarized 
+      chalkboard: true
+css: styles.css  
+
+---
+
+# Statik der Fluide - Teil 2
+
+
+## Grundbegriffe 
+
+Kraftangriffspunkt
+
+
+
+:::{.fragment .fade-in fragment-index=1}
+:::{.fragment .fade-out fragment-index=2}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_01.png)
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=2}
+:::{.fragment .fade-out fragment-index=3}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_02.png)
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=3}
+:::{.fragment .fade-out fragment-index=4}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_03.png)
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=4}
+:::{.fragment .fade-out fragment-index=5}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_04.png)
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=5}
+:::{.fragment .fade-out fragment-index=6}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_05.png)
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=6}
+:::{.fragment .fade-out fragment-index=7}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_06.png)
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=7}
+:::{.fragment .fade-out fragment-index=8}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_07.png)
+
+:::
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=8}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_08.png)
+
+:::
+:::
+
+:::{.fragment .fade-in fragment-index=9}
+:::{.absolute bottom=0 left=00}
+
+   - $p_0$: Umgebungsdruck 
+   - $p_G$: Druck im Flächenschwerpunkt
+   - $\left(\tilde{x} / \tilde{y}\right)$: Koordinaten Flächenschwerpunkt
+   - $\theta$: Neigungswinkel der Fläche
+   - $I_{xx},I_{xy}$ Flächenträgheitsmoment
+
+:::
+:::
