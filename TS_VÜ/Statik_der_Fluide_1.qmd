@@ -464,7 +464,7 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 ## Aufgabe 1 a)
 
 
-::: {.fragment .fade-in-then data-fragment-index="1"}
+::: {.fragment .fade-in-then-out data-fragment-index="1"}
 :::{.absolute top=100 left=0}
 
 ![](./assets/StatikDerFluide/Aufgabe_1a.png)
@@ -472,7 +472,7 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 :::
 :::
 
-::: {.fragment .fade-in data-fragment-index="2"}
+::: {.fragment .fade-in-then-out data-fragment-index="2"}
 :::{.absolute top=100 left=0}
 
 ![](./assets/StatikDerFluide/Aufgabe_1a_live-voting_v2.png)
@@ -481,7 +481,7 @@ c) \begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \
 
 
 
-:::{.fragment .center .fade-in-then-out data-fragment-index="2"}
+:::{.fragment .center .fade-in data-fragment-index="2"}
 :::{.absolute top=000 left=900}
 ![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
 :::

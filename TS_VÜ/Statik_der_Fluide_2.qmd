@@ -36,7 +36,6 @@ Kraftangriffspunkt
 :::{.absolute top=70 left=00}
 
 ![](./assets/StatikDerFluide2/druckangriffspunkt_02.png)
-
 :::
 :::
 :::
@@ -91,15 +90,27 @@ Kraftangriffspunkt
 :::
 :::
 
+
 :::{.fragment .fade-in fragment-index=8}
+:::{.fragment .fade-out fragment-index=9}
 :::{.absolute top=70 left=00}
 
 ![](./assets/StatikDerFluide2/druckangriffspunkt_08.png)
 
 :::
 :::
+:::
 
 :::{.fragment .fade-in fragment-index=9}
+:::{.absolute top=70 left=00}
+
+![](./assets/StatikDerFluide2/druckangriffspunkt_09.png)
+
+:::
+:::
+
+
+:::{.fragment .fade-in fragment-index=10}
 :::{.absolute bottom=0 left=00}
 
    - $p_0$: Umgebungsdruck 
@@ -163,8 +174,14 @@ Kraftangriffspunkt
 :::{.fragment .fade-in-then-out fragment-index=6}
 :::{.absolute top=70 left=00}
 
-![](./assets/StatikDerFluide2/Aufgabe_3_06.png)
+![](./assets/StatikDerFluide2/Aufgabe_3_F1_voting.png)
 
+:::
+:::
+
+:::{.fragment .center .fade-in-then-out data-fragment-index="6"}
+:::{.absolute top=000 left=900}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
 :::
 :::
 
@@ -172,7 +189,7 @@ Kraftangriffspunkt
 :::{.fragment .fade-in-then-out fragment-index=7}
 :::{.absolute top=70 left=00}
 
-![](./assets/StatikDerFluide2/Aufgabe_3_07.png)
+![](./assets/StatikDerFluide2/Aufgabe_3_06.png)
 
 :::
 :::
@@ -181,13 +198,22 @@ Kraftangriffspunkt
 :::{.fragment .fade-in-then-out fragment-index=8}
 :::{.absolute top=70 left=00}
 
+![](./assets/StatikDerFluide2/Aufgabe_3_07.png)
+
+:::
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=9}
+:::{.absolute top=70 left=00}
+
 ![](./assets/StatikDerFluide2/Aufgabe_3_08.png)
 
 :::
 :::
 
 
-:::{.fragment .fade-in fragment-index=9}
+:::{.fragment .fade-in fragment-index=10}
 :::{.absolute top=70 left=00}
 
 ![](./assets/StatikDerFluide2/Aufgabe_3_09.png)
@@ -361,7 +387,15 @@ Kraftangriffspunkt
 - $M = \rho g b \left( L_1^2 \left(\frac{H}{2} + \frac{L_1}{3} \right) -L_2^2 \left(\frac{H}{2}-\frac{L_2\sin{\alpha}}{3}\right)\right)$
 - $\sum{M}<0$
 - $L_2 = 2L_1; \qquad \alpha = 30°; \qquad \sin{\alpha} = 0.5$
-- => $\sum{M}<0$ bei $H> \frac{10}{9}L_1$ 
+
+:::{.red-text}
+
+- Voting: a) $H < \frac{10}{9} \qquad$    b) $H > \frac{10}{9} \qquad$ 
+- ![](./assets/StatikDerFluide/live_voting_qr.png){width="30%" height="30%"}
+
+:::
+
+- Korrekte Antwort: b) => $\sum{M}<0$ bei $H> \frac{10}{9}L_1$ 
 
 :::
 
@@ -409,6 +443,15 @@ Kraftangriffspunkt
 
 :::
 :::
+
+
+:::{.fragment  .fade-in-then-out data-fragment-index="6"}
+:::{.absolute bottom=000 left=900}
+![](./assets/StatikDerFluide/live_voting_qr.png){width="90%" height="90%"}
+:::
+:::
+
+
 
 :::{.fragment .fade-in-then-out fragment-index=6}
 :::{.absolute top=70 left=00}
