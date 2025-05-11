@@ -390,7 +390,7 @@ Kraftangriffspunkt
 
 :::{.red-text}
 
-- Voting: a) $H < \frac{10}{9} \qquad$    b) $H > \frac{10}{9} \qquad$ 
+- Voting: a) $H > \frac{10}{6} \qquad$    b) $H > \frac{10}{9} \qquad$ 
 - ![](./assets/StatikDerFluide/live_voting_qr.png){width="30%" height="30%"}
 
 :::
