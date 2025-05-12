@@ -60,37 +60,6 @@ Kraftangriffspunkt
 :::
 :::
 
-:::{.fragment .fade-in fragment-index=5}
-:::{.fragment .fade-out fragment-index=6}
-:::{.absolute top=70 left=00}
-
-![](./assets/StatikDerFluide2/druckangriffspunkt_05.png)
-
-:::
-:::
-:::
-
-:::{.fragment .fade-in fragment-index=6}
-:::{.fragment .fade-out fragment-index=7}
-:::{.absolute top=70 left=00}
-
-![](./assets/StatikDerFluide2/druckangriffspunkt_06.png)
-
-:::
-:::
-:::
-
-:::{.fragment .fade-in fragment-index=7}
-:::{.fragment .fade-out fragment-index=8}
-:::{.absolute top=70 left=00}
-
-![](./assets/StatikDerFluide2/druckangriffspunkt_07.png)
-
-:::
-:::
-:::
-
-
 :::{.fragment .fade-in fragment-index=8}
 :::{.fragment .fade-out fragment-index=9}
 :::{.absolute top=70 left=00}
@@ -111,7 +80,7 @@ Kraftangriffspunkt
 
 
 :::{.fragment .fade-in fragment-index=10}
-:::{.absolute bottom=0 left=00}
+:::{.absolute bottom=10 left=00}
 
    - $p_0$: Umgebungsdruck 
    - $p_G$: Druck im Flächenschwerpunkt
