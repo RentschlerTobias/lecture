@@ -604,7 +604,7 @@ Kraftangriffspunkt
 - =>$p_0$ hat keinen Einfluss auf $F_A$
 
 
-# Aufgabe 5: (Expertenwissen)
+# Aufgabe 5: (Prüfungsniveau)
 
 ## Aufgabe 5: Vorbermerkung
 
