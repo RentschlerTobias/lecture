@@ -606,7 +606,7 @@ $$ \vec{F} = - \int_{A} p d\vec{A}= - \begin{pmatrix} \sin(45°) \\ -\sin(45°) 
 :::
 
 ::: {.fragment .fade-in}
-$$ \vec{F} =  \begin{pmatrix} -1 \\ 1 \end{pmatrix}a^2  \left(p_0 - \rho g  \left(b+\frac{a}{2}\right)\right)  $$
+$$ \vec{F} =  \begin{pmatrix} -1 \\ 1 \end{pmatrix}a^2  \left(p_0 + \rho g  \left(b+\frac{a}{2}\right)\right)  $$
 :::
 
 ::: {.fragment .fade-in}
@@ -618,7 +618,7 @@ $$ \vec{F} = -\left(p_0 - \rho g  \tilde{h}\right)\vec{A} =  \left(p_0 - \rho g 
 :::
 
 ::: {.fragment .fade-in}
-$$ \vec{F} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}a^2  \left(p_0 - \rho g  \left(b+\frac{a}{2}\right)\right) $$
+$$ \vec{F} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}a^2  \left(p_0 + \rho g  \left(b+\frac{a}{2}\right)\right) $$
 :::
 
 
