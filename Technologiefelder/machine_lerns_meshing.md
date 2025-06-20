@@ -165,12 +165,12 @@ $$`
   <img
           class="fragment fade-in-then-out"
           src="./assets/delaunay_angle_maximization_01.jpg"
-          data-fragment-index="4"
+          data-fragment-index="5"
         />
   <img
           class="fragment fade-in-then-out"
           src="./assets/delaunay_angle_maximization_02.jpg"
-          data-fragment-index="5"
+          data-fragment-index="6"
         />
 </div>
 </div>
@@ -178,14 +178,25 @@ $$`
     <div class="r-stack">
     <img
         class="fragment fade-in-then-out"
-        src="./assets/delaunay_triangulation_01.png"
+        src="./assets/delaunay_triangulation_00.png"
         data-fragment-index="1"
       />
-<img
-        class="fragment fade-in"
-        src="./assets/delaunay_triangulation_02.png"
+    <img
+        class="fragment fade-in-then-out"
+        src="./assets/delaunay_triangulation_01.png"
         data-fragment-index="2"
       />
+    <img
+        class="fragment fade-in"
+        src="./assets/delaunay_triangulation_02.png"
+        data-fragment-index="3"
+      />
+    <img
+        class="fragment fade-in"
+        src="./assets/delaunay_triangulation_03.png"
+        data-fragment-index="4"
+      />
+
 </div>
 
 </div>

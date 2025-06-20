@@ -68,16 +68,18 @@ class BowyerWatsonVisualization(Scene):
                 a, b, c = triangle
                 cc_center, cc_radius = self.get_circumcircle(a, b, c)
                 circle_center_point = axes.coords_to_point(*cc_center)
-                # Transform circumcircle radius to the screen space
-                x_unit_length = axes.x_length / (axes.x_range[1] - axes.x_range[0])
-                y_unit_length = axes.y_length / (axes.y_range[1] - axes.y_range[0])
-                average_unit_length = (x_unit_length + y_unit_length) / 2
 
+
+                center_point = axes.coords_to_point(*cc_center)
+                edge_point_data = [cc_center[0] + cc_radius, cc_center[1]]
+                edge_point = axes.coords_to_point(*edge_point_data)
+                radius_pixels = np.linalg.norm(np.array(edge_point) - np.array(center_point))
+            
                 circumcircle = Circle(
-                radius=cc_radius * average_unit_length,
-                color=GREEN,
-                stroke_opacity=0.5,
-                ).move_to(circle_center_point)
+                    radius=radius_pixels,
+                    color=GREEN,
+                    stroke_opacity=0.5,
+                ).move_to(center_point)
                 self.play(Create(circumcircle), run_time=0.3)
 
                 dist = np.linalg.norm(np.array(point) - np.array(cc_center))
