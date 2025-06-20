@@ -147,9 +147,18 @@ $$`
 </div>
 
 
+## Why do we need a Mesh?
+
+- Direct particle simulation is impossible due to the enormous number of molecules.
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- The continuous governing equations (Navier-Stokes) cannot be solved analytically for complex geometries.
+<!-- .element: class="fragment" data-fragment-index="2"-->
+- A mesh discretizes the domain into small control volumes where conservation laws are applied.
+<!-- .element: class="fragment" data-fragment-index="3"-->
+
+
 
 ## Triangulated Mesh
-
 
 ### Delaunay Triangulation
 
@@ -363,6 +372,13 @@ function BowyerWatson(pointList)
 </div>
 
 
+## What is a Delaunay triangulation?
+- A Delaunay triangulation connects points to form triangles where no point lies inside any triangle's circumcircle.
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- This maximizes the minimum angle and minimizes the maximum angle of all triangles. 
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+
 
 ## Quadrilateral Mesh 
 
@@ -480,51 +496,13 @@ function BowyerWatson(pointList)
   </div>
 
 
-## Cross Fields for Quadrilateral Meshes
-### Introduction 
-<div id = "right">
-  <div class = "r-stack">
-    <img
-      class = "fragment fade-in-then-out"
-      src = "./assets/cross-field_01.png"
-      data-fragment-index = "0"
-      />
-    <img
-      class = "fragment fade-in-then-out"
-      src = "./assets/cross-field_02.png"
-      data-fragment-index = "1"
-      />
-     <img
-      class = "fragment fade-in-then-out"
-      src = "./assets/cross-field_03.png"
-      data-fragment-index = "2"
-      />
-     <img
-      class = "fragment fade-in-then-out"
-      src = "./assets/cross-field_04.png"
-      data-fragment-index = "3"
-      />
-     <img
-      class = "fragment fade-in-then-out"
-      src = "./assets/cross-field_05.png"
-      data-fragment-index = "4"
-      />
-  </div>
-</div>
+## Indirect Meshing
+### Triangulation and Recombination
 
-<div id = "left">
-
-- Define Geometry.
-<!-- .element: class="fragment" data-fragment-index="0" -->
-- Assume a Quadrilateral Mesh Structure.
-<!-- .element: class="fragment" data-fragment-index="1" -->
-- Abstract Mesh: Nodes as Line Intersections.
-<!-- .element: class="fragment" data-fragment-index="2" -->
-- Abstract Mesh: At Each Node Four Orthogonal Vectors.
-<!-- .element: class="fragment" data-fragment-index="3" -->
-- Crosses Known Along the Boundary.
-  <!-- .element: class="fragment" data-fragment-index="4"-->
-</div>
+<img
+ src = "./assets/domain_partition_v2/csme_motivation_06.png"
+ height = "550"
+ />
 
 
 ## Cross Fields for Quadrilateral Meshes
@@ -533,42 +511,78 @@ function BowyerWatson(pointList)
 <div id ="left">
 
 - Calculate Normal and Tangent Vectors Along the Boundary.
-<!-- .element: class="fragment" data-fragment-index="0"-->
-- Simplify Cross-Field to Frame-Field
 <!-- .element: class="fragment" data-fragment-index="1"-->
- <img
-     class = "fragment fade-in"
-     src   = "./assets/cross-field_06.png"
-     data-fragment-index = "1"
-     />
-- Propagate Information from Boundary to the domain's interior. 
+- Simplify Cross-Field to Frame-Field
 <!-- .element: class="fragment" data-fragment-index="2"-->
-- Mapping Frame-Field to Cross-Field. 
+- Propagate Information from Boundary to the domain's interior. 
 <!-- .element: class="fragment" data-fragment-index="3"-->
+- Get Singularities 
+<!-- .element: class="fragment" data-fragment-index="4"-->
+- Mapping Frame-Field to Cross-Field. 
+<!-- .element: class="fragment" data-fragment-index="5"-->
+- Generate Separatrices. 
+<!-- .element: class="fragment" data-fragment-index="6"-->
+- Streamline Integration
+<!-- .element: class="fragment" data-fragment-index="7"-->
+- Transfinite Interpolation 
+<!-- .element: class="fragment" data-fragment-index="9"-->
 </div>
 
 <div id = "right">
   <div class = "r-stack">
     <img
      class = "fragment fade-in-then-out"
-     src = "./assets/domain_partition_01.png"
+     src = "./assets/domain_partition_v2/domain_partition_00.png"
      data-fragment-index = "0"
      />
     <img
      class = "fragment fade-in-then-out"
-     src = "./assets/domain_partition_02.png"
+     src = "./assets/domain_partition_v2/domain_partition_01.png"
      data-fragment-index = "1"
      />
     <img
      class = "fragment fade-in-then-out"
-     src = "./assets/domain_partition_03.png"
+     src = "./assets/domain_partition_v2/domain_partition_02.png"
      data-fragment-index = "2"
      />
     <img
      class = "fragment fade-in-then-out"
-     src = "./assets/domain_partition_04.png"
+     src = "./assets/domain_partition_v2/domain_partition_03.png"
      data-fragment-index = "3"
      />
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_v2/domain_partition_04.png"
+     data-fragment-index = "4"
+     />
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_v2/domain_partition_05.png"
+     data-fragment-index = "5"
+     />
+    <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_v2/domain_partition_06.png"
+     data-fragment-index = "6"
+     />
+      <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_v2/domain_partition_07.png"
+     data-fragment-index = "7"
+     />
+
+   <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_v2/domain_partition_08.png"
+     data-fragment-index = "8"
+     />
+
+   <img
+     class = "fragment fade-in-then-out"
+     src = "./assets/domain_partition_v2/domain_partition_09.png"
+     data-fragment-index = "9"
+     />
+
   </div>
 </div>
 
@@ -611,6 +625,21 @@ function BowyerWatson(pointList)
        />
  </div>
 </div>
+
+
+### What are the advantages and disadvantages of indirect quad mesh generation and the direct cross-field based method?
+
+Indirect (Triangulation + Recombination):
+- Advantage: Fast and robust - always produces a valid mesh for any geometry
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- Disadvantage: Poor element quality due to irregular quad shapes from recombination
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+Direct (Cross-field + Transfinite Interpolation):
+- Advantage: High-quality, well-aligned quad elements with good aspect ratios
+<!-- .element: class="fragment" data-fragment-index="3"-->
+- Disadvantage: Complex implementation and can fail on difficult geometries
+<!-- .element: class="fragment" data-fragment-index="4"-->
 
 
 
@@ -1129,6 +1158,13 @@ function BowyerWatson(pointList)
   </div>
 
 </div>
+
+
+### Why use GNNs instead of NNs for mesh data?
+- CNNs work on structured, regular grids with fixed neighborhoods.
+<!-- .element: class="fragment" data-fragment-index="1"-->
+- GNNs handle unstructured mesh data where each node has irregular, varying connectivity patterns.
+<!-- .element: class="fragment" data-fragment-index="2"-->
 
 
 
