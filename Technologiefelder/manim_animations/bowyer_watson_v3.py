@@ -17,7 +17,7 @@ class BowyerWatsonVisualization(Scene):
         self.wait(1)
 
         # Generate random points in [0, 1] x [0, 1]
-        num_points = 4  # You can change the number of points here
+        num_points = 8  # You can change the number of points here
         point_array = np.random.rand(num_points, 2)
         point_list = point_array.tolist()
 
