@@ -335,26 +335,6 @@ function BowyerWatson(pointList)
         src="./assets/bowyer_watson_15.jpg"
         data-fragment-index="15"
       />
-<img
-        class="fragment fade-in-then-out"
-        src="./assets/bowyer_watson_16.jpg"
-        data-fragment-index="16"
-      />
-<img
-        class="fragment fade-in-then-out"
-        src="./assets/bowyer_watson_17.jpg"
-        data-fragment-index="17"
-      />
-<img
-        class="fragment fade-in-then-out"
-        src="./assets/bowyer_watson_18.jpg"
-        data-fragment-index="18"
-      />
-<img
-        class="fragment fade-in-then-out"
-        src="./assets/bowyer_watson_19.jpg"
-        data-fragment-index="19"
-      />
   </div>
   </div>
 
@@ -365,7 +345,7 @@ function BowyerWatson(pointList)
     class="fragment fade-in"
     autoplay
     controls
-    src="./assets/BowyerWatsonVisualization_14_nodes_white_bg.mp4"
+    src="./assets/BowyerWatsonVisualization.mp4"
     data-fragment-index="1"
     height = "500"
   >
