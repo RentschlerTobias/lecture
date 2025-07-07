@@ -1,0 +1,19 @@
+---
+title: "Vortragsübung Technische Strömungslehre"
+title-slide-attributes:
+   data-background-image: ./assets/titel_la.png 
+   data-background-opacity: "0.8"
+author: "Tobias Rentschler"
+format: 
+   revealjs:
+      theme: solarized 
+      chalkboard: true
+css: styles.css  
+
+---
+
+# Differntialgleichung im Spalt
+
+## Vorbemerkungen zu DGL im Spalt
+
+
