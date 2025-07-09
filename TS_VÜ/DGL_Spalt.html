@@ -148,6 +148,146 @@ Tobias Rentschler
 </section>
 <section id="vorbemerkungen-zu-dgl-im-spalt" class="slide level2">
 <h2>Vorbemerkungen zu DGL im Spalt</h2>
+<p><em>Spaltströmungen:</em></p>
+<ul>
+<li class="fragment"><p>Turbulent:</p>
+<ul>
+<li class="fragment"><img data-src="./assets/DGL_Spalt/turbulent_flow.png"></li>
+<li class="fragment">Bewegungen quer zur Hauptströmung</li>
+</ul></li>
+<li class="fragment"><p>Laminar:</p>
+<ul>
+<li class="fragment"><img data-src="./assets/DGL_Spalt/laminar_flow.png"></li>
+<li class="fragment">Keine Bewergungen quer zur Hauptströmung</li>
+</ul></li>
+<li class="fragment"><p>Voll ausgebildet: Keine Änderung der Strömung in Strömungsrichtung</p></li>
+<li class="fragment"><p>2D - Strömung</p></li>
+<li class="fragment"><p>Viskosität: Zähigkeit eines Fluids</p>
+<ul>
+<li class="fragment">dynamische Viskosität: <span class="math inline">\(\mu \left[ \frac{kg}{ms}\right]\)</span></li>
+<li class="fragment">kinematische Viskosität: <span class="math inline">\(\upsilon \left[ \frac{m²}{s}\right]\)</span></li>
+<li class="fragment"><span class="math inline">\(\mu = \rho \cdot \upsilon\)</span></li>
+</ul></li>
+<li class="fragment"><p>Newton’sches Fluid: linear viskoses Fließverhalten</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\tau = \mu \frac{\partial u}{\partial y}\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="vorbemerkungen-zu-dgl-im-spalt-1" class="slide level2">
+<h2>Vorbemerkungen zu DGL im Spalt</h2>
+<p><em>DGL einer stationären, inkompressiblen 2D-Spaltströmung</em></p>
+<ul>
+<li class="fragment">Massenbilanz: <span class="math inline">\(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y} = 0\)</span></li>
+<li class="fragment">Impulsbilanz:
+<ul>
+<li class="fragment"><span class="math inline">\(x\)</span>-Richtung: <span class="math inline">\(\rho \left(u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} \right) = \rho g_x - \frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right)\)</span></li>
+<li class="fragment"><span class="math inline">\(y\)</span>-Richtung: <span class="math inline">\(\rho \left(u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} \right) = \rho g_y - \frac{\partial p}{\partial y} + \mu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)\)</span></li>
+</ul></li>
+<li class="fragment">Laminar: <span class="math inline">\(v=0 =&gt; \frac{\partial v}{\partial y} = 0 =&gt; \frac{\partial u}{\partial x}= 0\)</span></li>
+<li class="fragment">Hydrostatische Druckverteilung
+<ul>
+<li class="fragment"><img data-src="./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png" style="width:40.0%"></li>
+<li class="fragment"><span class="math inline">\(x\)</span>- Richtung: <span class="math inline">\(- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0\)</span></li>
+<li class="fragment"><span class="math inline">\(y\)</span>- Richtung: <span class="math inline">\(\rho g_y = \frac{dp}{dy}\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="beiblatt-differentialgleichungen" class="slide level2">
+<h2>Beiblatt Differentialgleichungen</h2>
+<p><em>Bestimmung des Vorzeichens der aus der Schubspannung resultierenden Kraft vom Körper auf das Fluid</em></p>
+
+<img data-src="./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png" style="width:50.0%" class="r-stretch"><ul>
+<li class="fragment">Annahmen:
+<ul>
+<li class="fragment">Die Strömung ist stationär, laminar und voll ausgebildet.</li>
+</ul></li>
+<li class="fragment">Möglichkeit 1: Bestimmung des Vorzeichens aus der Anschauung:
+<ul>
+<li class="fragment">Das Fluid wird an den Stellen <span class="math inline">\(y = 0\)</span> und <span class="math inline">\(y = b\)</span> abgebremst.</li>
+<li class="fragment">=&gt; Es muss eine Kraft auf das Fluid in negativer Richtung wirken.</li>
+</ul></li>
+</ul>
+</section>
+<section id="beiblatt-differentialgleichungen-1" class="slide level2">
+<h2>Beiblatt Differentialgleichungen</h2>
+<p><em>Bestimmung des Vorzeichens der aus der Schubspannung resultierenden Kraft vom Körper auf das Fluid</em></p>
+<p><img data-src="./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png" class="absolute" style="bottom: 0px; right: 0px; width: 30%; "></p>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="absolute" style="top: 120px; left: 50px; ">
+<p>Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
+<ul>
+<li><span class="math inline">\(F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} &amp; \tau_{xy} \\ \tau_{yx} &amp; \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS\)</span></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="absolute" style="top: 120px; left: 50px; ">
+<p>Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} &amp; \tau_{xy} \\ \tau_{yx} &amp; \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS\)</span></p></li>
+<li><p><span class="math inline">\(= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS\)</span></p></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<div class="absolute" style="top: 120px; left: 50px; ">
+<p>Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} &amp; \tau_{xy} \\ \tau_{yx} &amp; \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS\)</span></p></li>
+<li><p><span class="math inline">\(= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS\)</span></p>
+<ul>
+<li><span class="math inline">\(\text{mit } n_x = 0:\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<div class="absolute" style="top: 120px; left: 50px; ">
+<p>Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} &amp; \tau_{xy} \\ \tau_{yx} &amp; \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS\)</span></p></li>
+<li><p><span class="math inline">\(= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS\)</span></p>
+<ul>
+<li><span class="math inline">\(\text{mit } n_x = 0:\)</span></li>
+</ul></li>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \begin{pmatrix} \tau_{xy}n_y \\ \tau_{yy}n_y \end{pmatrix} dS = \int_S \begin{pmatrix} \mu \left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) n_y \\ 2\mu \frac{\partial v}{\partial y} n_y \end{pmatrix} dS\)</span></p></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+<div class="absolute" style="top: 120px; left: 50px; ">
+<p>Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} &amp; \tau_{xy} \\ \tau_{yx} &amp; \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS\)</span></p></li>
+<li><p><span class="math inline">\(= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS\)</span></p>
+<ul>
+<li><span class="math inline">\(\text{mit } n_x = 0:\)</span></li>
+</ul></li>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \begin{pmatrix} \tau_{xy}n_y \\ \tau_{yy}n_y \end{pmatrix} dS = \int_S \begin{pmatrix} \mu \left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) n_y \\ 2\mu \frac{\partial v}{\partial y} n_y \end{pmatrix} dS\)</span></p>
+<ul>
+<li><span class="math inline">\(\text{mit } v = 0 \text{ (laminar, voll ausgebildet):}\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="6">
+<div class="absolute" style="top: 120px; left: 50px; ">
+<p>Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} &amp; \tau_{xy} \\ \tau_{yx} &amp; \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS\)</span></p></li>
+<li><p><span class="math inline">\(= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS\)</span></p>
+<ul>
+<li><span class="math inline">\(\text{mit } n_x = 0:\)</span></li>
+</ul></li>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \begin{pmatrix} \tau_{xy}n_y \\ \tau_{yy}n_y \end{pmatrix} dS = \int_S \begin{pmatrix} \mu \left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) n_y \\ 2\mu \frac{\partial v}{\partial y} n_y \end{pmatrix} dS\)</span></p>
+<ul>
+<li><span class="math inline">\(\text{mit } v = 0 \text{ (laminar, voll ausgebildet):}\)</span></li>
+</ul></li>
+<li><p><span class="math inline">\(F_{S,\tau} = \int_S \begin{pmatrix} \mu \frac{\partial u}{\partial y} n_y \\ 0 \end{pmatrix} dS\)</span></p></li>
+</ul>
+</div>
+</div>
 
 </section></section>
     </div>

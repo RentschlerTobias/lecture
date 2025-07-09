@@ -17,3 +17,157 @@ css: styles.css
 ## Vorbemerkungen zu DGL im Spalt
 
 
+:::{.incremental}
+
+*Spaltströmungen:*
+
+- Turbulent:
+   - ![](./assets/DGL_Spalt/turbulent_flow.png)
+   - Bewegungen quer zur Hauptströmung
+- Laminar:
+   - ![](./assets/DGL_Spalt/laminar_flow.png)
+   - Keine Bewergungen quer zur Hauptströmung
+- Voll ausgebildet: Keine Änderung der Strömung in Strömungsrichtung
+- 2D - Strömung
+
+- Viskosität: Zähigkeit eines Fluids
+   - dynamische Viskosität: $\mu \left[ \frac{kg}{ms}\right]$
+   - kinematische Viskosität: $\upsilon \left[ \frac{m²}{s}\right]$
+   - $\mu = \rho \cdot \upsilon$
+- Newton'sches Fluid: linear viskoses Fließverhalten
+   - $\tau = \mu \frac{\partial u}{\partial y}$
+:::
+
+
+## Vorbemerkungen zu DGL im Spalt
+
+*DGL einer stationären, inkompressiblen 2D-Spaltströmung*
+
+:::{.incremental}
+
+- Massenbilanz: $\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y} = 0$
+- Impulsbilanz:
+   - $x$-Richtung: $\rho \left(u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} \right) = \rho g_x - \frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right)$
+   - $y$-Richtung: $\rho \left(u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} \right) = \rho g_y - \frac{\partial p}{\partial y} + \mu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)$
+- Laminar: $v=0 => \frac{\partial v}{\partial y} = 0 => \frac{\partial u}{\partial x}= 0$
+- Hydrostatische Druckverteilung
+   - ![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png){width=40%}
+   - $x$- Richtung: $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0$
+   - $y$- Richtung: $\rho g_y = \frac{dp}{dy}$
+:::
+
+## Beiblatt Differentialgleichungen
+
+*Bestimmung des Vorzeichens der aus der Schubspannung resultierenden Kraft vom Körper auf das Fluid*
+
+
+:::{.incremental}
+
+![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png){width=50%}
+
+- Annahmen:
+   - Die Strömung ist stationär, laminar und voll ausgebildet.
+- Möglichkeit 1: Bestimmung des Vorzeichens aus der Anschauung:
+   - Das Fluid wird an den Stellen $y = 0$ und $y = b$ abgebremst.
+   - => Es muss eine Kraft auf das Fluid in negativer Richtung wirken.
+
+::: 
+
+## Beiblatt Differentialgleichungen
+
+*Bestimmung des Vorzeichens der aus der Schubspannung resultierenden Kraft vom Körper auf das Fluid*
+
+
+![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png){.absolute bottom=0 right=0 width=30%}
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=1}
+:::{.absolute top=120 left=50}
+
+
+ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+::: 
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=2}
+:::{.absolute top=120 left=50}
+
+
+Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+
+- $= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS$
+:::
+::: 
+
+
+:::{.fragment .fade-in-then-out fragment-index=3}
+:::{.absolute top=120 left=50}
+
+Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+
+- $= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS$
+
+   - $\text{mit } n_x = 0:$
+::: 
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=4}
+:::{.absolute top=120 left=50}
+
+Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+
+- $= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS$
+
+   - $\text{mit } n_x = 0:$
+
+- $F_{S,\tau} = \int_S \begin{pmatrix} \tau_{xy}n_y \\ \tau_{yy}n_y \end{pmatrix} dS = \int_S \begin{pmatrix} \mu \left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) n_y \\ 2\mu \frac{\partial v}{\partial y} n_y \end{pmatrix} dS$
+::: 
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=5}
+:::{.absolute top=120 left=50}
+
+ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+
+- $= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS$
+
+   - $\text{mit } n_x = 0:$
+
+- $F_{S,\tau} = \int_S \begin{pmatrix} \tau_{xy}n_y \\ \tau_{yy}n_y \end{pmatrix} dS = \int_S \begin{pmatrix} \mu \left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) n_y \\ 2\mu \frac{\partial v}{\partial y} n_y \end{pmatrix} dS$
+
+   - $\text{mit } v = 0 \text{ (laminar, voll ausgebildet):}$
+:::
+::: 
+
+:::{.fragment .fade-in fragment-index=6}
+:::{.absolute top=120 left=50}
+
+ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+
+- $= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS$
+
+   - $\text{mit } n_x = 0:$
+
+- $F_{S,\tau} = \int_S \begin{pmatrix} \tau_{xy}n_y \\ \tau_{yy}n_y \end{pmatrix} dS = \int_S \begin{pmatrix} \mu \left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) n_y \\ 2\mu \frac{\partial v}{\partial y} n_y \end{pmatrix} dS$
+
+   - $\text{mit } v = 0 \text{ (laminar, voll ausgebildet):}$
+
+- $F_{S,\tau} = \int_S \begin{pmatrix} \mu \frac{\partial u}{\partial y} n_y \\ 0 \end{pmatrix} dS$
+:::
+::: 
+
+
