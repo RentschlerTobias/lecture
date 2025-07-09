@@ -129,7 +129,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="./assets/titel_la.png" data-background-opacity="0.8" class="quarto-title-block center">
+<section id="title-slide" data-background-image="./assets/titel_la.png" data-background-opacity="0.6" class="quarto-title-block center">
   <h1 class="title">Vortragsübung Technische Strömungslehre</h1>
 
 <div class="quarto-title-authors">
@@ -223,7 +223,7 @@ Tobias Rentschler
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 <div class="absolute" style="top: 120px; left: 50px; ">
-<p>Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
+<p>pdf_tex Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über <span class="math inline">\(F_{S,\tau}\)</span></p>
 <ul>
 <li><p><span class="math inline">\(F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} &amp; \tau_{xy} \\ \tau_{yx} &amp; \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS\)</span></p></li>
 <li><p><span class="math inline">\(= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS\)</span></p></li>
@@ -288,8 +288,823 @@ Tobias Rentschler
 </ul>
 </div>
 </div>
+</section>
+<section id="aufgabe-16-a-basiswissen" class="slide level2">
+<h2>Aufgabe 16 a) (Basiswissen)</h2>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="1" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="2" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA\)</span></p>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="3" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="4" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="5" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 =&gt; \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="6" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><p><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 =&gt; \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy\)</span></p></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="7" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><p><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 =&gt; \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1\)</span></p></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="8" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><p><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 =&gt; \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2\)</span></p></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="9" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><p><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 =&gt; \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2\)</span></p></li>
+</ul>
+<p>Randbedingungen zur bestimmung der Integrationskonstanten <span class="math inline">\(c_1\)</span> &amp; <span class="math inline">\(c_2\)</span>:</p>
+<ul>
+<li><span class="math inline">\(u(0) = 0\)</span></li>
+<li><span class="math inline">\(u(b) = v_0\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="10" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><p><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 =&gt; \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2\)</span></p></li>
+</ul>
+<p>Randbedingungen zur bestimmung der Integrationskonstanten <span class="math inline">\(c_1\)</span> &amp; <span class="math inline">\(c_2\)</span>:</p>
+<ul>
+<li><span class="math inline">\(u(0) = 0\)</span></li>
+<li><span class="math inline">\(u(b) = v_0\)</span>
+<ul>
+<li>=&gt; <span class="math inline">\(c_2= 0\)</span></li>
+<li>=&gt; <span class="math inline">\(c_1 = \frac{v_0}{b} - \frac{1}{2 \mu} \frac{\partial p}{\partial x}b\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="11" style="top: 50px; left: 50px; ">
+<p>gesucht: <span class="math inline">\(\frac{\partial p}{\partial x}\)</span> damit <span class="math inline">\(Q = 0\)</span></p>
+<p><span class="math inline">\(Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy\)</span></p>
+<p>Herleitung <span class="math inline">\(u(y)\)</span> auf Massen-&amp; Impuslsnilanz für stationäre, imkompressible, laminare Strömung:</p>
+<ul>
+<li><p><span class="math inline">\(- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 =&gt; \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1\)</span></p></li>
+<li><p><span class="math inline">\(\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2\)</span></p></li>
+</ul>
+<p>Randbedingungen zur bestimmung der Integrationskonstanten <span class="math inline">\(c_1\)</span> &amp; <span class="math inline">\(c_2\)</span>:</p>
+<ul>
+<li><span class="math inline">\(u(0) = 0\)</span></li>
+<li><span class="math inline">\(u(b) = v_0\)</span>
+<ul>
+<li>=&gt; <span class="math inline">\(c_2= 0\)</span></li>
+<li>=&gt; <span class="math inline">\(c_1 = \frac{v_0}{b} - \frac{1}{2 \mu} \frac{\partial p}{\partial x}b\)</span></li>
+</ul></li>
+<li><span class="math inline">\(u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y\)</span></li>
+</ul>
+</div>
+</section>
+<section id="aufabe-16-a-basiswissen" class="slide level2">
+<h2>Aufabe 16 a) (Basiswissen)</h2>
+<div class="fragment fade-out absolute" data-fragment-index="1" style="top: 50px; left: 50px; ">
+<ul>
+<li><span class="math inline">\(Q = 0\)</span></li>
+<li><span class="math inline">\(u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="1" style="top: 50px; left: 50px; ">
+<ul>
+<li><span class="math inline">\(Q = 0\)</span></li>
+<li><span class="math inline">\(u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y\)</span></li>
+<li><span class="math inline">\(\int_{0}^{b} u(y) dy = \left[ \frac{1}{2 \mu} \frac{\partial p}{\partial x}\left(\frac{y^3}{3}-b\frac{y^2}{2}\right) + \frac{v_0}{2b}y^2\right]_{0}^{b}\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="2" style="top: 50px; left: 50px; ">
+<ul>
+<li><span class="math inline">\(Q = 0\)</span></li>
+<li><span class="math inline">\(u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y\)</span></li>
+<li><span class="math inline">\(\int_{0}^{b} u(y) dy = \left[ \frac{1}{2 \mu} \frac{\partial p}{\partial x}\left(\frac{y^3}{3}-b\frac{y^2}{2}\right) + \frac{v_0}{2b}y^2\right]_{0}^{b} = \frac{v_0}{2}b - \frac{1}{12 \mu}\frac{\partial p}{\partial x}b^3\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="3" style="top: 50px; left: 50px; ">
+<ul>
+<li><span class="math inline">\(Q = 0\)</span></li>
+<li><span class="math inline">\(u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y\)</span></li>
+<li><span class="math inline">\(\int_{0}^{b} u(y) dy = \left[ \frac{1}{2 \mu} \frac{\partial p}{\partial x}\left(\frac{y^3}{3}-b\frac{y^2}{2}\right) + \frac{v_0}{2b}y^2\right]_{0}^{b} = \frac{v_0}{2}b - \frac{1}{12 \mu}\frac{\partial p}{\partial x}b^3\)</span></li>
+<li>Auflösen nach <span class="math inline">\(\frac{\partial p}{\partial x}\)</span>:
+<ul>
+<li>=&gt;<span class="math inline">\(\frac{\partial p}{\partial x}= \frac{6 \mu v_0}{b^2}\)</span></li>
+<li>mit <span class="math inline">\(v_0 = 0.12 \frac{\mathrm{m}}{\mathrm{s}}\)</span> und <span class="math inline">\(\mu = 1.5 \mathrm{Pa} \cdot \mathrm{s}\)</span></li>
+<li>=&gt;<span class="math inline">\(\frac{\partial p}{\partial x}= \frac{6 \mu v_0}{b^2} = 30000 \left[\frac{Pa}{m}\right]\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-16-b-basiswissen" class="slide level2">
+<h2>Aufgabe 16 b) (Basiswissen)</h2>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="1" style="top: 50px; left: 50px; ">
+<ul>
+<li>gesucht: <span class="math inline">\(u(y)\)</span>, <span class="math inline">\(\tau (y)\)</span> =&gt; Kurvendiskussion</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="2" style="top: 50px; left: 50px; ">
+<ul>
+<li>gesucht: <span class="math inline">\(u(y)\)</span>, <span class="math inline">\(\tau (y)\)</span> =&gt; Kurvendiskussion</li>
+<li><span class="math inline">\(\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="3" style="top: 50px; left: 50px; ">
+<ul>
+<li>gesucht: <span class="math inline">\(u(y)\)</span>, <span class="math inline">\(\tau (y)\)</span> =&gt; Kurvendiskussion</li>
+<li><span class="math inline">\(\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}\)</span></li>
+<li>Extremwerte von <span class="math inline">\(u(y)\)</span> bei <span class="math inline">\(\tau (y) = 0\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="4" style="top: 50px; left: 50px; ">
+<ul>
+<li>gesucht: <span class="math inline">\(u(y)\)</span>, <span class="math inline">\(\tau (y)\)</span> =&gt; Kurvendiskussion</li>
+<li><span class="math inline">\(\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}\)</span></li>
+<li>Extremwerte von <span class="math inline">\(u(y)\)</span> bei <span class="math inline">\(\tau (y) = 0\)</span></li>
+<li><span class="math inline">\(\frac{\partial p}{\partial x} \left( y^* -\frac{b}{2}\right) +\mu \frac{v_0}{b} = 0\)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="5" style="top: 50px; left: 50px; ">
+<ul>
+<li>gesucht: <span class="math inline">\(u(y)\)</span>, <span class="math inline">\(\tau (y)\)</span> =&gt; Kurvendiskussion</li>
+<li><span class="math inline">\(\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}\)</span></li>
+<li>Extremwerte von <span class="math inline">\(u(y)\)</span> bei <span class="math inline">\(\tau (y) = 0\)</span></li>
+<li><span class="math inline">\(\frac{\partial p}{\partial x} \left( y^* -\frac{b}{2}\right) +\mu \frac{v_0}{b} = 0\)</span>
+<ul>
+<li><span class="math inline">\(=&gt; y^* = \frac{b}{3}\)</span></li>
+<li><span class="math inline">\(u(y^*) = - \frac{v_0}{3}\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="6" style="top: 50px; left: 50px; ">
+<ul>
+<li>gesucht: <span class="math inline">\(u(y)\)</span>, <span class="math inline">\(\tau (y)\)</span> =&gt; Kurvendiskussion</li>
+<li><span class="math inline">\(\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}\)</span></li>
+<li>Extremwerte von <span class="math inline">\(u(y)\)</span> bei <span class="math inline">\(\tau (y) = 0\)</span></li>
+<li><span class="math inline">\(\frac{\partial p}{\partial x} \left( y^* -\frac{b}{2}\right) +\mu \frac{v_0}{b} = 0\)</span>
+<ul>
+<li><span class="math inline">\(=&gt; y^* = \frac{b}{3}\)</span></li>
+<li><span class="math inline">\(u(y^*) = - \frac{v_0}{3}\)</span></li>
+</ul></li>
+<li><img data-src="./assets/DGL_Spalt/16b.png" style="width:250.0%"></li>
+</ul>
+</div>
 
 </section></section>
+<section>
+<section id="organisation" class="title-slide slide level1 center">
+<h1>Organisation</h1>
+<ul>
+<li>ILIAS: Zentrale Informationsplattform zur Lehrveranstaltung
+<ul>
+<li>Übersicht über Termine, Hörsaal, Materialien etc.</li>
+<li>Diskussionsforum</li>
+<li>Online-Sprechstunde
+<ul>
+<li>sprechstunde@ihs.uni-stuttgart.de</li>
+</ul></li>
+<li>Aufzeichnungen früherer Vortragsübungen</li>
+</ul></li>
+<li>10 Vortragsübungen
+<ul>
+<li>Verantwortlich: Frau Ma und Herr Rentschler</li>
+<li>Teilnahme in Präsenz oder online (Aufzeichnungen) möglich</li>
+</ul></li>
+<li>9 Tutorien
+<ul>
+<li>Verantwortlich: Herr Raj</li>
+</ul></li>
+</ul>
+</section>
+<section id="termine-vortragsübung" class="slide level2">
+<h2>Termine Vortragsübung</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Thema</th>
+<th style="text-align: center;">Datum</th>
+<th style="text-align: center;">Uhrzeit</th>
+<th style="text-align: center;">Hörsaal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Hydrostatik</td>
+<td style="text-align: center;">Mo. 05.12.2025</td>
+<td style="text-align: center;">11:30–13:00</td>
+<td style="text-align: center;">V53.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Hydrostatik</td>
+<td style="text-align: center;">Mo. 12.05.2025</td>
+<td style="text-align: center;">11:30–13:00</td>
+<td style="text-align: center;">V53.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Erhaltungsgleichungen</td>
+<td style="text-align: center;">Mo. 26.05.2025</td>
+<td style="text-align: center;">11:30–13:00</td>
+<td style="text-align: center;">V53.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Erhaltungsgleichungen</td>
+<td style="text-align: center;">Di. 27.05.2025</td>
+<td style="text-align: center;">15:45–17:15</td>
+<td style="text-align: center;">V47.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Erhaltungsgleichungen</td>
+<td style="text-align: center;">Mo. 16.06.2025</td>
+<td style="text-align: center;">11:30–13:00</td>
+<td style="text-align: center;">V53.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Rohrhydraulik</td>
+<td style="text-align: center;">Di. 17.06.2025</td>
+<td style="text-align: center;">15:45–17:15</td>
+<td style="text-align: center;">V47.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Rohrhydraulik</td>
+<td style="text-align: center;">Mi. 30.06.2025</td>
+<td style="text-align: center;">11:30–13:00</td>
+<td style="text-align: center;">V53.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Differentialgleichungen/Spalt</td>
+<td style="text-align: center;">Mo. 14.07.2025</td>
+<td style="text-align: center;">11:30–13:00</td>
+<td style="text-align: center;">V53.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Prüfungsaufgaben 2025F</td>
+<td style="text-align: center;">Di. 15.07.2025</td>
+<td style="text-align: center;">15:45–17:15</td>
+<td style="text-align: center;">V47.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Prüfungsaufgaben 2025F</td>
+<td style="text-align: center;">Mo. 21.07.2025</td>
+<td style="text-align: center;">11:30–13:00</td>
+<td style="text-align: center;">V47.04</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="live-voting" class="slide level2">
+<h2>Live Voting</h2>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="absolute" style="top: 50px; left: 0px; ">
+<ul>
+<li class="fragment">Interaktivität in der Vortragsübung</li>
+<li class="fragment">Theorieblöcke durch Umfragen auflockern</li>
+<li class="fragment">Antwortmöglichkeiten direkt im Vortrag anzeigen</li>
+<li class="fragment">Erkennen von Verständnisproblemen in Echtzeit</li>
+<li class="fragment">Anonyme Beteiligung – keine falsche Scheu</li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="6">
+<div class="absolute" style="top: 400px; ">
+<p>https://ilias3.uni-stuttgart.de/vote/5TRI</p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="6">
+<div class="absolute" style="top: 450px; ">
+<p><img data-src="./assets/StatikDerFluide/live_voting_qr.png" style="width:60.0%;height:60.0%"></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="vortragsübung-1-statik-der-fluide" class="title-slide slide level1 center">
+<h1>Vortragsübung 1: Statik der Fluide</h1>
+
+</section>
+<section id="grundbegriffe-hydrostatik" class="slide level2">
+<h2>Grundbegriffe Hydrostatik</h2>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="absolute" style="top: 50px; left: 0px; ">
+<ul>
+<li>Statik:
+<ul>
+<li><span class="math inline">\(\sum{\vec{F}} = m \cdot \vec{a} = \frac{\partial \left(m \vec{v}\right)}{\partial t} \stackrel{!}{=} 0\)</span>
+<ul>
+<li>Keine relative bewegung zwischen den Fluidteilchen</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in-and-out" data-fragment-index="2">
+<div class="absolute" style="top: 200px; left: 0px; ">
+<ul>
+<li>Druck:
+<ul>
+<li>Einheit: <span class="math inline">\(Pa = \frac{F}{A} \left[\frac{N}{m^2}\right]\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="3">
+<div class="absolute" style="top: 200px; left: 0px; ">
+<ul>
+<li>Druck:
+<ul>
+<li>Einheit: <span class="math inline">\(Pa = \frac{F}{A} \left[\frac{N}{m^2}\right]\)</span></li>
+<li>Skalarer Wert =&gt; Richtungsunabhängig</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druck.png" style="width:40.0%;height:40.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/Druck_00.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_01.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_02.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="6">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_03.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="7">
+<div class="absolute" style="top: 300px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/communicating_tubes.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment center fade-in" data-fragment-index="5">
+<div class="absolute" style="top: 0px; left: 900px; ">
+<p><img data-src="./assets/StatikDerFluide/live_voting_qr.png" style="width:90.0%;height:90.0%"></p>
+</div>
+</div>
+<div class="fragment center fade-in" data-fragment-index="7">
+<div class="absolute" style="top: 650px; left: 50px; ">
+<div class="red-text">
+<p>LIVE VOTING: Wie verhält sich der Druck an den drei markierten Stellen? <span class="math inline">\(a) \ p_1 &gt; p_2 = p_3 &lt; p_4  \qquad b) \  p_1 &gt; p_2 = p_3 = p_4 \qquad c) \  p_1 = p_2 = p_3 = p_4\)</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="grundbegriffe-hydrostatik-1" class="slide level2">
+<h2>Grundbegriffe Hydrostatik</h2>
+<ul>
+<li>Druckverlauf: <span class="math inline">\(p(h)\)</span></li>
+</ul>
+<div class="fragment fade-out" data-fragment-index="2">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_015.png"></p>
+</div>
+</div>
+<div class="fragment center fade-in" data-fragment-index="1">
+<div class="absolute" style="top: 0px; left: 900px; ">
+<p><img data-src="./assets/StatikDerFluide/live_voting_qr.png" style="width:90.0%;height:90.0%"></p>
+</div>
+</div>
+<div class="fragment fade-out" data-fragment-index="5">
+<div class="fragment center fade-in" data-fragment-index="1">
+<div class="absolute" style="top: 650px; left: 50px; ">
+<div class="red-text">
+<p>LIVE VOTING: Welcher Druck herrscht an der markierten Stelle? <span class="math inline">\(a) \ p = p_0 - \rho g h \qquad b) \  p = \rho g h\qquad c) \ p = p_0 + \rho g h\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment center fade-in" data-fragment-index="5">
+<div class="absolute" style="top: 650px; left: 50px; ">
+<div class="red-text">
+<p>LIVE VOTING: Welcher Druck herrscht an der markierten Stelle? <span class="math inline">\(a) \ p = p_0 + \rho g h_2 \qquad b) \  p = p_0 + \rho g \left(h_2+ h_1\right) \qquad c) \ p = p_0 + \rho g \left(h_2- h_1\right)\)</span></p>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_02.png"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_03.png"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_04.png"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_05.png"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="6">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_06.png"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="7">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_07.png"></p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="8">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/druckverlauf_08.png"></p>
+</div>
+</div>
+</section>
+<section id="grundbegriffe-hydrostatik-2" class="slide level2">
+<h2>Grundbegriffe Hydrostatik</h2>
+<ul>
+<li>Druckkraft: <span class="math inline">\(\vec{F} = -\int p\, d\vec{A} = -\int p\vec{n}\, dA\)</span>
+<ul>
+<li>Vektor =&gt; Richtungsabhängig</li>
+</ul></li>
+</ul>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-out" data-fragment-index="2">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/Druckkraft_02.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+</div>
+<div class="fragment center fade-in-then-out" data-fragment-index="1">
+<div class="absolute" style="top: 0px; left: 900px; ">
+<p><img data-src="./assets/StatikDerFluide/live_voting_qr.png" style="width:90.0%;height:90.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-out" data-fragment-index="2">
+<div class="absolute" style="top: 370px; left: 50px; ">
+<div class="red-text">
+<p>LIVE VOTING: Wie groß ist die Kraft, die durch den Druck auf die Fläche ausgeübt wird?</p>
+<ol type="a">
+<li><p><span class="math display">\[\begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 +\frac{2}{3} \rho g h \right) bh \end{equation}\]</span></p></li>
+<li><p><span class="math display">\[\begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 +\frac{1}{2} \rho g h \right) bh \end{equation}\]</span></p></li>
+<li><p><span class="math display">\[\begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 + \rho g h \right) bh \end{equation}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/Druckkraft_03.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/Druckkraft_04.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/Druckkraft_05.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/Druckkraft_06.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in">
+<div class="absolute" style="top: 150px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/Druckkraft_07.png" style="width:80.0%;height:80.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in">
+<div class="absolute" style="top: 550px; left: 50px; ">
+<p><span class="math display">\[\begin{equation} \vec{F} = \begin{pmatrix} 1\\ 0 \end{pmatrix} \left( p_0 +\frac{1}{2} \rho g h \right) bh \end{equation}\]</span></p>
+</div>
+</div>
+</section></section>
+<section id="aufgabe-1-a" class="title-slide slide level1 center">
+<h1>Aufgabe 1 a</h1>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="absolute" style="top: 100px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1a.png"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="absolute" style="top: 100px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1a_live-voting.png"></p>
+</div>
+</div>
+<div class="fragment center fade-in-then-out" data-fragment-index="2">
+<div class="absolute" style="top: 0px; left: 900px; ">
+<p><img data-src="./assets/StatikDerFluide/live_voting_qr.png" style="width:90.0%;height:90.0%"></p>
+</div>
+</div>
+</section>
+
+<section id="aufgabe-1-b" class="title-slide slide level1 center">
+<h1>Aufgabe 1 b)</h1>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="absolute" style="top: 100px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1b_live-voting.png"></p>
+</div>
+</div>
+<div class="fragment center fade-in-then-out" data-fragment-index="1">
+<div class="absolute" style="top: 0px; left: 900px; ">
+<p><img data-src="./assets/StatikDerFluide/live_voting_qr.png" style="width:90.0%;height:90.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in">
+<p>Fläche S1 Integration:</p>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<div class="absolute" style="top: 200px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1b_small.png" style="width:30.0%;height:30.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} = - \int_{A} p d\vec{A}= \begin{pmatrix} 1 \\ 0 \end{pmatrix}\int_{-(a+b)}^{-b} \left(p_0 - \rho g y \right) dy \]</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} =\begin{pmatrix} 1 \\ 0 \end{pmatrix}\cdot  a  \cdot\left[p_o y -\rho g \frac{y^2}{2}\right]_{-(a+b)}^{-b} \]</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} =\begin{pmatrix} 1 \\ 0 \end{pmatrix}\cdot  a^2  \cdot\left(p_o +\rho g \left(b+\frac{a}{2}\right)\right) \]</span></p>
+</div>
+<div class="fragment fade-in">
+<p>Flächenschwerpunkt (mit <span class="math inline">\(\tilde{h} = b +a/2\)</span>)</p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} = -(p_o +\rho g \tilde{h}) \vec{A} = \begin{pmatrix} 1 \\ 0 \end{pmatrix} a^2 \left(p_0+\rho g \left(b+\frac{a}{2}\right)\right)\]</span></p>
+</div>
+</section>
+
+<section id="aufgabe-1-b-1" class="title-slide slide level1 center">
+<h1>Aufgabe 1 b)</h1>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="absolute" style="top: 100px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1b_S2_live-voting.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<p>Fläche S2 Integration:</p>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<div class="absolute" style="top: 400px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1b_small.png" style="width:30.0%;height:30.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} = - \int_{A} p d\vec{A}= - \begin{pmatrix} 0 \\ 1 \end{pmatrix} p \int_{A}dA =  - \begin{pmatrix} 0 \\ 1 \end{pmatrix}\cdot  a^2  \cdot \left(p_o + \rho g b\right)\]</span></p>
+</div>
+<div class="fragment fade-in">
+<p>Flächenschwerpunkt</p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} = - \begin{pmatrix} 0 \\ 1 \end{pmatrix}\cdot  a^2  \cdot \left(p_o + \rho g b\right) \]</span></p>
+</div>
+</section>
+
+<section id="aufgabe-1-b-2" class="title-slide slide level1 center">
+<h1>Aufgabe 1 b)</h1>
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="absolute" style="top: 100px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1b_S3_live-voting.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<p>Fläche S3 Integration:</p>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<div class="absolute" style="top: 450px; left: 0px; ">
+<p><img data-src="./assets/StatikDerFluide/Aufgabe_1b_small.png" style="width:30.0%;height:30.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} = - \int_{A} p d\vec{A}= \begin{pmatrix} \sin(45°) \\ \cos(45°) \end{pmatrix} \int_{-(a+b)}^{-b} \left(p_0 - \rho g y \right) a \sqrt{2} dy \]</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} =  \begin{pmatrix} -1 \\ 1 \end{pmatrix}a^2  \left(p_0 - \rho g  \left(b+\frac{a}{2}\right)\right)  \]</span></p>
+</div>
+<div class="fragment fade-in">
+<p>Flächenschwerpunkt (mit <span class="math inline">\(\tilde{h} = b +a/2\)</span>)</p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} = -\left(p_0 - \rho g  \tilde{h}\right)\vec{A} =  \left(p_0 - \rho g  \tilde{h}\right)\vec{A} \begin{pmatrix} -\sin(45°) \\ \sin(45°) \end{pmatrix} \sqrt{2} a^2 \]</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[ \vec{F} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}a^2  \left(p_0 - \rho g  \left(b+\frac{a}{2}\right)\right) \]</span></p>
+</div>
+</section>
+
+<section id="aufgabe-1-c" class="title-slide slide level1 center">
+<h1>Aufgabe 1 c)</h1>
+<div class="fragment fade-in">
+<p>Berechnen Sie die Auftriebskraft des Teilkörpers anhand der Druckkräfte.</p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[  F_A = \sum{\mathrm{Druckkräfte \ parallel \ zur \ y-Achse}}\]</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[  F_A =\sum{F_y} = F_{S2_y} + F_{S3y} \]</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[  F_A =-a^2(p_0+\rho g b) +a^2 \left(p_0 +\rho g \left(b \frac{a}{2}\right)\right)\]</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[  F_A =\rho g \frac{a^3}{2}\]</span></p>
+</div>
+</section>
+
+<section id="aufgabe-1-d" class="title-slide slide level1 center">
+<h1>Aufgabe 1 d)</h1>
+<div class="fragment fade-in">
+<p>Berechnen Sie die Auftriebskraft des Teilkörpers anhand des verdrängten Volumens.</p>
+</div>
+<div class="fragment fade-in">
+<p>Archimedes: Auftriebskraft eines Körpers <span class="math inline">\(\hat{=}\)</span> Gewichtskraft des verdrängten Volumens</p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math display">\[  F_A = \rho_{\mathrm{Fluid}} g V =\frac{1}{2} a^2*a \rho_{\mathrm{Fluid}} g= \frac{a^3}{2} \rho_{\mathrm{Fluid}} g\]</span></p>
+</div>
+</section>
+
+<section id="aufgabe-2-a" class="title-slide slide level1 center">
+<h1>Aufgabe 2 a)</h1>
+<p>Wie groß ist das vom gesamten Schiff verdrängte Wasservolumen?</p>
+<div class="fragment fade-in">
+<p><span class="math inline">\(V_W\)</span>: Berechnung über die Auftriebskraft</p>
+</div>
+<div class="fragment fade-in">
+<p>Kräftegleichgewicht: <span class="math inline">\(\sum{F_y} = 0\)</span></p>
+<p><span class="math inline">\(F_{A,Wasser}+F_{A,Luft} - F_G \overset{!}{=} 0\)</span></p>
+<p><span class="math inline">\(\quad \mathrm{mit} F_{A,Luft} = 0 \quad \text{(Annahmen: Der Auftrieb in Luft ist zu vernachlässigen)}\)</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math inline">\(m_w \cdot g = M \cdot g\)</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math inline">\(V_W \rho= M\)</span></p>
+</div>
+<div class="fragment fade-in">
+<p><span class="math inline">\(V_W = \frac{M}{\rho}\)</span></p>
+</div>
+</section>
+
+<section id="aufgabe-2-b" class="title-slide slide level1 center">
+<h1>Aufgabe 2 b)</h1>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-out" data-fragment-index="2">
+<div class="absolute" style="top: 80px; left: 50px; ">
+<p>Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.</p>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<div class="fragment fade-out" data-fragment-index="3">
+<div class="absolute" style="top: 80px; left: 50px; ">
+<p>Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.</p>
+<ul>
+<li>Kraft auf gekrümmte Flächen =&gt; Zerlegung in Komponenten</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="3">
+<div class="fragment fade-out" data-fragment-index="8">
+<div class="absolute" style="top: 80px; left: 50px; ">
+<p>Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.</p>
+<ul>
+<li>Kraft auf gekrümmte Flächen =&gt; Zerlegung in Komponenten</li>
+<li><span class="math inline">\(F_x\)</span> Durckkraft auf horizontal projezierte Flächen</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="8">
+<div class="fragment fade-out" data-fragment-index="9">
+<div class="absolute" style="top: 80px; left: 50px; ">
+<p>Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.</p>
+<ul>
+<li>Kraft auf gekrümmte Flächen =&gt; Zerlegung in Komponenten</li>
+<li><span class="math inline">\(F_x\)</span> Durckkraft auf horizontal projezierte Flächen</li>
+<li>Keine resultierende horizontale Kraft an geschlossenen Oberflächen</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="9">
+<div class="absolute" style="top: 80px; left: 50px; ">
+<p>Berechnen Sie die x- und a-Komponente der Kraft des Fluides auf den Rumpf.</p>
+<ul>
+<li>Kraft auf gekrümmte Flächen =&gt; Zerlegung in Komponenten</li>
+<li><span class="math inline">\(F_x\)</span> Durckkraft auf horizontal projezierte Flächen</li>
+<li>Keine resultierende horizontale Kraft an geschlossenen Oberflächen</li>
+<li><span class="math inline">\(F_y = F_A = Mg \quad \vec{F}=\begin{pmatrix} 0 \\ Mg \end{pmatrix}\)</span></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_a2_b_01.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_a2_b_02.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_a2_b_03.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="6">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_a2_b_04.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="7">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_a2_b_05.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="8">
+<div class="absolute" style="top: 350px; left: 50px; ">
+<p><img data-src="./assets/StatikDerFluide/hydrostatik_a2_b_06.png" style="width:100.0%;height:100.0%"></p>
+</div>
+</div>
+</section>
+
+<section id="aufgabe-2-c" class="title-slide slide level1 center">
+<h1>Aufgabe 2 c)</h1>
+<div class="fragment fade-in" data-fragment-index="1">
+<div class="fragment fade-out" data-fragment-index="2">
+<div class="absolute" style="top: 80px; left: 50px; ">
+<ul>
+<li>gesucht: <span class="math inline">\(F_x, F_y\)</span> zwischen <span class="math inline">\(y=-h_1\)</span> und <span class="math inline">\(y=-h_2\)</span></li>
+<li>Kontur: <span class="math inline">\(y= \frac{x^3}{4h^2} -3 h_1\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

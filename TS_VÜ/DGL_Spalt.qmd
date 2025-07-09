@@ -96,7 +96,7 @@ css: styles.css
 :::{.fragment .fade-in-then-out fragment-index=2}
 :::{.absolute top=120 left=50}
 
-
+pdf_tex
 Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 
 - $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
@@ -169,5 +169,281 @@ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 - $F_{S,\tau} = \int_S \begin{pmatrix} \mu \frac{\partial u}{\partial y} n_y \\ 0 \end{pmatrix} dS$
 :::
 ::: 
+
+## Aufgabe 16 a) (Basiswissen)
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=1 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=2 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA$
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=3 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=4 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0$
+
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=5 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=6 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+
+- $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy$
+
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=7 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+
+- $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=8 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+
+- $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
+
+- $\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2$
+
+
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=9 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+
+- $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
+
+- $\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2$
+
+Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
+
+   - $u(0) = 0$
+   - $u(b) = v_0$
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=10 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+
+- $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
+
+- $\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2$
+
+Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
+
+   - $u(0) = 0$
+   - $u(b) = v_0$
+      - => $c_2= 0$
+      - => $c_1 = \frac{v_0}{b} - \frac{1}{2 \mu} \frac{\partial p}{\partial x}b$
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=11 .absolute top=50 left=50}
+
+gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
+
+$Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
+
+Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
+
+- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+
+- $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
+
+- $\int \left( \frac{1}{\mu} \frac{\partial p}{\partial x} y + c_1 \right) dy = \frac{1}{2 \mu} \frac{\partial p}{x}y^2+c_1 y +c_2$
+
+Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
+
+   - $u(0) = 0$
+   - $u(b) = v_0$
+      - => $c_2= 0$
+      - => $c_1 = \frac{v_0}{b} - \frac{1}{2 \mu} \frac{\partial p}{\partial x}b$
+   - $u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y$
+
+:::
+
+## Aufabe 16 a) (Basiswissen)
+
+
+:::{.fragment .fade-out fragment-index=1 .absolute top=50 left=50}
+
+- $Q = 0$
+- $u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y$
+
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=1 .absolute top=50 left=50}
+
+- $Q = 0$
+- $u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y$
+- $\int_{0}^{b} u(y) dy = \left[ \frac{1}{2 \mu} \frac{\partial p}{\partial x}\left(\frac{y^3}{3}-b\frac{y^2}{2}\right) + \frac{v_0}{2b}y^2\right]_{0}^{b}$
+
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=2 .absolute top=50 left=50}
+
+- $Q = 0$
+- $u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y$
+- $\int_{0}^{b} u(y) dy = \left[ \frac{1}{2 \mu} \frac{\partial p}{\partial x}\left(\frac{y^3}{3}-b\frac{y^2}{2}\right) + \frac{v_0}{2b}y^2\right]_{0}^{b} = \frac{v_0}{2}b - \frac{1}{12 \mu}\frac{\partial p}{\partial x}b^3$
+
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=3 .absolute top=50 left=50}
+
+- $Q = 0$
+- $u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y$
+- $\int_{0}^{b} u(y) dy = \left[ \frac{1}{2 \mu} \frac{\partial p}{\partial x}\left(\frac{y^3}{3}-b\frac{y^2}{2}\right) + \frac{v_0}{2b}y^2\right]_{0}^{b} = \frac{v_0}{2}b - \frac{1}{12 \mu}\frac{\partial p}{\partial x}b^3$
+- Auflösen nach $\frac{\partial p}{\partial x}$:
+   - =>$\frac{\partial p}{\partial x}= \frac{6 \mu v_0}{b^2}$
+   - mit $v_0 = 0.12 \frac{\mathrm{m}}{\mathrm{s}}$ und $\mu = 1.5 \mathrm{Pa} \cdot \mathrm{s}$
+   - =>$\frac{\partial p}{\partial x}= \frac{6 \mu v_0}{b^2} = 30000 \left[\frac{Pa}{m}\right]$
+
+:::
+
+
+## Aufgabe 16 b) (Basiswissen)
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=1 .absolute top=50 left=50}
+
+- gesucht: $u(y)$, $\tau (y)$ => Kurvendiskussion 
+
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=2 .absolute top=50 left=50}
+
+- gesucht: $u(y)$, $\tau (y)$ => Kurvendiskussion 
+- $\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}$
+
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=3 .absolute top=50 left=50}
+
+- gesucht: $u(y)$, $\tau (y)$ => Kurvendiskussion 
+- $\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}$
+- Extremwerte von $u(y)$ bei $\tau (y) = 0$
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=4 .absolute top=50 left=50}
+
+- gesucht: $u(y)$, $\tau (y)$ => Kurvendiskussion 
+- $\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}$
+- Extremwerte von $u(y)$ bei $\tau (y) = 0$
+- $\frac{\partial p}{\partial x} \left( y^* -\frac{b}{2}\right) +\mu \frac{v_0}{b} = 0$
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=5 .absolute top=50 left=50}
+
+- gesucht: $u(y)$, $\tau (y)$ => Kurvendiskussion 
+- $\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}$
+- Extremwerte von $u(y)$ bei $\tau (y) = 0$
+- $\frac{\partial p}{\partial x} \left( y^* -\frac{b}{2}\right) +\mu \frac{v_0}{b} = 0$
+   - $=> y^* = \frac{b}{3}$
+   - $u(y^*) = - \frac{v_0}{3}$
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=6 .absolute top=50 left=50}
+
+- gesucht: $u(y)$, $\tau (y)$ => Kurvendiskussion 
+- $\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}$
+- Extremwerte von $u(y)$ bei $\tau (y) = 0$
+- $\frac{\partial p}{\partial x} \left( y^* -\frac{b}{2}\right) +\mu \frac{v_0}{b} = 0$
+   - $=> y^* = \frac{b}{3}$
+   - $u(y^*) = - \frac{v_0}{3}$
+- ![](./assets/DGL_Spalt/16b.png){width=250%}
+:::
+
+
+
+
+
 
 

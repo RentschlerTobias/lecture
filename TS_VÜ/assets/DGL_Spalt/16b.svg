@@ -8,7 +8,10 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
-   sodipodi:docname="trubulent_flow.svg"
+   sodipodi:docname="16b.svg"
+   inkscape:export-filename="16b.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,15 +26,16 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     inkscape:zoom="3.6639768"
-     inkscape:cx="130.18641"
-     inkscape:cy="140.83059"
-     inkscape:window-width="1834"
-     inkscape:window-height="1426"
+     inkscape:zoom="2.5908228"
+     inkscape:cx="92.827652"
+     inkscape:cy="175.2339"
+     inkscape:window-width="1707"
+     inkscape:window-height="1392"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4" />
+     inkscape:current-layer="layer4"
+     showguides="true" />
   <defs
      id="defs1">
     <inkscape:path-effect
@@ -357,10 +361,11 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     style="display:inline">
     <g
        id="g2"
-       inkscape:export-filename="turbulent_flow"
+       inkscape:export-filename="16b.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"
        style="display:inline"
@@ -420,7 +425,8 @@
     <g
        inkscape:groupmode="layer"
        id="layer4"
-       inkscape:label="a16b">
+       inkscape:label="a16b"
+       style="display:inline">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.209644;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle);marker-end:url(#ConcaveTriangle)"
          d="m 6.3399879,12.389757 v 6.873126"
@@ -551,27 +557,27 @@
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1"
          x="14.294085"
-         y="29.731451"
+         y="32.377285"
          id="text10-03"><tspan
            sodipodi:role="line"
            id="tspan10-0"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:Cantarell;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25"
            x="14.294085"
-           y="29.731451">$-\frac{v_0}{3}$</tspan></text>
+           y="32.377285">$-\frac{v_0}{3}$</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1"
          x="18.326309"
-         y="29.731451"
+         y="32.377285"
          id="text10-03-7"><tspan
            sodipodi:role="line"
            id="tspan10-0-5"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:Cantarell;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25"
            x="18.326309"
-           y="29.731451">$0$</tspan></text>
+           y="32.377285">$0$</tspan></text>
       <g
          id="g1"
-         transform="translate(14.826382,-0.25530815)">
+         transform="translate(14.826382,2.3905253)">
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;font-family:Cantarell;-inkscape-font-specification:Cantarell;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:none;stroke-opacity:1"
@@ -585,7 +591,7 @@
              y="29.986759">$v_0$</tspan></text>
       </g>
       <path
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:0.25,0.5;stroke-opacity:1;stroke-dashoffset:0"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linejoin:miter;stroke-miterlimit:3.7;stroke-dasharray:0.25, 0.5;stroke-dashoffset:0;stroke-opacity:1"
          d="m 6.6341862,17.384964 c 16.0341868,0 32.0683728,0 48.1025588,0"
          id="path19"
          inkscape:path-effect="#path-effect19"
