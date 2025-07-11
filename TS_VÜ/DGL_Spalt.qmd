@@ -76,9 +76,22 @@ css: styles.css
    - $y$-Richtung: $\rho \left(u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} \right) = \rho g_y - \frac{\partial p}{\partial y} + \mu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)$
 - Laminar: $v=0 => \frac{\partial v}{\partial y} = 0 => \frac{\partial u}{\partial x}= 0$
 - Hydrostatische Druckverteilung
-   - ![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png){width=40%}
-   - $x$- Richtung: $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0$
-   - $y$- Richtung: $\rho g_y = \frac{dp}{dy}$
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+- $x$- Richtung: $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0$
+- $y$- Richtung: $\rho g_y = \frac{dp}{dy}$
+
+:::
+
+:::{.column width="50%"}
+- ![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png)
+
+:::
+::::
+
 :::
 
 ## Beiblatt Differentialgleichungen
@@ -462,7 +475,7 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 - $\frac{\partial p}{\partial x} \left( y^* -\frac{b}{2}\right) +\mu \frac{v_0}{b} = 0$
    - $=> y^* = \frac{b}{3}$
    - $u(y^*) = - \frac{v_0}{3}$
-- ![](./assets/DGL_Spalt/16b.png){width=250%}
+- ![](./assets/DGL_Spalt/16b.png)
 :::
 
 
