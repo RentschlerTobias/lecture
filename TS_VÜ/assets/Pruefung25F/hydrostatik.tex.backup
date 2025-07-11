@@ -1,0 +1,208 @@
+\aufgloes{gesamtPunkte_hydro}{
+%
+% Aufgabenstellung
+%
+  \nuraufg{
+      Gegeben sei ein ruhender Tankanhänger mit rechteckigem Querschnitt der Tiefe $b$ (in Zeichenebene) und der Höhe $h$. Der Tank hat eine Länge $l$ und eine Leermasse $m$. Die Reifen des Anhängers werden durch zwei Lager an der Unterseite beschrieben. Zum Betanken befindet sich an der Oberseite des Anhängers ein zunächst dicht verschlossener Deckel. Der Tank ist bis zu einer Höhe von $\frac{2}{3}h$ mit einem Fluid der Dichte $\rho$ befüllt. Im Innern des Tanks herrscht ein Überdruck $p_{\"u}$ gegenüber dem Umgebungsdruck. Zum Ablassen des Fluids ist eine kreisförmige Klappe mit dem Durchmesser $d$ an der Hinterseite des Tanks angebracht. Die Klappe ist im Punkt $M$ drehbar gelagert.
+    %
+    \begin{center}
+      \input{hydrostatik.pdf_tex}
+    \end{center}
+    %
+    \begin{annahmen}      
+      \item Der Deckel und die Klappe schließen im gezeichneten Zustand dicht ab.
+      \item Das lokale $\tilde{x}$-$\tilde{y}$-Koordinatensystem liegt im Flächenschwerpunkt der Klappe.
+    \end{annahmen}
+    %
+    \begin{gegeben}
+    &   Tiefe: $b$	&	Dichte: $\rho$\\
+    &   Höhe: $h$      &       Leermasse: $m$\\
+    &	Länge: $l$	&	Erdbeschleunigung: $g$\\
+    &	Durchmesser: $d$	&	Überdruck: $p_{\"u}$\\
+    &   Umgebungsdruck: $p_0$	&	Flächenträgheitsmoment: $I_{\tilde{x}\tilde{x}}=I_{\tilde{x}\tilde{y}}=\frac{\pi}{64}d^4$\\
+    \end{gegeben}
+   }
+%
+% a)
+%
+  \teil
+  {
+    Zeichnen Sie den Druckverlauf $p(y)$ für $y=[\frac{1}{3}h,-\frac{2}{3}h]$ im Innern des Tanks und geben Sie die charakteristischen Werte an.
+  }
+  {
+    Bestimmung der charakteristischen Werte:
+    \begin{equation*}
+      p(y = \frac{1}{3}h) = p_{\"u} \;
+    \end{equation*}
+    \begin{equation*}
+      p(y = 0) = p_{\"u} \;
+    \end{equation*}
+    \begin{equation*}
+      p(y = -\frac{2}{3}h) = p_{\"u} + \frac{2}{3} \rho g h \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+    Druckverlauf:\; \teilpunkte{gesamtPunkte_hydro}{1}
+    \begin{center}
+      \input{hydrostatik_druckverlauf_teilaufgabe_a.pdf_tex}
+    \end{center}
+  }
+%
+% b)
+%
+  \teil
+  {
+    Bestimmen Sie die Kräfte in $y$-Richtung auf die Lager.
+  }
+  { 
+    Druckkraft an der Stelle $y = -\frac{2}{3}h$:
+    \begin{equation*}
+      F_p = p A = \frac{2}{3} \rho g h l b \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+    Momentengleichgewicht (linkes Lager $L1$):
+    \begin{equation*}
+      \sum{M_{L1}} = 0 = -\frac{1}{4}l F_p -\frac{1}{4} m g + \frac{5}{8}l F_{L2,y}
+    \end{equation*}
+    \begin{equation*}
+      F_{L2,y} = \frac{2}{5} (F_p + F_g) \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+    Kräftegleichgewicht:
+    \begin{equation*}
+      \sum{F_y} = 0 = F_p + F_g - F_{L1,y} - F_{L2,y}
+    \end{equation*}
+    \begin{equation*}
+      F_{L1,y} = \frac{3}{5} (F_p + F_g) \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+  }
+  
+%
+% c)
+%
+  \teil
+  {
+    Bestimmen Sie die Kraft $F_v$ auf die vom Fluid benetzte Fläche der Klappe.
+  }
+  { 
+    Projezierte Fläche:
+      \begin{equation*}
+	A_p = \frac{\pi}{4} d^2
+      \end{equation*} 
+      
+    Druck im Flächenschwerpunkt:
+      \begin{equation*}
+	p = p_{\"u} + \rho g \big( \frac{2}{3}h - \frac{1}{2}d \big) \; \teilpunkte{gesamtPunkte_hydro}{1}
+      \end{equation*} 
+      
+    Kraft:
+      \begin{equation*}
+	F_v = p A_p = \Big( p_{\"u} + \rho g \big( \frac{2}{3}h - \frac{1}{2}d \big) \Big) \frac{\pi}{4} d^2 \; \teilpunkte{gesamtPunkte_hydro}{1}
+      \end{equation*} 
+  }
+
+%
+% d)
+%
+  \teil
+  {
+    Bestimmen Sie das von $F_v$ erzeugte Moment um den Drehpunkt $M$.
+  }
+  {
+    Ansatz nach Formel 3.26 (b):
+    \begin{equation*}
+      \tilde{y}_p = \frac{p_{\infty}}{p_G}\tilde{y} + \frac{\rho g sin(\alpha)}{p_G A} I_{\tilde{x}\tilde{x}} \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+    Mit:
+    \begin{equation*}
+      p_G = p_{\"u} + \rho g \big( \frac{2}{3}h - \frac{1}{2}d \big)
+    \end{equation*}
+    \begin{equation*}
+      A = \frac{\pi}{4} d^2
+    \end{equation*}
+    \begin{equation*}
+      sin(\alpha) = 1
+    \end{equation*}
+    \begin{equation*}
+      I_{\tilde{x}\tilde{x}} = \frac{\pi}{64}d^4
+    \end{equation*}
+    Eingesetzt:
+    \begin{equation*}
+      \tilde{y}_p = \frac{\rho g}{\Big( p_{\"u} + \rho g \big( \frac{2}{3}h - \frac{1}{2}d \big) \Big) \frac{\pi}{4} d^2} \frac{\pi}{64}d^4 \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+    \begin{equation*}
+      \tilde{y}_p = \frac{1}{16} \frac{\rho g d^2}{ p_{\"u} + \rho g \big( \frac{2}{3}h - \frac{1}{2}d \big) }
+    \end{equation*}
+    Hebelarm:
+    \begin{equation*}
+      y_p = \tilde{y}_p + \frac{d}{2}
+    \end{equation*}
+    Moment um Drehpunkt M:
+    \begin{equation*}
+      M = y_p p_G A
+    \end{equation*}
+    \begin{equation*}
+      M = \Big( \frac{d}{2} + \frac{1}{16} \frac{\rho g d^2}{ p_{\"u} + \rho g \big( \frac{2}{3}h - \frac{1}{2}d \big) } \Big) \Big( p_{\"u} + \rho g \big( \frac{2}{3}h - \frac{1}{2}d \big) \Big) \frac{\pi}{4}d^2 \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+  }
+%
+% e)
+%
+  \nuraufg{
+    Im Folgenden sei der Deckel an der Oberseite geöffnet. Im Tankinnern stellt sich somit der Druck $p_0$ ein. Auf der Fahrt erfährt der Anhänger eine Beschleunigung $a_x$ in $x$-Richtung. Der Flüssigkeitsspiegel berührt dabei nie den Boden.
+    }
+  \teil
+  {
+    Wie hoch darf der Füllstand $h_f(a_x)$ in der Ruhelage maximal sein, damit das Fluid während des Beschleunigens nicht herraus fließt?
+  }
+  {    
+    Allgemeiner Ansatz mit neuem Koordinatensystem an der linken Seite des Deckels:
+    \begin{equation*}
+      p(x,y) = -\rho a_x x - \rho(g+a_y)y + C
+    \end{equation*}
+    Randbedingung:
+    \begin{equation*}
+      p(0,0) = p_0 \quad \Rightarrow \quad C = p_0 \; \teilpunkte{gesamtPunkte_hydro}{1}
+    \end{equation*}
+    Flüssigkeitsspiegel an der rechten Tankseite ($\frac{2}{3}l$,$y$):
+    \begin{equation*}
+      p(\frac{2}{3}l,y) = -\rho a_x (\frac{2}{3}l ) - \rho g (h - h_f) + p_0 = p_0
+    \end{equation*}
+    \begin{equation*}
+      y = - \frac{2}{3} \frac{a_x}{g} l \quad \Rightarrow \quad h' = |y| = \frac{2}{3} \frac{a_x}{g} l
+    \end{equation*}  
+    
+    Volumen des beschleunigten Fluids aus zwei Quadern und einem Prisma:
+    \begin{equation*}
+      V_{beschl} = \frac{1}{3}(h-h') l b + h' l b + \frac{2}{3}(h-h') l b \frac{1}{2}
+    \end{equation*}
+    Mit Volumen des ruhenden Fluids gleichsetzen und $h'$ einsetzen:
+    \begin{equation*}
+      V_{ruhend} = h_f l b = V_{beschl}
+    \end{equation*}
+    \begin{equation*}
+      h_f l b = \frac{1}{3}(h-h') l b + h' l b + \frac{2}{3}(h-h') l b \frac{1}{2}
+    \end{equation*}
+    \begin{equation*}
+      h_f = \frac{2}{3}h + \frac{1}{3}h'
+    \end{equation*}
+    \begin{equation*}
+      h_f = \frac{2}{3}h + \frac{1}{3}(h - \frac{2}{3}\frac{a_x}{g}l) = h - \frac{2}{9}\frac{a_x}{g} l
+    \end{equation*}
+
+    Alternativ $h'$ über Neigung bestimmen:
+    \begin{equation*}
+      \theta = tan^{-1} \frac{a_x}{g+a_z} \Rightarrow tan(\theta) = \frac{a_x}{g}
+    \end{equation*}
+    Höhe der fluidfreien Fläche $h_l$ auf der rechten Tankseite über Trigonometrie:
+    \begin{equation*}
+      tan(\theta) = \frac{h_l}{\frac{2}{3}l}
+    \end{equation*}
+    $tan(\theta)$ gleichsetze und umformen:
+    \begin{equation*}
+      h_l = \frac{2}{3}\frac{a_x}{g}l
+    \end{equation*}
+    Höhe der vom Fluid bedeckten Fläche $h'$ auf der rechten Tankseite:
+    \begin{equation*}
+      h = h_l + h' \Rightarrow h' = h - \frac{2}{3}\frac{a_x}{g}l
+    \end{equation*}
+     
+  }
+  
+}

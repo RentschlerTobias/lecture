@@ -16,27 +16,52 @@ css: styles.css
 
 ## Vorbemerkungen zu DGL im Spalt
 
+*Spaltströmungen:*
+
+::::{.columns}
+
+
+:::{.column width="50%"}
 
 :::{.incremental}
-
-*Spaltströmungen:*
 
 - Turbulent:
    - ![](./assets/DGL_Spalt/turbulent_flow.png)
    - Bewegungen quer zur Hauptströmung
+:::
+
+:::
+
+:::{.column width="50%"}
+
+:::{.incremental}
+
 - Laminar:
    - ![](./assets/DGL_Spalt/laminar_flow.png)
    - Keine Bewergungen quer zur Hauptströmung
+:::
+
+:::
+
+::::
+
+:::{.incremental}
+
 - Voll ausgebildet: Keine Änderung der Strömung in Strömungsrichtung
 - 2D - Strömung
 
+:::
+
+:::{.incremental}
 - Viskosität: Zähigkeit eines Fluids
    - dynamische Viskosität: $\mu \left[ \frac{kg}{ms}\right]$
    - kinematische Viskosität: $\upsilon \left[ \frac{m²}{s}\right]$
    - $\mu = \rho \cdot \upsilon$
-- Newton'sches Fluid: linear viskoses Fließverhalten
-   - $\tau = \mu \frac{\partial u}{\partial y}$
+- Newton'sches Fluid: linear viskoses Fließverhalten: $\tau = \mu \frac{\partial u}{\partial y}$
+
 :::
+
+
 
 
 ## Vorbemerkungen zu DGL im Spalt
@@ -96,7 +121,6 @@ css: styles.css
 :::{.fragment .fade-in-then-out fragment-index=2}
 :::{.absolute top=120 left=50}
 
-pdf_tex
 Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 
 - $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
@@ -204,7 +228,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0$
 
 :::
 
@@ -217,7 +241,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
 
 :::
 
@@ -230,7 +254,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
 
 - $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy$
 
@@ -245,7 +269,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
 
 - $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
 
@@ -259,7 +283,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
 
 - $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
 
@@ -278,7 +302,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
 
 - $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
 
@@ -299,7 +323,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
 
 - $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
 
@@ -322,7 +346,7 @@ $Q = \int_{A} u_A dA = t \int u(y)  dy =  1 \int_{0}^{b} u(y) dy$
 
 Herleitung $u(y)$ auf Massen-& Impuslsnilanz für stationäre, imkompressible, laminare Strömung:
 
-- $- \frac{\partial p}{x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
+- $- \frac{\partial p}{\partial x} + \mu \frac{\partial^2 u}{\partial y^2} = 0 => \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x}$
 
 - $\int \left( \frac{\partial^2 u}{\partial y^2} =\frac{1 }{\mu } \frac{\partial p}{x} \right) dy = \frac{\partial u}{\partial y} = \frac{1}{\mu}\frac{\partial p}{\partial x}y+c_1$
 
@@ -442,8 +466,80 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 :::
 
 
+## Aufgabe 17 a)
 
 
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+- mit $v(a) = -v_0$, $v(-a)=2v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} + \frac{c_1a}{\mu} +c_2 = -v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} - \frac{c_1a}{\mu} +c_2 = 2v_0$
+   - => $c_1 = -\frac{3 v_0 \mu}{2a}$
+   - => $c_2 = \frac{v_0}{2}-\frac{a^2}{2 \mu}\left(\frac{\partial p}{\partial y} -\rho g\right)$
+- $v(x) = \frac{1}{\mu} \frac{\partial p}{\partial y} \cdot \frac{x^2}{2} - \rho g \cdot \frac{x^2}{2} + \frac{x}{\mu} \cdot \frac{-3v_0}{2a}  + \frac{v_0}{2}- \frac{a^2}{2\mu}\left(\frac{\partial p}{\partial y} - \rho g \right)$
+- $\tau(x) = \frac{\partial p}{\partial y} x - \rho g x - \frac{3 v_0 M}{2a}$
 
 
+## Aufgabe 17 b)
 
+- ges: $v(0)$ wenn $\tau \left(\frac{a}{-2}\right)$ & Verläufe $u(x)$, $\tau(x)$
+- $v(0) = \frac{v_0}{2} - \frac{a^2}{2 \mu} \left( \frac{ \partial p}{\partial y} - \rho g \right)$
+- Bestimmung $\frac{\partial p}{\partial y}$ aus $\tau\left(\frac{a}{-2}\right) = 0$ :
+- $\tau\left(\frac{a}{-2}\right) = \frac{\partial p}{\partial y} \cdot \frac{a}{-2} + \rho g \frac{a}{-2} - \frac{3 v_0 M}{2a}=0$
+   - $\frac{\partial p}{\partial y}= \rho g  - \frac{3 v_0 M}{a^2}$
+- $v(0) = \frac{v_0}{2} - \frac{a^2}{2 \mu} \left( \rho g - \frac{3 v_0 M}{a^2} - \rho g \right) = \frac{v_0}{2} + \frac{3 v_0}{2} = 2 v_0$
+
+## Aufgabe 18 a) 
+
+- geg: $u(\frac{\partial P}{\partial x}), \tau(\frac{\partial P}{\partial x})$
+
+Partielle Ableitungen
+- $\frac{\partial^2 u}{\partial y^2} = \frac{1}{\mu} \frac{\partial P}{\partial x} \quad \int y$
+
+- $\frac{\partial u}{\partial y} = \frac{1}{\mu} \frac{\partial P}{\partial x} y + C_1 \quad \int y$
+
+- $u = \frac{1}{2\mu} \frac{\partial P}{\partial x} y^2 + C_1 y + C_2$
+
+   - oben: $u_B = \frac{1}{2\mu_B} \frac{\partial P}{\partial x} y^2 + C_1 y + C_2$
+
+- $\tau_B = \frac{\partial P}{\partial x} y + \mu_B C_1$
+
+   - unten: $u_A = \frac{1}{2\mu_A} \frac{\partial P}{\partial x} y^2 + C_3 y + C_4$
+
+- $\tau_A = \frac{\partial P}{\partial x} y + \mu_A C_3$
+
+- 4 Unbekannte => 4 Randbedingungen
+   - $u_B(b) = 0 \quad \longrightarrow \quad \frac{1}{2\mu_B} \frac{\partial P}{\partial x} b^2 + \frac{\mu_A C_3}{\mu_B} b + C_2 = 0 \quad (1)$
+
+   - $u_A(-b) = 0 \quad \longrightarrow \quad \frac{1}{2\mu_A} \frac{\partial P}{\partial x} b^2 + C_3(-b) + C_2 = 0 \quad (2)$
+
+   - $u_B(0) = u_A(0) \quad \longrightarrow \quad C_2 = C_4 \quad (3)$
+
+   - $\tau_B(0) = \tau_A(0) \quad \longrightarrow \quad \mu_B C_1 = \mu_A C_3 \quad \Rightarrow \quad C_1 = \frac{\mu_A C_3}{\mu_B} \quad (4)$
+
+
+## Aufgabe 18 a) 
+
+- $(1) - (2):$
+   - $\quad \frac{\partial P}{\partial x} b^2 \frac{1}{2} \left(\frac{1}{\mu_B} - \frac{1}{\mu_A}\right) + b C_3 \left(\frac{\mu_A}{\mu_B} + 1\right) = 0$
+
+      - => $C_3 = \frac{\partial P}{\partial x} \frac{b}{2} \frac{\mu_B - \mu_A}{(\mu_B + \mu_A)\mu_A}$
+- in (4) einsetzen: 
+   - $\quad C_1 = \frac{\partial P}{\partial x} \frac{b}{2} \frac{\mu_B - \mu_A}{(\mu_B + \mu_A)\mu_B}$
+
+- in (2) einsetzen: 
+   - $\quad C_2 = -b^2 \frac{\partial P}{\partial x} \frac{1}{M_B + M_A}=C_4$
+- $\tau_{AB} = \frac{\partial p}{\partial x} y + \frac{\partial p}{\partial x} \frac{b}{2}\frac{M_B-M_A}{M_B+M_A}$
+
+## Aufgabe 18 b) 
+
+- $u_B$, $u_A$, $\tau_{AB}$
+
+- $\tau_{AB} = \left(\frac{\partial P}{\partial x}\right) y + \frac{\partial P}{\partial x} \frac{b}{2} \frac{\mu_B - \mu_A}{\mu_B + \mu_A}$
+
+- $\tau_{AB}(y^*) = 0$
+
+- $\frac{\partial P}{\partial x} y^* + \frac{\partial P}{\partial x} \frac{b}{2} \frac{\mu_B - \mu_A}{\mu_B + \mu_A} = 0$
+
+- $y^* = \frac{b}{2} \frac{\mu_A - \mu_B}{\mu_B + \mu_A} \rightarrow 0$ mit $\mu_A = \mu_B$

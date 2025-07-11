@@ -1,0 +1,88 @@
+%% Creator: Inkscape 1.0.1 (3bc2e813f5, 2020-09-07), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'hydrostatik.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{438.85116577bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.33455181)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{hydrostatik.pdf}}%
+    \put(0.19030993,0.28581716){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{hydrostatik.pdf}}%
+    \put(0.02797033,0.27306433){\color[rgb]{0,0,0}\rotatebox{0.2539535}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p_0$\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{hydrostatik.pdf}}%
+    \put(0.04018602,0.18962656){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$g$\end{tabular}}}}%
+    \put(0.6808222,0.11596615){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2H$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{hydrostatik.pdf}}%
+    \put(0.1548567,0.13788835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}M\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{hydrostatik.pdf}}%
+    \put(0.75271282,0.0716652){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
+    \put(0.84208068,0.12738957){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$b$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{hydrostatik.pdf}}%
+    \put(0.91946114,0.05297303){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\overline{x}$\end{tabular}}}}%
+    \put(0.8597659,0.01969592){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\overline{y}$\end{tabular}}}}%
+    \put(0.79721691,0.22091965){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$I_{\bar{x} \bar{x}}= \frac{1}{12}r^3 b$\end{tabular}}}}%
+    \put(0.79721691,0.18082399){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$I_{\bar{x} \bar{y}}= \frac{1}{12}r b^3 $\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{hydrostatik.pdf}}%
+    \put(0.75419618,0.26182251){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}Fla\"chentr\"agheitsmoment: \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{hydrostatik.pdf}}%
+    \put(0.47827671,0.28462405){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{hydrostatik.pdf}}%
+    \put(0.1310137,0.06297619){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$H$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{hydrostatik.pdf}}%
+    \put(0.08869823,0.00120343){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
+    \put(-0.00063643,0.06853908){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{hydrostatik.pdf}}%
+    \put(0.46422443,0.09358653){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\rho_w$\end{tabular}}}}%
+    \put(0.52800451,0.09144191){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\frac{H}{2}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{hydrostatik.pdf}}%
+    \put(0.32750382,0.06795142){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\rho$\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

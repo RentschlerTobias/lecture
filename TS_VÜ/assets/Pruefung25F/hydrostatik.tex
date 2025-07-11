@@ -1,0 +1,172 @@
+\aufgloes{gesamtPunkte_hydro}{
+	%
+	% Aufgabenstellung
+	%
+	\nuraufg{
+		Eine hydraulische Hebevorrichtung der Tiefe $b$ besteht aus zwei masselosen Kolben, die sich in ihrem jeweiligen Hubraum ab oder auf bewegen können. Befüllt ist die Vorrichtung mit einem Öl der Dichte $\rho$. Zusätzlich wirken auf die Kolben die Kräfte $F_1$ und $F_2$ in negativer $y$-Richtung. Eine im Punkt $M$ drehbare Klappe öffnet ab einem kritischen Moment $M_{krit}$. Ein Würfel der Kantenlänge $\frac{1}{2}H$ schwebt im Öl.%
+		\begin{center}
+			\input{hydrostatik.pdf_tex}
+		\end{center}
+		%
+		\begin{annahmen}
+			\item Die Flüssigkeit ist inkompressibel.
+			\item Der sich jeweils einstellende Zustand ist stationär.
+			\item Die Klappe schließt im geschlossenen Zustand dicht ab.
+		\end{annahmen}
+		
+		%
+		\begin{gegeben}
+			& Kolbenfläche: $A_1=A,A_2=4A$
+			& Höhe: $H$\\  
+			& Umgebungsdruck: $p_0$
+			& Erdbeschleunigung: $g$ \\  
+			& Behälter- und Klappentiefe: $b$
+			& Kritisches Moment: $M_{krit}$  \\
+			& Dichte: $\rho$
+		\end{gegeben}
+	}
+	%
+	%    
+	\nuraufg{
+		Zunächst sei $F_1 = F_2 = 0$.
+	}
+	
+	
+	
+	%
+	% a)
+	% 
+	\teil
+	{
+		Berechnen Sie die auf den Würfel wirkende Auftriebskraft und dessen Dichte $\rho_w$.
+	}
+	{
+		Berechnen der Auftriebskraft $F_{Auftrieb}$ auf den Würfel. 
+		\begin{equation*}
+			F_{Auftrieb} = \frac{\rho g H^{3}}{8}  \; \teilpunkte{gesamtPunkte_hydro}{1}
+		\end{equation*}
+		Die Dichte $\rho_w$ entspricht der Dichte $\rho$ damit der Würfel in Öl schweben kann.  \; \teilpunkte{gesamtPunkte_hydro}{1}
+		
+	}
+	% b)  
+	\teil
+	{
+		Berechnen Sie den Betrag der resultierenden Druckkraft $F_{p}$ auf die Klappe.
+	}
+	{ 
+		\begin{equation*}
+			F_{p} = p_G A = \frac{3}{2} \rho g {H}^2 b\;
+			\teilpunkte{gesamtPunkte_hydro}{2}
+		\end{equation*}
+		
+	}
+	%
+	% c)
+	%
+	\teil
+	{
+		Berechnen Sie das von der Druckkraft $F_p$ erzeugte Moment um den Drehpunkt M.
+	}
+	{ Hebelarm:
+		\begin{equation*}
+			\begin{split}
+				l_{p} & = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}                 \\
+				      & = \frac{H}{2} + \frac{\rho g}{\rho g \frac{3H}{2} H b} \frac{1}{12} {H}^3 b \\
+				      & = \frac{5}{9} H                                                             \\
+			\end{split}
+			\teilpunkte{gesamtPunkte_hydro}{2}
+		\end{equation*}
+		
+		
+		Resultierendes Moment:
+		\begin{equation*}
+			\begin{split}
+				M_p & = F_{p} l_{p}                             \\
+				    & = \frac{3}{2} \rho g  H^2 b \frac{5}{9} H \\
+				    & = \frac{5}{6} \rho g {H}^3 b \;
+			\end{split}
+			\teilpunkte{gesamtPunkte_hydro}{1}
+		\end{equation*}
+	}
+	
+	\nuraufg{
+		Nun wirke die Kraft $F_1 \neq 0$. Die Positionen der Kolben und des Würfels bleiben gleich.
+	}
+	%  d)
+	\teil
+	{
+		Wie verändern sich die auf die Ober- und Unterseite des Würfels wirkenden Druckkräfte und die Auftriebskraft?
+	}
+	{
+		$F_{o}$ und $F_{u}$ sind größer. \teilpunkte{gesamtPunkte_hydro}{1}
+		$F_{Auftrieb}$ bleibt gleich. \teilpunkte{gesamtPunkte_hydro}{1}
+		
+	}
+	%  e)
+	\teil
+	{
+		Skizzieren Sie den Druckverlauf über die linke und rechte Seite der Klappe und geben Sie die charakteristischen Werte an.
+	}
+	{
+	
+		Druckverlauf: \teilpunkte{gesamtPunkte_hydro}{3}
+		
+		\begin{center}
+			\input{druckverlauf_teilaufgabe_c.pdf_tex}
+		\end{center}
+		
+	}
+	% g)
+	%
+	\teil
+	{
+		Berechnen Sie die Kraft $F_2$ in Abhängigkeit von $F_1$, damit das System im Ruhezustand ist.
+	}
+	{
+		\begin{equation*}
+			p_0+\frac{F_1}{A} = p_0+\frac{F_2}{4A}
+		\end{equation*}
+		
+		\begin{equation*}
+			F_2=4F_1
+			\teilpunkte{gesamtPunkte_hydro}{1}
+		\end{equation*}
+		
+	}
+	
+	
+	%
+	% g)
+	%
+	\teil
+	{
+		Bestimmen Sie die Kraft $F_1$, bei der sich die Klappe öffnet.
+	}
+	{ Druckkraft:
+		\begin{equation*}
+			F_{p} = p_G A =\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb\;
+			\teilpunkte{gesamtPunkte_hydro}{1}
+		\end{equation*}
+		Hebelarm:
+		\begin{equation*}
+			\begin{split}
+				l_{p} & = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}                                              \\
+				      & = \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b \\
+			\end{split}
+			\teilpunkte{gesamtPunkte_hydro}{1}
+		\end{equation*}
+		Klappe öffnet ab einem kritischen Moment $M_{krit}$:
+		\begin{equation*}
+			\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb \left( \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b \right) \overset{!}{=} M_{krit}
+			\teilpunkte{gesamtPunkte_hydro}{2}
+		\end{equation*}
+		\begin{equation*}
+			\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) \frac{H^2 b}{2} + \frac{ \rho gH^3 b }{12}= M_{krit}
+		\end{equation*}
+		
+		\begin{equation*}
+			F_1=\frac{2A M_{krit}}{H^2 b}-\frac{5}{3}\rho gHA
+			\teilpunkte{gesamtPunkte_hydro}{1}
+		\end{equation*}
+	}
+}
