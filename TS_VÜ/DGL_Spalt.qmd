@@ -78,6 +78,10 @@ css: styles.css
 - Hydrostatische Druckverteilung
 
 ::::{.columns}
+:::{.column width="50%"}
+- ![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png)
+
+:::
 
 :::{.column width="50%"}
 
@@ -86,10 +90,7 @@ css: styles.css
 
 :::
 
-:::{.column width="50%"}
-- ![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png)
 
-:::
 ::::
 
 :::
