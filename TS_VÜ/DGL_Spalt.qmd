@@ -534,6 +534,12 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 :::
 
 
+:::{.fragment .fade-in-then-out fragment-index=1 .absolute top=250 left=50}
+
+![](./assets/DGL_Spalt/aufgabe16_08.png)
+:::
+
+
 :::{.fragment .fade-in-then-out fragment-index=2 .absolute top=50 left=50}
 
 - Bestimmung von $\tau(x)$ und $v(x)$:
