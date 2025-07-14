@@ -72,9 +72,22 @@ css: styles.css
 
 - Massenbilanz: $\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y} = 0$
 - Impulsbilanz:
-   - $x$-Richtung: $\rho \left(u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} \right) = \rho g_x - \frac{\partial p}{\partial x} + \mu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right)$
-   - $y$-Richtung: $\rho \left(u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} \right) = \rho g_y - \frac{\partial p}{\partial y} + \mu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)$
+
+   - $x$-Richtung: $\rho \left( \frac{\partial  u}{\partial t} + u \frac{\partial u}{\partial x} +v \frac{\partial u}{\partial y}\right) = \rho g_x - \frac{\partial p}{\partial x} + \mu \left(\frac{{\partial}^2 u}{\partial x^2}+\frac{{\partial}^2 u}{\partial y^2}\right)$
+
+   - $y$-Richtung: $\rho \left(\frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} \right) = \rho g_y - \frac{\partial p}{\partial y} + \mu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)$
 - Laminar: $v=0 => \frac{\partial v}{\partial y} = 0 => \frac{\partial u}{\partial x}= 0$
+- Folgende Terme der Impulsgleichung werden auf Grund der Annahmen zu Null:
+   - $\frac{\partial u}{\partial t} = 0 \qquad \text{stationär}$
+   - $u \frac{\partial u}{\partial x}  = 0 \qquad \text{voll ausgebildet}$
+   - $v \frac{\partial u}{\partial y}  = 0 \qquad \text{laminar und voll ausgebildet}$
+   - $\frac{\partial^2 u}{\partial x^2} = 0 \qquad \text{voll ausgebildet}$
+:::
+
+## Vorbemerkungen zu DGL im Spalt
+
+
+:::{.incremental}
 - Hydrostatische Druckverteilung
 
 ::::{.columns}
