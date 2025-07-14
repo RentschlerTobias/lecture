@@ -38,7 +38,7 @@ css: styles.css
 
 - Laminar:
    - ![](./assets/DGL_Spalt/laminar_flow.png)
-   - Keine Bewergungen quer zur Hauptströmung
+   - Keine Bewegungen quer zur Hauptströmung
 :::
 
 :::
@@ -133,19 +133,36 @@ css: styles.css
 ![](./assets/DGL_Spalt/Beiblatt_DGL_Spalt.png){.absolute bottom=0 right=0 width=30%}
 
 
-
 :::{.fragment .fade-in-then-out fragment-index=1}
 :::{.absolute top=120 left=50}
 
 
  Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 
-- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+- $F_{S,\tau} = \int_S \tau \cdot dS$
 ::: 
-
 :::
 
 :::{.fragment .fade-in-then-out fragment-index=2}
+:::{.absolute top=120 left=50}
+
+ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS$
+::: 
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=3}
+:::{.absolute top=120 left=50}
+
+ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+::: 
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=4}
 :::{.absolute top=120 left=50}
 
 Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
@@ -157,7 +174,7 @@ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 ::: 
 
 
-:::{.fragment .fade-in-then-out fragment-index=3}
+:::{.fragment .fade-in-then-out fragment-index=5}
 :::{.absolute top=120 left=50}
 
 Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
@@ -170,7 +187,22 @@ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 ::: 
 :::
 
-:::{.fragment .fade-in-then-out fragment-index=4}
+:::{.fragment .fade-in-then-out fragment-index=6}
+:::{.absolute top=120 left=50}
+
+Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
+
+- $F_{S,\tau} = \int_S \tau \cdot dS = \int_S \tau \cdot n \, dS = \int_S \begin{pmatrix} \tau_{xx} & \tau_{xy} \\ \tau_{yx} & \tau_{yy} \end{pmatrix} \cdot \begin{pmatrix} n_x \\ n_y \end{pmatrix} dS$
+
+- $= \int_S \begin{pmatrix} \tau_{xx}n_x + \tau_{xy}n_y \\ \tau_{yx}n_x + \tau_{yy}n_y \end{pmatrix} dS$
+
+   - $\text{mit } n_x = 0:$
+
+- $F_{S,\tau} = \int_S \begin{pmatrix} \tau_{xy}n_y \\ \tau_{yy}n_y \end{pmatrix} dS$
+::: 
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=7}
 :::{.absolute top=120 left=50}
 
 Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
@@ -185,7 +217,7 @@ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 ::: 
 :::
 
-:::{.fragment .fade-in-then-out fragment-index=5}
+:::{.fragment .fade-in-then-out fragment-index=8}
 :::{.absolute top=120 left=50}
 
  Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
@@ -202,7 +234,7 @@ Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
 :::
 ::: 
 
-:::{.fragment .fade-in fragment-index=6}
+:::{.fragment .fade-in fragment-index=9}
 :::{.absolute top=120 left=50}
 
  Möglichkeit 2: Bestimmung des Vorzeichens rechnerisch über $F_{S,\tau}$
@@ -496,6 +528,112 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 ## Aufgabe 17 a)
 
 
+:::{.fragment .fade-in-then-out fragment-index=1 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=2 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=3 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+:::
+
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=4 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+- mit $v(a) = -v_0$, $v(-a)=2v_0$
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=5 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+- mit $v(a) = -v_0$, $v(-a)=2v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} + \frac{c_1a}{\mu} +c_2 = -v_0$
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=6 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+- mit $v(a) = -v_0$, $v(-a)=2v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} + \frac{c_1a}{\mu} +c_2 = -v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} - \frac{c_1a}{\mu} +c_2 = 2v_0$
+
+:::
+
+
+:::{.fragment .fade-in-then-out fragment-index=7 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+- mit $v(a) = -v_0$, $v(-a)=2v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} + \frac{c_1a}{\mu} +c_2 = -v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} - \frac{c_1a}{\mu} +c_2 = 2v_0$
+   - => $c_1 = -\frac{3 v_0 \mu}{2a}$
+
+:::
+
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=8 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+- mit $v(a) = -v_0$, $v(-a)=2v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} + \frac{c_1a}{\mu} +c_2 = -v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} - \frac{c_1a}{\mu} +c_2 = 2v_0$
+   - => $c_1 = -\frac{3 v_0 \mu}{2a}$
+   - => $c_2 = \frac{v_0}{2}-\frac{a^2}{2 \mu}\left(\frac{\partial p}{\partial y} -\rho g\right)$
+
+:::
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=9 .absolute top=50 left=50}
+
+- Bestimmung von $\tau(x)$ und $v(x)$:
+- $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
+- $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
+- mit $v(a) = -v_0$, $v(-a)=2v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} + \frac{c_1a}{\mu} +c_2 = -v_0$
+- $\frac{1}{\mu} \frac{\partial p }{\partial y } \frac{a^2}{2} - \frac{1}{\mu} \rho g \frac{a^2}{2} - \frac{c_1a}{\mu} +c_2 = 2v_0$
+   - => $c_1 = -\frac{3 v_0 \mu}{2a}$
+   - => $c_2 = \frac{v_0}{2}-\frac{a^2}{2 \mu}\left(\frac{\partial p}{\partial y} -\rho g\right)$
+- $v(x) = \frac{1}{\mu} \frac{\partial p}{\partial y} \cdot \frac{x^2}{2} - \rho g \cdot \frac{x^2}{2} + \frac{x}{\mu} \cdot \frac{-3v_0}{2a}  + \frac{v_0}{2}- \frac{a^2}{2\mu}\left(\frac{\partial p}{\partial y} - \rho g \right)$
+
+:::
+
+
+
+
+:::{.fragment .fade-in-then-out fragment-index=10 .absolute top=50 left=50}
+
 - Bestimmung von $\tau(x)$ und $v(x)$:
 - $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$
 - $\frac{1}{\mu} \int \tau dx => v(x) = \frac{1}{\mu} \frac{\partial p }{\partial y } \frac{x^2}{2} - \frac{1}{\mu} \rho g \frac{x^2}{2} + \frac{c_1x}{\mu} +c_2$
@@ -506,6 +644,8 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
    - => $c_2 = \frac{v_0}{2}-\frac{a^2}{2 \mu}\left(\frac{\partial p}{\partial y} -\rho g\right)$
 - $v(x) = \frac{1}{\mu} \frac{\partial p}{\partial y} \cdot \frac{x^2}{2} - \rho g \cdot \frac{x^2}{2} + \frac{x}{\mu} \cdot \frac{-3v_0}{2a}  + \frac{v_0}{2}- \frac{a^2}{2\mu}\left(\frac{\partial p}{\partial y} - \rho g \right)$
 - $\tau(x) = \frac{\partial p}{\partial y} x - \rho g x - \frac{3 v_0 M}{2a}$
+
+:::
 
 
 ## Aufgabe 17 b)
