@@ -262,35 +262,30 @@ Bestimmen Sie die Wellenleistung $P_T$, die mit der Turbine gewonnen werden kön
 - => $h_T = 34,2 \, \mathrm{m}$
 :::
 
-## Schritt 6: Wellenleistung der Turbine berechnen
-**Formel für Turbinenleistung:**
-$$P_T = \eta_T \rho g Q h_T$$
+## Aufgabe 2d)
 
-**Erklärung:** 
-- Bei der Turbine wird Energie **entnommen** (Energiewandlung)
-- Wirkungsgrad $\eta_T$ berücksichtigt Verluste bei der Energieumwandlung
+Wellenleistung der Turbine berechnen
 
-**Mit:**
-- $\eta_T = 0{,}9$
-- $Q = 2\pi \, \mathrm{m^3/s}$
-- $h_T = 34{,}2 \, \mathrm{m}$
+:::{.incremental}
 
-**Berechnung:**
-$$P_T = 0{,}9 \times 1000 \times 9{,}81 \times 2\pi \times 34{,}2 = 1{,}9 \, \mathrm{MW}$$
+- $$P_T = \eta_T \rho g Q h_T$$
 
----
+   - Bei der Turbine wird Energie **entnommen** (Energiewandlung)
+   - Wirkungsgrad $\eta_T$ berücksichtigt Verluste bei der Energieumwandlung
 
-## Schritt 7: Ergebnis zusammenfassen
-**Antwort:**
+      - $\eta_T = 0{,}9$
+      - $Q = 2\pi \, \mathrm{m^3/s}$
+      - $h_T = 34{,}2 \, \mathrm{m}$
+
+- $$P_T = 0{,}9 \times 1000 \times 9{,}81 \times 2\pi \times 34{,}2 = 1{,}9 \, \mathrm{MW}$$
+
 - Turbinenhöhe: $h_T = 34{,}2 \, \mathrm{m}$
 - Wellenleistung der Turbine: $P_T = 1{,}9 \, \mathrm{MW}$
 
-**Interpretation:** 
-- Die Turbine nutzt den Höhenunterschied zwischen Berg und Speicher 2
-- Trotz der ungünstigen Druckverhältnisse (niedriger Druck am Berg) kann noch Energie zurückgewonnen werden
-- Die Energierückgewinnung beträgt etwa 17% der zusätzlichen Pumpenleistung aus Teil c)
+- Interpretation:
+   - Die Turbine nutzt den Höhenunterschied zwischen Berg und Speicher 2
+   - Trotz der ungünstigen Druckverhältnisse (niedriger Druck am Berg) kann noch Energie zurückgewonnen werden
+   - Die Energierückgewinnung beträgt etwa 17% der zusätzlichen Pumpenleistung aus Teil c)
 
----
+:::
 
-## Alternative Lösungsweg (optional)
-**Energiegleichung von Speicher 1 nach Speicher 2:**
