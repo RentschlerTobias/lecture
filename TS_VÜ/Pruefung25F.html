@@ -141,81 +141,289 @@ Tobias Rentschler
 </div>
 
 </section>
-<section>
-<section id="aufgabe-1-aufgabenstellung" class="title-slide slide level1 center">
-<h1>Aufgabe 1: Aufgabenstellung</h1>
-Eine hydraulische Hebevorrichtung der Tiefe <span class="math inline">\(b\)</span> besteht aus zwei masselosen Kolben, die sich in ihrem jeweiligen Hubraum ab oder auf bewegen können. Befüllt ist die Vorrichtung mit einem Öl der Dichte <span class="math inline">\(\rho\)</span>. Zusätzlich wirken auf die Kolben die Kräfte <span class="math inline">\(F_1\)</span> und <span class="math inline">\(F_2\)</span> in negativer <span class="math inline">\(y\)</span>-Richtung. Eine im Punkt <span class="math inline">\(M\)</span> drehbare Klappe öffnet ab einem kritischen Moment <span class="math inline">\(M_{krit}\)</span>. Ein Würfel der Kantenlänge <span class="math inline">\(\frac{1}{2}H\)</span> schwebt im Öl.%
-<ul>
-<li>Annahmen:
-<ul>
-<li>Die Flüssigkeit ist inkompressibel.</li>
-<li>Der sich jeweils einstellende Zustand ist stationär.</li>
-<li>Die Klappe schließt im geschlossenen Zustand dicht ab.</li>
-</ul></li>
-<li>Gegeben:
-<ul>
-<li>Kolbenfläche: <span class="math inline">\(A_1=A,A_2=4A\)</span></li>
-<li>Höhe: <span class="math inline">\(H\)</span><br>
-</li>
-<li>Umgebungsdruck: <span class="math inline">\(p_0\)</span></li>
-<li>Erdbeschleunigung: <span class="math inline">\(g\)</span><br>
-</li>
-<li>Behälter- und Klappentiefe: <span class="math inline">\(b\)</span></li>
-<li>Kritisches Moment: <span class="math inline">\(M_{krit}\)</span></li>
-<li>Dichte: <span class="math inline">\(\rho\)</span></li>
-</ul></li>
-</ul>
-</section>
 <section id="aufgabe-1a" class="slide level2">
 <h2>Aufgabe 1a)</h2>
-<p>Berechnen Sie die auf den Würfel wirkende Auftriebskraft und dessen Dichte <span class="math inline">\(\rho_w\)</span>. Berechnen der Auftriebskraft <span class="math inline">\(F_{Auftrieb}\)</span> auf den Würfel. - <span class="math inline">\(F_{Auftrieb} = \frac{\rho g H^{3}}{8}  \; \teilpunkte{gesamtPunkte_hydro}{1}\)</span> - Die Dichte <span class="math inline">\(\rho_w\)</span> entspricht der Dichte <span class="math inline">\(\rho\)</span> damit der Würfel in Öl schweben kann. ; </p>
+<div>
+<ul>
+<li class="fragment"><p>Berechnen Sie die auf den Würfel wirkende Auftriebskraft und dessen Dichte <span class="math inline">\(\rho_w\)</span>.</p></li>
+<li class="fragment"><p>Berechnen der Auftriebskraft <span class="math inline">\(F_{Auftrieb}\)</span> auf den Würfel.</p>
+<ul>
+<li class="fragment">Die Dichte <span class="math inline">\(\rho_w\)</span> entspricht der Dichte <span class="math inline">\(\rho\)</span> damit der Würfel in Öl schweben kann.<br>
+</li>
+</ul></li>
+<li class="fragment"><p>Die Auftriebskraft entspricht der Gewichtskraft des verdrängten Volumens</p>
+<ul>
+<li class="fragment"><span class="math inline">\(F_{Auftrieb} = \frac{\rho g H^{3}}{8}\)</span></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="aufgabe-1b" class="slide level2">
 <h2>Aufgabe 1b)</h2>
-<p>Berechnen Sie den Betrag der resultierenden Druckkraft <span class="math inline">\(F_{p}\)</span> auf die Klappe. - <span class="math inline">\(F_{p} = p_G A = \frac{3}{2} \rho g {H}^2 b\)</span></p>
+<div>
+<ul>
+<li class="fragment"><p>Berechnen Sie den Betrag der resultierenden Druckkraft <span class="math inline">\(F_{p}\)</span> auf die Klappe.</p></li>
+<li class="fragment"><p>Berechnung über den Druck im Flächenschwerpunkt, multipliziert mit der Fläche der Klappe</p>
+<ul>
+<li class="fragment">Druckverlauf mit <span class="math inline">\(p(y)=\rho g y\)</span>:</li>
+<li class="fragment">Flächenschwerpunkt bei: <span class="math inline">\(y=\frac{3}{2}H\)</span></li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(F_{p} = p_G A = \frac{3}{2} \rho g {H}^2 b\)</span></p></li>
+</ul>
+</div>
 </section>
 <section id="aufgabe-1c" class="slide level2">
 <h2>Aufgabe 1c)</h2>
 <p>Berechnen Sie das von der Druckkraft <span class="math inline">\(F_p\)</span> erzeugte Moment um den Drehpunkt M.</p>
+<div>
 <ul>
-<li>Hebelarm: -<span class="math inline">\(l_{p} &amp; = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}\)</span> -<span class="math inline">\(= \frac{H}{2} + \frac{\rho g}{\rho g \frac{3H}{2} H b} \frac{1}{12} {H}^3 b\)</span> -<span class="math inline">\(= \frac{5}{9} H\)</span></li>
+<li class="fragment">Hebelarm:
+<ul>
+<li class="fragment"><span class="math inline">\(l_{p}  = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}\)</span></li>
+<li class="fragment"><span class="math inline">\(l_{p}= \frac{H}{2} + \frac{\rho g}{\rho g \frac{3H}{2} H b} \frac{1}{12} {H}^3 b\)</span></li>
+<li class="fragment"><span class="math inline">\(l_{p}= \frac{5}{9} H\)</span></li>
+</ul></li>
+<li class="fragment">Resultierendes Moment:
+<ul>
+<li class="fragment"><span class="math inline">\(M_p  = F_{p} l_{p}\)</span></li>
+<li class="fragment"><span class="math inline">\(M_p= \frac{3}{2} \rho g  H^2 b \frac{5}{9} H\)</span></li>
+<li class="fragment"><span class="math inline">\(M_p= \frac{5}{6} \rho g {H}^3 b\)</span></li>
+</ul></li>
 </ul>
-<p>Resultierendes Moment: - <span class="math inline">\(M_p  = F_{p} l_{p}\)</span> - <span class="math inline">\(= \frac{3}{2} \rho g  H^2 b \frac{5}{9} H\)</span> - <span class="math inline">\(= \frac{5}{6} \rho g {H}^3 b\)</span></p>
+</div>
 </section>
 <section id="aufgabe-1d" class="slide level2">
 <h2>Aufgabe 1d)</h2>
 <p>Nun wirke die Kraft <span class="math inline">\(F_1 \neq 0\)</span>. Die Positionen der Kolben und des Würfels bleiben gleich.</p>
-<p>Wie verändern sich die auf die Ober- und Unterseite des Würfels wirkenden Druckkräfte und die Auftriebskraft? <span class="math inline">\(F_{o}\)</span> und <span class="math inline">\(F_{u}\)</span> sind größer. <span class="math inline">\(F_{Auftrieb}\)</span> bleibt gleich.</p>
+<p>Wie verändern sich die auf die Ober- und Unterseite des Würfels wirkenden Druckkräfte und die Auftriebskraft?</p>
 </section>
 <section id="aufgabe-1e" class="slide level2">
 <h2>Aufgabe 1e)</h2>
 <p>Skizzieren Sie den Druckverlauf über die linke und rechte Seite der Klappe und geben Sie die charakteristischen Werte an.</p>
-<pre><code>\begin{center}
-    \input{druckverlauf_teilaufgabe_c.pdf_tex}
-\end{center}</code></pre>
+</section>
+<section id="aufgabe-1f" class="slide level2">
+<h2>Aufgabe 1f)</h2>
+<p>Berechnen Sie die Kraft <span class="math inline">\(F_2\)</span> in Abhängigkeit von <span class="math inline">\(F_1\)</span>, damit das System im Ruhezustand ist.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(p_0+\frac{F_1}{A} = p_0+\frac{F_2}{4A}\)</span></li>
+<li class="fragment"><span class="math inline">\(F_2=4F_1\)</span></li>
+</ul>
+</div>
 </section>
 <section id="aufgabe-1g" class="slide level2">
 <h2>Aufgabe 1g)</h2>
-<p>Berechnen Sie die Kraft <span class="math inline">\(F_2\)</span> in Abhängigkeit von <span class="math inline">\(F_1\)</span>, damit das System im Ruhezustand ist.</p>
+<p>Bestimmen Sie die Kraft <span class="math inline">\(F_1\)</span>, bei der sich die Klappe öffnet.</p>
+<div>
 <ul>
-<li><p><span class="math inline">\(p_0+\frac{F_1}{A} = p_0+\frac{F_2}{4A}\)</span></p></li>
-<li><p><span class="math inline">\(F_2=4F_1\)</span> Bestimmen Sie die Kraft <span class="math inline">\(F_1\)</span>, bei der sich die Klappe öffnet.</p></li>
-<li><p>Druckkraft:</p>
+<li class="fragment">Druckkraft:
 <ul>
-<li><span class="math inline">\(F_{p} = p_G A =\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb\)</span></li>
+<li class="fragment"><span class="math inline">\(F_{p} = p_G A =\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb\)</span></li>
 </ul></li>
-<li><p>Hebelarm:</p>
+<li class="fragment">Hebelarm:
 <ul>
-<li><span class="math inline">\(l_{p} &amp; = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}\)</span></li>
-<li><span class="math inline">\(= \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b\)</span></li>
+<li class="fragment"><span class="math inline">\(l_{p} = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}\)</span></li>
+<li class="fragment"><span class="math inline">\(l_{p} = \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b\)</span></li>
 </ul></li>
-<li><p>Klappe öffnet ab einem kritischen Moment <span class="math inline">\(M_{krit}\)</span>:</p>
+<li class="fragment">Klappe öffnet ab einem kritischen Moment <span class="math inline">\(M_{krit}\)</span>:
 <ul>
-<li><p><span class="math inline">\(\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb \left( \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b \right) \overset{!}{=} M_{krit}\)</span></p></li>
-<li><p><span class="math inline">\(\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) \frac{H^2 b}{2} + \frac{ \rho gH^3 b }{12}= M_{krit}\)</span></p></li>
-<li><p><span class="math inline">\(F_1=\frac{2A M_{krit}}{H^2 b}-\frac{5}{3}\rho gHA\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb \left( \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b \right) \overset{!}{=} M_{krit}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) \frac{H^2 b}{2} + \frac{ \rho gH^3 b }{12}= M_{krit}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(F_1=\frac{2A M_{krit}}{H^2 b}-\frac{5}{3}\rho gHA\)</span></p></li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section>
+<section id="aufgabe-2" class="title-slide slide level1 center">
+<h1>Aufgabe 2)</h1>
+
+</section>
+<section id="aufgabe-2a" class="slide level2">
+<h2>Aufgabe 2a)</h2>
+<p>Bestimmen Sie die Strömungsgeschwindigkeit <span class="math inline">\(v\)</span> sowie die Rohrreibungszahl <span class="math inline">\(\lambda\)</span> unter Verwendung des beiliegenden Moody-Diagramms.</p>
+<div>
+<ul>
+<li class="fragment">Die Strömungsgeschwindigkeit berechnet sich über den Volumenstrom und dem Querschnitt:
+<ul>
+<li class="fragment"><span class="math inline">\(v=\frac{Q}{A}=2 \, \mathrm{\frac{m}{s}}\)</span></li>
+</ul></li>
+<li class="fragment">Für die Bestimmung von <span class="math inline">\(\lambda\)</span> werden die Reynolds-Zahl und das Verhältnis von Wandrauhigkeit <span class="math inline">\(k\)</span> zu Rohrdurchmesser <span class="math inline">\(D\)</span> benötigt.
+<ul>
+<li class="fragment"><span class="math inline">\(\mathrm{Re}=\frac{vD}{\nu}=\frac{2 \frac{\mathrm{m}}{\mathrm{s}} * 2 \mathrm{m} }{10^{-6}\frac{m^2}{s}}= 4*10^{6}\)</span></li>
+<li class="fragment"><span class="math inline">\(\frac{k}{D}=\frac{10\,\mathrm{mm}}{2000\,\mathrm{mm}}=0,005\)</span></li>
+<li class="fragment">=&gt; <span class="math inline">\(\lambda=0,03\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-2b" class="slide level2">
+<h2>Aufgabe 2b)</h2>
+<p>Bestimmen Sie die notwendige Förderhöhe <span class="math inline">\(h_P\)</span> um den Volumenstrom von Speicher 1 nach Speicher 2 zu pumpen und die dafür nötige Wellenleistung <span class="math inline">\(P_P\)</span> der Pumpe.</p>
+<div>
+<ul>
+<li class="fragment">Energiegleichung von Speicher 1 nach Speicher 2:
+<ul>
+<li class="fragment"><p><span class="math inline">\(\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{0}}{\rho g} + H_{2} + \lambda \frac{L_{1}}{D} \frac{v^2}{2g} + \lambda \frac{L_{2}}{D} \frac{v^2}{2g} + \frac{v^2}{2g} - h_P\)</span></p></li>
+<li class="fragment"><p>Bedeutung der einzelnen Verlustterme:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\lambda \frac{L_{1}}{D} \frac{v^2}{2g}\)</span> - Reibungsverluste in Rohrabschnitt 1</li>
+<li class="fragment"><span class="math inline">\(\lambda \frac{L_{2}}{D} \frac{v^2}{2g}\)</span> - Reibungsverluste in Rohrabschnitt 2<br>
+</li>
+<li class="fragment"><span class="math inline">\(\frac{v^2}{2g}\)</span> - Örtliche Verluste (z.B. Einlauf, Auslauf, Carnot)</li>
+<li class="fragment"><span class="math inline">\(h_P\)</span> - Pumpenhöhe (Energiezufuhr, daher negatives Vorzeichen)</li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{0}}{\rho g} + H_{2} + \left( \lambda \left( \frac{L_{1}+L_{2}}{D} \right) +1 \right) \frac{v^2}{2g} - h_P\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(h_P = 117,18 \,\mathrm{m}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(P_P = \frac{\rho g Q h_P}{\eta_P} = 8,5 \,\mathrm{MW}\)</span></p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-2c" class="slide level2">
+<h2>Aufgabe 2c)</h2>
+<p>Damit der Dampfdruck auf dem Berg nicht unterschritten wird (<span class="math inline">\(p_B &gt; p_{vap}\)</span>), muss das Druckniveau erhöht werden. Zur Energierückgewinnung wird eine Turbine unmittelbar vor dem Speicher 2 eingebaut. Der Volumenstrom kann für c), d) und e) als konstant angenommen werden.</p>
+<div>
+<ul>
+<li class="fragment"><p>Ziel: Pumpe muss so dimensioniert werden, dass am höchsten Punkt (Berg) der Druck nicht unter den Dampfdruck fällt.</p></li>
+<li class="fragment"><p>Randbedingung: <span class="math inline">\(p_B = p_{vap}\)</span> (kritischer Fall)</p></li>
+<li class="fragment"><p>Energiegleichung von Speicher 1 bis zum Berg aufstellen</p>
+<ul>
+<li class="fragment"><span class="math display">\[\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{B}}{\rho g} + H_{B} + \frac{v^2}{2g} + \lambda \frac{L_{1}}{D} \frac{v^2}{2g} - h_P\]</span></li>
+</ul></li>
+<li class="fragment"><p>Kritische Bedingung: <span class="math inline">\(p_B = p_{vap}\)</span></p>
+<ul>
+<li class="fragment"><span class="math display">\[\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{vap}}{\rho g} + H_{B} + \frac{v^2}{2g} + \lambda \frac{L_{1}}{D} \frac{v^2}{2g} - h_P\]</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-2c-1" class="slide level2">
+<h2>Aufgabe 2c)</h2>
+<ul>
+<li>Nach Pumpenhöhe auflösen
+<ul>
+<li><span class="math display">\[h_P = \frac{p_{0} - p_{vap}}{\rho g} + (H_{1} - H_{B}) - \left(1 + \lambda \frac{L_{1}}{D}\right) \frac{v^2}{2g}\]</span></li>
+</ul></li>
+</ul>
+<div>
+<ul>
+<li class="fragment">Gegebene Werte einsetzen
+<ul>
+<li class="fragment"><span class="math inline">\(p_0 = 1 \times 10^5 \, \mathrm{Pa}\)</span></li>
+<li class="fragment"><span class="math inline">\(p_{vap} = 2300 \, \mathrm{Pa}\)</span></li>
+<li class="fragment"><span class="math inline">\(\rho = 1000 \, \mathrm{kg/m^3}\)</span></li>
+<li class="fragment"><span class="math inline">\(g = 9{,}81 \, \mathrm{m/s^2}\)</span></li>
+<li class="fragment"><span class="math inline">\(v = 2 \, \mathrm{m/s}\)</span> (aus Teilaufgabe a)</li>
+<li class="fragment"><span class="math inline">\(\lambda = 0{,}03\)</span> (aus Teilaufgabe a)</li>
+</ul></li>
+<li class="fragment">=&gt; <span class="math inline">\(h_P = 151{,}4 \, \mathrm{m}\)</span></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-2c-2" class="slide level2">
+<h2>Aufgabe 2c)</h2>
+<div>
+<ul>
+<li class="fragment"><p>Wellenleistung berechnen</p>
+<ul>
+<li class="fragment"><p><span class="math display">\[P_P = \frac{\rho g Q h_P}{\eta_P}\]</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(Q = 2\pi \, \mathrm{m^3/s}\)</span></li>
+<li class="fragment"><span class="math inline">\(\eta_P = 0{,}85\)</span></li>
+<li class="fragment"><span class="math inline">\(h_P = 151{,}4 \, \mathrm{m}\)</span></li>
+</ul></li>
+</ul></li>
+<li class="fragment"><p><span class="math display">\[P_P = \frac{1000 \times 9{,}81 \times 2\pi \times 151{,}4}{0{,}85} = 11 \, \mathrm{MW}\]</span></p></li>
+<li class="fragment"><p>Notwendige Förderhöhe: <span class="math inline">\(h_{P,neu} = 151{,}4 \, \mathrm{m}\)</span></p></li>
+<li class="fragment"><p>Wellenleistung: <span class="math inline">\(P_{P,neu} = 11 \, \mathrm{MW}\)</span></p></li>
+<li class="fragment"><p>Interpretation: Die Pumpe muss eine höhere Förderhöhe als in Teilaufgabe b) aufbringen, um den Dampfdruck am Berg nicht zu unterschreiten.</p></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-2d" class="slide level2">
+<h2>Aufgabe 2d)</h2>
+<p>Bestimmen Sie die Wellenleistung <span class="math inline">\(P_T\)</span>, die mit der Turbine gewonnen werden könnte, unter der Bedingung von Aufgabenteil c).</p>
+<div>
+<ul>
+<li class="fragment"><p>Ziel:Bestimmung der Turbinenleistung zwischen Berg und Speicher 2</p></li>
+<li class="fragment"><p>Ausgangssituation:</p>
+<ul>
+<li class="fragment">Turbine wird unmittelbar vor Speicher 2 eingebaut</li>
+<li class="fragment">Bedingung aus Teil c): <span class="math inline">\(p_B = p_{vap}\)</span> am Berg</li>
+<li class="fragment">Energierückgewinnung durch Höhenunterschied und Druckdifferenz</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-2d-1" class="slide level2">
+<h2>Aufgabe 2d)</h2>
+<div>
+<ul>
+<li class="fragment">Energiegleichung aufstellen: Von Berg nach Speicher 2:
+<ul>
+<li class="fragment"><span class="math display">\[\frac{p_{B}}{\rho g} + \frac{v^2}{2g} + H_{B} = \frac{p_{0}}{\rho g} + H_{2} + \left( \lambda \frac{L_{2}}{D} + 1 \right) \frac{v^2}{2g} + h_T\]</span></li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><span class="math inline">\(\frac{p_{B}}{\rho g}\)</span>: Druckhöhe am Berg</li>
+<li class="fragment"><span class="math inline">\(\frac{v^2}{2g}\)</span>: Geschwindigkeitshöhe am Berg</li>
+<li class="fragment"><span class="math inline">\(H_{B}\)</span>: Höhe des Berges</li>
+<li class="fragment"><span class="math inline">\(\frac{p_{0}}{\rho g}\)</span>: Druckhöhe am Speicher 2</li>
+<li class="fragment"><span class="math inline">\(H_{2}\)</span>: Höhe des Wasserspiegels in Speicher 2</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><span class="math inline">\(\lambda \frac{L_{2}}{D} \frac{v^2}{2g}\)</span>: Reibungsverluste vom Berg bis Speicher 2</li>
+<li class="fragment"><span class="math inline">\(\frac{v^2}{2g}\)</span>: Carnot-Verlust <span class="math inline">\(\zeta_{Carnot} \alpha \frac{v^2}{2g}\)</span> mit <span class="math inline">\(\zeta_{Carnot}:= 1\)</span> &amp; <span class="math inline">\(\alpha = 1\)</span> turbulent</li>
+<li class="fragment"><span class="math inline">\(h_T\)</span>: Turbinenhöhe (Energieentnahme)</li>
+<li class="fragment">Randbedingung <span class="math inline">\(p_B = p_{vap}\)</span></li>
+</ul>
+</div></div>
+<ul>
+<li class="fragment"><span class="math display">\[\frac{p_{vap}}{\rho g} + \frac{v^2}{2g} + H_{B} = \frac{p_{0}}{\rho g} + H_{2} + \left( \lambda \frac{L_{2}}{D} + 1 \right) \frac{v^2}{2g} + h_T\]</span></li>
+</ul>
+</div>
+</section>
+<section id="aufgabe-2d-2" class="slide level2">
+<h2>Aufgabe 2d)</h2>
+<div>
+<ul>
+<li class="fragment"><p>Nach Turbinenhöhe auflösen</p>
+<ul>
+<li class="fragment"><span class="math inline">\(h_T = \frac{p_{vap}}{\rho g} + \frac{v^2}{2g} + H_{B} - \frac{p_{0}}{\rho g} - H_{2} - \left( \lambda \frac{L_{2}}{D} + 1 \right) \frac{v^2}{2g}\)</span></li>
+</ul></li>
+<li class="fragment"><p>Umformen zu:</p>
+<ul>
+<li class="fragment"><span class="math display">\[h_T = \frac{p_{vap} - p_{0}}{\rho g} + (H_{B} - H_{2}) - \lambda \frac{L_{2}}{D} \frac{v^2}{2g}\]</span></li>
+</ul></li>
+<li class="fragment"><p>Werte einsetzen <span class="math inline">\(p_{vap} = 2300 \, \mathrm{Pa}\)</span></p>
+<p><span class="math inline">\(p_0 = 1 \times 10^5 \, \mathrm{Pa}\)</span></p>
+<p><span class="math inline">\(\rho = 1000 \, \mathrm{kg/m^3}\)</span></p>
+<p><span class="math inline">\(g = 9{,}81 \, \mathrm{m/s^2}\)</span></p>
+<p><span class="math inline">\(v = 2 \, \mathrm{m/s}\)</span> (aus Teilaufgabe a)</p>
+<p><span class="math inline">\(\lambda = 0{,}03\)</span> (aus Teilaufgabe a)</p></li>
+<li class="fragment"><p>=&gt; <span class="math inline">\(h_T = 34,2 \, \mathrm{m}\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="schritt-6-wellenleistung-der-turbine-berechnen" class="slide level2">
+<h2>Schritt 6: Wellenleistung der Turbine berechnen</h2>
+<p><strong>Formel für Turbinenleistung:</strong> <span class="math display">\[P_T = \eta_T \rho g Q h_T\]</span></p>
+<p><strong>Erklärung:</strong> - Bei der Turbine wird Energie <strong>entnommen</strong> (Energiewandlung) - Wirkungsgrad <span class="math inline">\(\eta_T\)</span> berücksichtigt Verluste bei der Energieumwandlung</p>
+<p><strong>Mit:</strong> - <span class="math inline">\(\eta_T = 0{,}9\)</span> - <span class="math inline">\(Q = 2\pi \, \mathrm{m^3/s}\)</span> - <span class="math inline">\(h_T = 34{,}2 \, \mathrm{m}\)</span></p>
+<p><strong>Berechnung:</strong> <span class="math display">\[P_T = 0{,}9 \times 1000 \times 9{,}81 \times 2\pi \times 34{,}2 = 1{,}9 \, \mathrm{MW}\]</span></p>
+</section>
+<section id="schritt-7-ergebnis-zusammenfassen" class="slide level2">
+<h2>Schritt 7: Ergebnis zusammenfassen</h2>
+<p><strong>Antwort:</strong> - Turbinenhöhe: <span class="math inline">\(h_T = 34{,}2 \, \mathrm{m}\)</span> - Wellenleistung der Turbine: <span class="math inline">\(P_T = 1{,}9 \, \mathrm{MW}\)</span></p>
+<p><strong>Interpretation:</strong> - Die Turbine nutzt den Höhenunterschied zwischen Berg und Speicher 2 - Trotz der ungünstigen Druckverhältnisse (niedriger Druck am Berg) kann noch Energie zurückgewonnen werden - Die Energierückgewinnung beträgt etwa 17% der zusätzlichen Pumpenleistung aus Teil c)</p>
+</section>
+<section id="alternative-lösungsweg-optional" class="slide level2">
+<h2>Alternative Lösungsweg (optional)</h2>
+<p><strong>Energiegleichung von Speicher 1 nach Speicher 2:</strong></p>
 
 </section></section>
     </div>

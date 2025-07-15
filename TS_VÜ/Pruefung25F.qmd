@@ -12,92 +12,285 @@ css: styles.css
 
 ---
 
-# Aufgabe 1: Aufgabenstellung
-
-Eine hydraulische Hebevorrichtung der Tiefe $b$ besteht aus zwei masselosen Kolben, die sich in ihrem jeweiligen Hubraum ab oder auf bewegen können. Befüllt ist die Vorrichtung mit einem Öl der Dichte $\rho$. Zusätzlich wirken auf die Kolben die Kräfte $F_1$ und $F_2$ in negativer $y$-Richtung. Eine im Punkt $M$ drehbare Klappe öffnet ab einem kritischen Moment $M_{krit}$. Ein Würfel der Kantenlänge $\frac{1}{2}H$ schwebt im Öl.%
-\begin{center}
-
-        \input{./assets/Pruefung25F/hydrostatik.pdf_tex}
-\end{center}
-
-- Annahmen:
-   - Die Flüssigkeit ist inkompressibel.
-   - Der sich jeweils einstellende Zustand ist stationär.
-   - Die Klappe schließt im geschlossenen Zustand dicht ab.
-		
-- Gegeben:
-   - Kolbenfläche: $A_1=A,A_2=4A$
-   - Höhe: $H$  
-   - Umgebungsdruck: $p_0$
-   - Erdbeschleunigung: $g$  
-   - Behälter- und Klappentiefe: $b$
-   - Kritisches Moment: $M_{krit}$
-   - Dichte: $\rho$
-
-
 
 ## Aufgabe 1a)
 
-Berechnen Sie die auf den Würfel wirkende Auftriebskraft und dessen Dichte $\rho_w$.
-Berechnen der Auftriebskraft $F_{Auftrieb}$ auf den Würfel. 
- - $F_{Auftrieb} = \frac{\rho g H^{3}}{8}  \; \teilpunkte{gesamtPunkte_hydro}{1}$
- - Die Dichte $\rho_w$ entspricht der Dichte $\rho$ damit der Würfel in Öl schweben kann.  \; \teilpunkte{gesamtPunkte_hydro}{1}
-	
+
+:::{.incremental}
+
+- Berechnen Sie die auf den Würfel wirkende Auftriebskraft und dessen Dichte $\rho_w$.
+- Berechnen der Auftriebskraft $F_{Auftrieb}$ auf den Würfel. 
+
+   - Die Dichte $\rho_w$ entspricht der Dichte $\rho$ damit der Würfel in Öl schweben kann.  
+- Die Auftriebskraft entspricht der Gewichtskraft des verdrängten Volumens
+   - $F_{Auftrieb} = \frac{\rho g H^{3}}{8}$
+:::
+
+
 ## Aufgabe 1b)  
 
-Berechnen Sie den Betrag der resultierenden Druckkraft $F_{p}$ auf die Klappe.
+:::{.incremental}
+
+- Berechnen Sie den Betrag der resultierenden Druckkraft $F_{p}$ auf die Klappe.
+- Berechnung über den Druck im Flächenschwerpunkt, multipliziert mit der Fläche der Klappe
+
+   - Druckverlauf mit $p(y)=\rho g y$: 
+   - Flächenschwerpunkt bei: $y=\frac{3}{2}H$
 - $F_{p} = p_G A = \frac{3}{2} \rho g {H}^2 b$
+:::
+
+
 
 ## Aufgabe 1c)  
 
 Berechnen Sie das von der Druckkraft $F_p$ erzeugte Moment um den Drehpunkt M.
 
+:::{.incremental}
+
 - Hebelarm:
-   -$l_{p} & = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}$
-      -$= \frac{H}{2} + \frac{\rho g}{\rho g \frac{3H}{2} H b} \frac{1}{12} {H}^3 b$ 
-      -$= \frac{5}{9} H$ 
+   - $l_{p}  = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}$
+   - $l_{p}= \frac{H}{2} + \frac{\rho g}{\rho g \frac{3H}{2} H b} \frac{1}{12} {H}^3 b$ 
+   - $l_{p}= \frac{5}{9} H$ 
 
-Resultierendes Moment:
+- Resultierendes Moment:
    - $M_p  = F_{p} l_{p}$
-   - $= \frac{3}{2} \rho g  H^2 b \frac{5}{9} H$
-   - $= \frac{5}{6} \rho g {H}^3 b$
-
+   - $M_p= \frac{3}{2} \rho g  H^2 b \frac{5}{9} H$
+   - $M_p= \frac{5}{6} \rho g {H}^3 b$
+:::
 
 ## Aufgabe 1d)  
 
 Nun wirke die Kraft $F_1 \neq 0$. Die Positionen der Kolben und des Würfels bleiben gleich.
 
 Wie verändern sich die auf die Ober- und Unterseite des Würfels wirkenden Druckkräfte und die Auftriebskraft?
-	$F_{o}$ und $F_{u}$ sind größer. 
-	$F_{Auftrieb}$ bleibt gleich. 
 	
+
 ## Aufgabe 1e)  
 
 Skizzieren Sie den Druckverlauf über die linke und rechte Seite der Klappe und geben Sie die charakteristischen Werte an.
-	
-	\begin{center}
-		\input{druckverlauf_teilaufgabe_c.pdf_tex}
-	\end{center}
 
-
-## Aufgabe 1g)  
+## Aufgabe 1f)  
 
 Berechnen Sie die Kraft $F_2$ in Abhängigkeit von $F_1$, damit das System im Ruhezustand ist.
 
+:::{.incremental}
+
    - $p_0+\frac{F_1}{A} = p_0+\frac{F_2}{4A}$
    - $F_2=4F_1$
+:::
+
+
+## Aufgabe 1g)  
 Bestimmen Sie die Kraft $F_1$, bei der sich die Klappe öffnet.
 
+:::{.incremental}
 - Druckkraft:
-
    - $F_{p} = p_G A =\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb$
 - Hebelarm:
-   - $l_{p} & = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}$
-   - $= \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b$
+   - $l_{p} = \frac{H}{2} + \frac{\rho g}{p_G A} I_{\tilde{x}\tilde{x}}$
+   - $l_{p} = \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b$
 
 - Klappe öffnet ab einem kritischen Moment $M_{krit}$:
    - $\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) Hb \left( \frac{H}{2} + \frac{\rho g}{\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) H b} \frac{1}{12} {H}^3 b \right) \overset{!}{=} M_{krit}$
    - $\left( \frac{F_1}{A}+\frac{3}{2} \rho gH \right) \frac{H^2 b}{2} + \frac{ \rho gH^3 b }{12}= M_{krit}$
 	
    - $F_1=\frac{2A M_{krit}}{H^2 b}-\frac{5}{3}\rho gHA$
+:::
 
+
+# Aufgabe 2)
+
+## Aufgabe 2a)
+
+Bestimmen Sie die Strömungsgeschwindigkeit $v$ sowie die Rohrreibungszahl $\lambda$ unter Verwendung des beiliegenden Moody-Diagramms.
+
+:::{.incremental}
+
+- Die Strömungsgeschwindigkeit berechnet sich über den Volumenstrom und dem Querschnitt:
+   - $v=\frac{Q}{A}=2 \, \mathrm{\frac{m}{s}}$
+- Für die Bestimmung von $\lambda$ werden die Reynolds-Zahl und das Verhältnis von Wandrauhigkeit $k$ zu Rohrdurchmesser $D$ benötigt.
+   - $\mathrm{Re}=\frac{vD}{\nu}=\frac{2 \frac{\mathrm{m}}{\mathrm{s}} * 2 \mathrm{m} }{10^{-6}\frac{m^2}{s}}= 4*10^{6}$
+   - $\frac{k}{D}=\frac{10\,\mathrm{mm}}{2000\,\mathrm{mm}}=0,005$ 
+   - => $\lambda=0,03$
+:::
+
+
+## Aufgabe 2b)
+
+
+Bestimmen Sie die notwendige Förderhöhe $h_P$ um den Volumenstrom von Speicher 1 nach Speicher 2 zu pumpen und die dafür nötige Wellenleistung $P_P$ der Pumpe.
+
+
+:::{.incremental}
+- Energiegleichung von Speicher 1 nach Speicher 2:
+   - $\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{0}}{\rho g} + H_{2} + \lambda \frac{L_{1}}{D} \frac{v^2}{2g} + \lambda \frac{L_{2}}{D} \frac{v^2}{2g} + \frac{v^2}{2g} - h_P$
+   - Bedeutung der einzelnen Verlustterme:
+ 
+      - $\lambda \frac{L_{1}}{D} \frac{v^2}{2g}$ - Reibungsverluste in Rohrabschnitt 1
+      - $\lambda \frac{L_{2}}{D} \frac{v^2}{2g}$ - Reibungsverluste in Rohrabschnitt 2  
+      - $\frac{v^2}{2g}$ - Örtliche Verluste (z.B. Einlauf, Auslauf, Carnot)
+      - $h_P$ - Pumpenhöhe (Energiezufuhr, daher negatives Vorzeichen)
+
+   - $\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{0}}{\rho g} + H_{2} + \left( \lambda \left( \frac{L_{1}+L_{2}}{D} \right) +1 \right) \frac{v^2}{2g} - h_P$
+   - $h_P = 117,18 \,\mathrm{m}$
+   - $P_P = \frac{\rho g Q h_P}{\eta_P} = 8,5 \,\mathrm{MW}$
+
+:::
+
+## Aufgabe 2c)
+
+Damit der Dampfdruck auf dem Berg nicht unterschritten wird ($p_B > p_{vap}$), muss das Druckniveau erhöht werden. Zur Energierückgewinnung wird eine Turbine unmittelbar vor dem Speicher 2 eingebaut. Der Volumenstrom kann für c), d) und e) als konstant angenommen werden.
+
+
+:::{.incremental}
+
+- Ziel: Pumpe muss so dimensioniert werden, dass am höchsten Punkt (Berg) der Druck nicht unter den Dampfdruck fällt.
+- Randbedingung: $p_B = p_{vap}$ (kritischer Fall)
+
+- Energiegleichung von Speicher 1 bis zum Berg aufstellen
+
+   - $$\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{B}}{\rho g} + H_{B} + \frac{v^2}{2g} + \lambda \frac{L_{1}}{D} \frac{v^2}{2g} - h_P$$
+
+- Kritische Bedingung: $p_B = p_{vap}$
+   - $$\frac{p_{0}}{\rho g} + H_{1} = \frac{p_{vap}}{\rho g} + H_{B} + \frac{v^2}{2g} + \lambda \frac{L_{1}}{D} \frac{v^2}{2g} - h_P$$
+:::
+
+
+## Aufgabe 2c)
+
+- Nach Pumpenhöhe auflösen
+   - $$h_P = \frac{p_{0} - p_{vap}}{\rho g} + (H_{1} - H_{B}) - \left(1 + \lambda \frac{L_{1}}{D}\right) \frac{v^2}{2g}$$
+
+
+:::{.incremental}
+
+- Gegebene Werte einsetzen
+   - $p_0 = 1 \times 10^5 \, \mathrm{Pa}$
+   - $p_{vap} = 2300 \, \mathrm{Pa}$
+   - $\rho = 1000 \, \mathrm{kg/m^3}$
+   - $g = 9{,}81 \, \mathrm{m/s^2}$
+   - $v = 2 \, \mathrm{m/s}$ (aus Teilaufgabe a)
+   - $\lambda = 0{,}03$ (aus Teilaufgabe a)
+
+- => $h_P = 151{,}4 \, \mathrm{m}$
+
+:::
+
+
+## Aufgabe 2c)
+
+:::{.incremental}
+
+- Wellenleistung berechnen
+
+   - $$P_P = \frac{\rho g Q h_P}{\eta_P}$$
+
+      - $Q = 2\pi \, \mathrm{m^3/s}$
+      - $\eta_P = 0{,}85$
+      - $h_P = 151{,}4 \, \mathrm{m}$
+   
+- $$P_P = \frac{1000 \times 9{,}81 \times 2\pi \times 151{,}4}{0{,}85} = 11 \, \mathrm{MW}$$
+
+- Notwendige Förderhöhe: $h_{P,neu} = 151{,}4 \, \mathrm{m}$
+- Wellenleistung: $P_{P,neu} = 11 \, \mathrm{MW}$
+
+- Interpretation: Die Pumpe muss eine höhere Förderhöhe als in Teilaufgabe b) aufbringen, um den Dampfdruck am Berg nicht zu unterschreiten.
+:::
+
+
+## Aufgabe 2d)
+
+Bestimmen Sie die Wellenleistung $P_T$, die mit der Turbine gewonnen werden könnte, unter der Bedingung von Aufgabenteil c).
+
+:::{.incremental}
+
+- Ziel:Bestimmung der Turbinenleistung zwischen Berg und Speicher 2
+
+- Ausgangssituation:
+   - Turbine wird unmittelbar vor Speicher 2 eingebaut
+   - Bedingung aus Teil c): $p_B = p_{vap}$ am Berg
+   - Energierückgewinnung durch Höhenunterschied und Druckdifferenz
+
+:::
+
+## Aufgabe 2d)
+
+:::{.incremental}
+- Energiegleichung aufstellen: Von Berg nach Speicher 2:
+   - $$\frac{p_{B}}{\rho g} + \frac{v^2}{2g} + H_{B} = \frac{p_{0}}{\rho g} + H_{2} + \left( \lambda \frac{L_{2}}{D} + 1 \right) \frac{v^2}{2g} + h_T$$
+
+::::{.columns}
+:::{.column width="50%"}
+   - $\frac{p_{B}}{\rho g}$: Druckhöhe am Berg
+   - $\frac{v^2}{2g}$: Geschwindigkeitshöhe am Berg
+   - $H_{B}$: Höhe des Berges
+   - $\frac{p_{0}}{\rho g}$: Druckhöhe am Speicher 2
+   - $H_{2}$: Höhe des Wasserspiegels in Speicher 2
+:::
+:::{.column width="50%"}
+   - $\lambda \frac{L_{2}}{D} \frac{v^2}{2g}$: Reibungsverluste vom Berg bis Speicher 2
+   - $\frac{v^2}{2g}$: Carnot-Verlust $\zeta_{Carnot} \alpha \frac{v^2}{2g}$ mit $\zeta_{Carnot}:= 1$ & $\alpha = 1$ turbulent
+   - $h_T$: Turbinenhöhe (Energieentnahme)
+   - Randbedingung $p_B = p_{vap}$
+:::
+::::
+
+   - $$\frac{p_{vap}}{\rho g} + \frac{v^2}{2g} + H_{B} = \frac{p_{0}}{\rho g} + H_{2} + \left( \lambda \frac{L_{2}}{D} + 1 \right) \frac{v^2}{2g} + h_T$$
+:::
+
+
+## Aufgabe 2d)
+:::{.incremental}
+
+- Nach Turbinenhöhe auflösen
+   - $h_T = \frac{p_{vap}}{\rho g} + \frac{v^2}{2g} + H_{B} - \frac{p_{0}}{\rho g} - H_{2} - \left( \lambda \frac{L_{2}}{D} + 1 \right) \frac{v^2}{2g}$
+
+- Umformen zu:
+   - $$h_T = \frac{p_{vap} - p_{0}}{\rho g} + (H_{B} - H_{2}) - \lambda \frac{L_{2}}{D} \frac{v^2}{2g}$$
+- Werte einsetzen
+   $p_{vap} = 2300 \, \mathrm{Pa}$
+
+   $p_0 = 1 \times 10^5 \, \mathrm{Pa}$
+   
+   $\rho = 1000 \, \mathrm{kg/m^3}$
+   
+   $g = 9{,}81 \, \mathrm{m/s^2}$
+   
+   $v = 2 \, \mathrm{m/s}$ (aus Teilaufgabe a)
+   
+   $\lambda = 0{,}03$ (aus Teilaufgabe a)
+- => $h_T = 34,2 \, \mathrm{m}$
+:::
+
+## Schritt 6: Wellenleistung der Turbine berechnen
+**Formel für Turbinenleistung:**
+$$P_T = \eta_T \rho g Q h_T$$
+
+**Erklärung:** 
+- Bei der Turbine wird Energie **entnommen** (Energiewandlung)
+- Wirkungsgrad $\eta_T$ berücksichtigt Verluste bei der Energieumwandlung
+
+**Mit:**
+- $\eta_T = 0{,}9$
+- $Q = 2\pi \, \mathrm{m^3/s}$
+- $h_T = 34{,}2 \, \mathrm{m}$
+
+**Berechnung:**
+$$P_T = 0{,}9 \times 1000 \times 9{,}81 \times 2\pi \times 34{,}2 = 1{,}9 \, \mathrm{MW}$$
+
+---
+
+## Schritt 7: Ergebnis zusammenfassen
+**Antwort:**
+- Turbinenhöhe: $h_T = 34{,}2 \, \mathrm{m}$
+- Wellenleistung der Turbine: $P_T = 1{,}9 \, \mathrm{MW}$
+
+**Interpretation:** 
+- Die Turbine nutzt den Höhenunterschied zwischen Berg und Speicher 2
+- Trotz der ungünstigen Druckverhältnisse (niedriger Druck am Berg) kann noch Energie zurückgewonnen werden
+- Die Energierückgewinnung beträgt etwa 17% der zusätzlichen Pumpenleistung aus Teil c)
+
+---
+
+## Alternative Lösungsweg (optional)
+**Energiegleichung von Speicher 1 nach Speicher 2:**
