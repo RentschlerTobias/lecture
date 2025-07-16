@@ -71,6 +71,8 @@ Wie verändern sich die auf die Ober- und Unterseite des Würfels wirkenden Druc
 
 Skizzieren Sie den Druckverlauf über die linke und rechte Seite der Klappe und geben Sie die charakteristischen Werte an.
 
+![](./assets/Pruefung25F/aufgabe-1f_druckverlauf.png)
+
 ## Aufgabe 1f)  
 
 Berechnen Sie die Kraft $F_2$ in Abhängigkeit von $F_1$, damit das System im Ruhezustand ist.
@@ -79,11 +81,11 @@ Berechnen Sie die Kraft $F_2$ in Abhängigkeit von $F_1$, damit das System im Ru
 
    - $p_0+\frac{F_1}{A} = p_0+\frac{F_2}{4A}$
    - $F_2=4F_1$
-   - ![](./assets/Pruefung25F/aufgabe-1f_druckverlauf.png)
 :::
 
 
 ## Aufgabe 1g)  
+
 Bestimmen Sie die Kraft $F_1$, bei der sich die Klappe öffnet.
 
 :::{.incremental}
@@ -291,4 +293,49 @@ Wellenleistung der Turbine berechnen
    - Die Energierückgewinnung beträgt etwa 17% der zusätzlichen Pumpenleistung aus Teil c)
 
 :::
+
+## Aufgabe 2 e)
+
+# Aufgabe 3
+
+## Aufgbae 3a)
+
+:::{.incremental}
+
+- Berechnen Sie die Geschwindigkeit $v_3$ an der Stelle (3).
+
+- Energiebilanz von (1) nach (3):
+- $p_{0} + \frac{\rho}{2} v_1^2 = p_{0} + \frac{\rho}{2} v_3^2$
+- $v_3 = v_1$
+
+:::
+
+
+## Aufgabe 3b)
+
+:::{.incremental}
+
+- Berechnen Sie das Geschwindigkeitsprofil $v_2(h)$ in Abhängigkeit der unbekannten Strahlhöhe $h_2$ und der maximalen Geschwindigkeit $v_{2,max}$.
+- Lineare Gleichung: $v_2(h) = mh + c$
+- Randbedingungen: 
+   - $v_2(0) = 0$ 
+   - $v_2(h_2) = v_{2,max}$
+- Damit ergibt sich für das lineare Geschwindigkeitsprofil:
+   - $v_2(h) = v_{2,max}\frac{h}{h_2}$
+
+:::
+
+
+## Aufgabe 3b)
+
+:::{.incremental}
+
+- Konti:
+- $Q_1 = Q_2 + Q_3$ 
+- $h_1^2 v_1 = \frac{v_{2,max}}{2}  h_1 h_2 + h_1 h_3 v_1$
+- Daraus erhält man die Strahlhöhe $h_2$:
+- $h_2 = \frac{2 v_1 (h_1 - h_3)}{v_{2,max}}$ 
+
+:::
+
 
