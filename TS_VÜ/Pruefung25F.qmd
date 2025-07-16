@@ -77,6 +77,7 @@ Berechnen Sie die Kraft $F_2$ in Abhängigkeit von $F_1$, damit das System im Ru
 
    - $p_0+\frac{F_1}{A} = p_0+\frac{F_2}{4A}$
    - $F_2=4F_1$
+   - ![](./assets/Pruefung25F/aufgabe-1f_druckverlauf.png)
 :::
 
 
