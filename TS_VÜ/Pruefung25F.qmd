@@ -65,6 +65,7 @@ Berechnen Sie das von der Druckkraft $F_p$ erzeugte Moment um den Drehpunkt M.
 Nun wirke die Kraft $F_1 \neq 0$. Die Positionen der Kolben und des Würfels bleiben gleich.
 
 Wie verändern sich die auf die Ober- und Unterseite des Würfels wirkenden Druckkräfte und die Auftriebskraft?
+- $F_o$ und $F_u$ erhöhen sich um den Betrag $\frac{F_1}{A}$
 	
 
 ## Aufgabe 1e)  
@@ -165,7 +166,6 @@ Damit der Dampfdruck auf dem Berg nicht unterschritten wird ($p_B > p_{vap}$), m
 
 - Nach Pumpenhöhe auflösen
    - $$h_P = \frac{p_{0} - p_{vap}}{\rho g} + (H_{1} - H_{B}) - \left(1 + \lambda \frac{L_{1}}{D}\right) \frac{v^2}{2g}$$
-
 
 :::{.incremental}
 
@@ -294,7 +294,44 @@ Wellenleistung der Turbine berechnen
 
 :::
 
-## Aufgabe 2 e)
+## Aufgabe 2e)
+
+Bestimmen Sie die sich einstellende Höhe der Fontäne.
+
+:::{.incremental}
+
+- **Anwendung der Energiegleichung:**
+  - Von Berg (Punkt B) über Leckage zur Oberseite der Fontäne
+  - Berücksichtigung aller Energieterme und Verluste
+
+- **Energiegleichung aufstellen:**
+  $$\frac{p_{B}}{\rho g} + \frac{v^2}{2g} + H_{B} = \frac{p_{0}}{\rho g} + H_{F} + \lambda \frac{L_{2}}{D} \frac{v^2}{2g} + \Delta h$$
+
+- **Erläuterung der Terme:**
+  - $\frac{p_{B}}{\rho g}$: Druckhöhe am Berg
+  - $\frac{v^2}{2g}$: Geschwindigkeitshöhe
+  - $H_{B}$: Geodätische Höhe am Berg
+  - $\frac{p_{0}}{\rho g}$: Atmosphärendruck an der Fontäne
+  - $H_{F}$: Fontänenhöhe (gesucht)
+  - $\lambda \frac{L_{2}}{D} \frac{v^2}{2g}$: Reibungsverluste in der Leitung
+  - $\Delta h$: Weitere Verluste
+
+:::
+
+## Aufgabe 2e)
+
+Bestimmen Sie die sich einstellende Höhe der Fontäne.
+
+:::{.incremental}
+
+- **Umstellung nach Fontänenhöhe:**
+  $$H_{F} = \frac{p_{B}}{\rho g} + \frac{v^2}{2g} + H_{B} - \frac{p_{0}}{\rho g} - \lambda \frac{L_{2}}{D} \frac{v^2}{2g} - \Delta h$$
+
+- **Ergebnis:**
+  - **Absolute Höhe (bezogen auf NN):** $H_F = 264,4 \, \text{m}$
+  - **Relative Höhe (bezogen auf Leckstelle):** $H_F' = 14,4 \, \text{m}$
+
+:::
 
 # Aufgabe 3
 
@@ -326,16 +363,302 @@ Wellenleistung der Turbine berechnen
 :::
 
 
-## Aufgabe 3b)
+## Aufgabe 3c)
 
 :::{.incremental}
 
 - Konti:
-- $Q_1 = Q_2 + Q_3$ 
-- $h_1^2 v_1 = \frac{v_{2,max}}{2}  h_1 h_2 + h_1 h_3 v_1$
+   - $Q_1 = Q_2 + Q_3$ 
+   - $h_1^2 v_1 = \frac{v_{2,max}}{2}  h_1 h_2 + h_1 h_3 v_1$
 - Daraus erhält man die Strahlhöhe $h_2$:
-- $h_2 = \frac{2 v_1 (h_1 - h_3)}{v_{2,max}}$ 
+   - $h_2 = \frac{2 v_1 (h_1 - h_3)}{v_{2,max}}$ 
 
 :::
 
+## Aufgabe 3d)
+
+Im Folgenden wird die Umlenkschaufel fixiert, wodurch sich die Strahlhöhe $h_2$ einstellt. Die Größen $h_2$, $h_3$ und $v_{2,max}$ gelten als gegeben, die Reibung zwischen Umlenkvorrichtung und Strahl wird vernachlässigt. Das Geschwindigkeitsprofil $v_2(h)$ bleibt dabei linear.
+
+:::{.incremental}
+
+- $\underline{v}_1 = v_1 \begin{pmatrix} 1 \\ 0 \end{pmatrix}$
+- $\underline{v}_2(h) = v_{2,max}\frac{h}{h_2} \begin{pmatrix} -\cos \alpha \\ \sin \alpha \end{pmatrix}$ 
+- $\underline{v}_3 = v_1 \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ 
+:::
+
+
+## Aufgabe 3e)
+
+Berechnen Sie mit einer Impulsbilanz am eingezeichneten Kontrollvolumen den Vektor der Stützkraft $\underline{F}_S$ in Abhängigkeit von der Druckkraft auf die freien Oberflächen $\underline{F}_A$.
+
+:::{.incremental}
+- **Impulsbilanz am Kontrollvolumen:**
+  - Allgemeine Form: $\sum \dot{m} \underline{v} = \sum \underline{F}$
+  - Mit Impulsstromdichte: $\rho \underline{v} (\underline{v} \cdot \underline{n}) \, dA$
+
+- **Impulsströme der drei Teilstrahlen:**
+  - Strahl (1): $\rho h_1^2 \underline{v}_1 (\underline{v}_1 \cdot \underline{n}_1)$
+  - Strahl (2): $\rho h_1 \int_0^{h_2} \underline{v}_{2} (\underline{v}_2 \cdot \underline{n}_2) \, dh$
+  - Strahl (3): $\rho h_1 h_3 \underline{v}_3 (\underline{v}_3 \cdot \underline{n}_3)$
+
+- **Einsetzen der Richtungsvektoren:**
+  - Strahl (1): $\rho h_1^2 v_1^2 \begin{pmatrix} -1 \\ 0 \end{pmatrix}$
+  - Strahl (2): $\rho h_1 \frac{v_{2,max}^2}{h_2^2} \frac{h_2^3}{3} \begin{pmatrix} -\cos \alpha \\ \sin \alpha \end{pmatrix} = \rho h_1 \frac{h_2}{3} v_{2,max}^2 \begin{pmatrix} -\cos \alpha \\ \sin \alpha \end{pmatrix}$
+  - Strahl (3): $\rho h_1 h_3 v_3^2 \begin{pmatrix} 1 \\ 0 \end{pmatrix}$
+
+:::
+
+
+## Aufgabe 3e)
+
+Berechnen Sie mit einer Impulsbilanz am eingezeichneten Kontrollvolumen den Vektor der Stützkraft $\underline{F}_S$ in Abhängigkeit von der Druckkraft auf die freien Oberflächen $\underline{F}_A$.
+
+:::{.incremental}
+
+- **Impulsbilanz aufstellen:**
+  $$\rho h_1^2 v_1^2 \begin{pmatrix} -1 \\ 0 \end{pmatrix} + \rho h_1 \frac{h_2}{3} v_{2,max}^2 \begin{pmatrix} -\cos \alpha \\ \sin \alpha \end{pmatrix} + \rho h_1 h_3 v_3^2 \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \underline{F}_S + \underline{F}_A$$
+
+- **Auflösung nach Stützkraft:**
+  $$\underline{F}_S = -\underline{F}_A + \rho h_1^2 v_1^2 \begin{pmatrix} -1 \\ 0 \end{pmatrix} + \rho h_1 \frac{h_2}{3} v_{2,max}^2 \begin{pmatrix} -\cos \alpha \\ \sin \alpha \end{pmatrix} + \rho h_1 h_3 v_1^2 \begin{pmatrix} 1 \\ 0 \end{pmatrix}$$
+:::
+
+## Aufgabe 3f)
+Bestimmen Sie mithilfe eines Kräftegleichgewichts an der Umlenkschaufel den Kraftvektor $\underline{F}_U$, der von der Befestigung der Umlenkschaufel aufgebracht werden muss.
+
+:::{.incremental}
+- **Kräftegleichgewicht an der Umlenkschaufel:**
+  - Alle Kräfte an der Schaufel müssen im Gleichgewicht stehen
+  - $\underline{F}_K + \underline{F}_P + \underline{F}_G + \underline{F}_U = \underline{0}$
+
+- **Identifikation der Kräfte:**
+  - $\underline{F}_K$: Kontaktkraft vom Fluid auf die Schaufel
+  - $\underline{F}_P$: Druckkraft auf die Schaufel  
+  - $\underline{F}_G$: Gewichtskraft der Schaufel
+  - $\underline{F}_U$: Befestigungskraft (gesucht)
+
+- **Anwendung des 3. Newtonschen Gesetzes:**
+  - $\underline{F}_K = -\underline{F}_S$ (Reaktionskraft zur Stützkraft)
+  - $\underline{F}_P = -\underline{F}_A$ (Reaktionskraft zur Druckkraft)
+
+- **Umstellung nach gesuchter Kraft:**
+  $\underline{F}_U = -\underline{F}_K - \underline{F}_P - \underline{F}_G$
+  $\underline{F}_U = \underline{F}_S + \underline{F}_A - \underline{F}_G$
+
+- **Gewichtskraft der Umlenkschaufel:**
+  $\underline{F}_G = \begin{pmatrix} 0 \\ -mg \end{pmatrix}$
+
+- **Einsetzen der bekannten Ausdrücke:**
+  $\underline{F}_U = \rho h_1^2 v_1^2 \begin{pmatrix} -1 \\ 0 \end{pmatrix} + \rho h_1 h_3 v_1^2 \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \rho h_1 \frac{h_2}{3} v_{2,max}^2 \begin{pmatrix} -\cos \alpha \\ \sin \alpha \end{pmatrix} + \begin{pmatrix} 0 \\ mg \end{pmatrix}$
+:::
+
+## Aufgabe 3g)
+Bestimmen Sie den Umlenkwinkel $\alpha$, sodass ${F}_{U,y}=2mg$ gilt.
+
+:::{.incremental}
+- **Gegebene Bedingung:**
+  - Die y-Komponente der Befestigungskraft soll: $F_{U,y} = 2mg$
+
+- **y-Komponente von $\underline{F}_U$ aus Aufgabe f):**
+  - Aus der vorherigen Lösung: 
+  $$F_{U,y} = \rho h_1 \frac{h_2}{3} v_{2,max}^2 \sin \alpha + mg$$
+
+- **Gleichsetzen mit der Bedingung:**
+  $$F_{U,y} \overset{!}{=} 2mg$$
+  $$2mg = \rho h_1 \frac{h_2}{3} v_{2,max}^2 \sin \alpha + mg$$
+
+- **Umformen zur Bestimmung von $\sin \alpha$:**
+  $$2mg - mg = \rho h_1 \frac{h_2}{3} v_{2,max}^2 \sin \alpha$$
+  $$mg = \rho h_1 \frac{h_2}{3} v_{2,max}^2 \sin \alpha$$
+
+:::
+
+
+## Aufgabe 3g)
+
+Bestimmen Sie den Umlenkwinkel $\alpha$, sodass ${F}_{U,y}=2mg$ gilt.
+
+:::{.incremental}
+
+- **Auflösung nach $\sin \alpha$:**
+  $$\sin \alpha = \frac{mg}{\rho h_1 \frac{h_2}{3} v_{2,max}^2} = \frac{3mg}{\rho h_1 h_2 v_{2,max}^2}$$
+
+
+- **Bestimmung des Winkels:**
+  $$\alpha = \sin^{-1} \left(\frac{3mg}{\rho h_1 h_2 v_{2,max}^2} \right)$$
+:::
+
+# Aufgabe 4
+
+## Aufgabe 4a)
+
+Geben Sie die entsprechend vereinfachte Impulsgleichung in y-Richtung an.
+
+:::{.incremental}
+- **Ausgangspunkt - Vollständige Impulsgleichung in y-Richtung:**
+  $$\frac{\partial (\rho v)}{\partial t} + \frac{\partial (\rho u v)}{\partial x} + \frac{\partial (\rho v v)}{\partial y} = \rho g_y - \frac{\partial p}{\partial y} + \mu \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} \right)$$
+
+- **Vereinfachung - Stationäre Strömung:**
+  - $\frac{\partial (\rho v)}{\partial t} = 0$ (zeitunabhängig)
+
+- **Vereinfachung - Voll ausgebildete Strömung:**
+  - $\frac{\partial (\rho u v)}{\partial x} = 0$ (keine Änderung in Strömungsrichtung)
+
+- **Vereinfachung - Laminar:**
+  - $\frac{\partial (\rho v v)}{\partial y} = 0$ (keine Querströmung)
+  - $\frac{\partial^2 v}{\partial y^2} = 0$ (kein Gradient in Strömungsrichtung)
+  
+- **Vereinfachung - Vernachlässigung der Schwerkraft:**
+  - $\rho g_y = 0$ (gegeben)
+
+- **Vereinfachte Impulsgleichung:**
+  $$\frac{\partial p}{\partial y} = \mu \frac{\partial^2 v}{\partial x^2}$$
+:::
+
+## Aufgabe 4b)
+
+Geben Sie die Randbedingung für die Spaltwände an.
+
+:::{.incremental}
+
+- Haftbedingung:
+   - Flüssigkeit haftet vollständig an den festen Wänden
+   - Geschwindigkeit an der Wand entspricht der Wandgeschwindigkeit
+
+- Spaltwände sind fixiert: Wandgeschwindigkeit ist null
+
+- Randbedingungen:
+
+   - An der oberen Spaltwand: $v(x = h) = 0$
+   - An der unteren Spaltwand: $v(x = -h) = 0$
+
+- Physikalische Bedeutung:
+   - Maximum der Geschwindigkeit in der Spaltmitte
+   - Symmetrisches Geschwindigkeitsprofil
+:::
+
+
+## Aufgabe 4c)
+Bestimmen Sie die Geschwindigkeitsverteilung $v(x)$ in Abhängigkeit von $x$, $h$, $\mu$ und dem unbekannten Druckgradient $\frac{\partial p}{\partial y}$.
+
+:::{.incremental}
+- **Ausgangspunkt - Vereinfachte Impulsgleichung:**
+  $$\frac{\partial p}{\partial y} = \mu \frac{\partial^2 v}{\partial x^2}$$
+
+- **Umstellung für Integration:**
+  $$\frac{\partial^2 v}{\partial x^2} = \frac{1}{\mu} \frac{\partial p}{\partial y}$$
+
+- **Erste Integration:**
+  $$\frac{\partial v}{\partial x} = \frac{1}{\mu} \frac{\partial p}{\partial y} x + C_1$$
+
+- **Zweite Integration:**
+  $$v(x) = \frac{1}{2 \mu} \frac{\partial p}{\partial y} x^2 + C_1 x + C_2$$
+:::
+
+
+## Aufgabe 4c)
+
+Bestimmen Sie die Geschwindigkeitsverteilung $v(x)$ in Abhängigkeit von $x$, $h$, $\mu$ und dem unbekannten Druckgradient $\frac{\partial p}{\partial y}$.
+
+
+:::{.incremental}
+
+$$v(x) = \frac{1}{2 \mu} \frac{\partial p}{\partial y} x^2 + C_1 x + C_2$$
+
+- **Bestimmung von $C_1$:**
+  - $v(x = -h) = 0 = v(x = +h)$
+  - Umstellen der beiden Gleichungen: $2 C_1 h = 0$
+  - => $C_1 = 0$
+
+- **Bestimmung von $C_2$:**
+  - Einsetzen von $C_1 = 0$ in eine Randbedingung:
+  - $C_2 = -\frac{1}{2 \mu} \frac{\partial p}{\partial y} h^2$
+
+- **Geschwidigkeitsverteilung:**
+  $$v(x) = \frac{1}{2 \mu} \frac{\partial p}{\partial y} (x^2 - h^2)$$
+
+:::
+
+
+## Aufgabe 4d)
+
+Skizzieren Sie die Geschwindigkeits- und Schubspannungsverteilung. Geben Sie die charakteristischen Werte an.
+
+:::{.incremental}
+- **Schubspannungsverteilung ableiten:**
+  - Aus dem Newton'schen Reibungsgesetz: $\tau = \mu \frac{\partial v}{\partial x}$
+  - Mit $v(x) = \frac{1}{2 \mu} \frac{\partial p}{\partial y} (x^2 - h^2)$
+
+- **Ableitung der Geschwindigkeit:**
+  $$\frac{\partial v}{\partial x} = \frac{1}{2 \mu} \frac{\partial p}{\partial y} \cdot 2x = \frac{1}{\mu} \frac{\partial p}{\partial y} x$$
+
+- **Schubspannungsverteilung:**
+  $$\tau(x) = \mu \frac{\partial v}{\partial x} = \frac{\partial p}{\partial y} x$$
+:::
+
+## Aufgabe 4d)
+
+:::{.incremental}
+
+- **Charakteristische Werte der Schubspannung:**
+  - An der oberen Wand: $\tau(h) = \frac{\partial p}{\partial y} h$
+  - An der unteren Wand: $\tau(-h) = -\frac{\partial p}{\partial y} h$
+  - In der Spaltmitte: $\tau(0) = 0$
+
+- **Charakteristische Werte der Geschwindigkeit:**
+  - An den Wänden: $v(\pm h) = 0$
+  - Maximum in der Spaltmitte: $v(0) = -\frac{h^2}{2\mu} \frac{\partial p}{\partial y}$
+
+- **Verlauf der Profile:**
+  - **Geschwindigkeit:** Parabolisches Profil mit Maximum in der Mitte
+  - **Schubspannung:** Lineares Profil, null in der Mitte, Maximum an den Wänden
+  - Die Schubspannung wechselt das Vorzeichen (obere/untere Wand)
+:::
+
+
+## Aufgabe 4e)
+Berechnen Sie den Druckgradienten $\frac{\partial p}{\partial y}$ und den sich einstellenden Volumenstrom, damit die Platten in derselben Position bleiben.
+
+:::{.incremental}
+- **Neue Geschwindigkeitsverteilung mit Schwerkraft:**
+  $$v(x) = \frac{1}{2 \mu} \left( \frac{\partial p}{\partial y} - \rho g \right) (x^2 - h^2)$$
+
+- **Schubspannungsverteilung ableiten:**
+  $$\tau(x) = \mu \frac{\partial v}{\partial x} = \left( \frac{\partial p}{\partial y} - \rho g \right) x$$
+
+- **Reibungskräfte auf die Platten:**
+  - Rechte Platte (x = h): $F_{\tau,r} = \tau(h) \cdot 2ab \cdot (-1) = -2ab h \left( \frac{\partial p}{\partial y} - \rho g \right)$
+  - Linke Platte (x = -h): $F_{\tau,l} = \tau(-h) \cdot 2ab \cdot (1) = -2ab h \left( \frac{\partial p}{\partial y} - \rho g \right)$
+
+- **Kräftegleichgewicht für beide Platten:**
+  - Gesamte Reibungskraft: $F_{\tau,r} + F_{\tau,l} = -4ab h \left( \frac{\partial p}{\partial y} - \rho g \right)$
+  - Gewichtskraft beider Platten: $-2mg$
+
+:::
+
+## Aufgabe 4e)
+
+:::{.incremental}
+- **Gleichgewichtsbedingung:**
+  $$-4ab h \left( \frac{\partial p}{\partial y} - \rho g \right) = -2mg$$
+
+- **Auflösung nach Druckgradient:**
+  $$\frac{\partial p}{\partial y} = \frac{2mg}{4abh} + \rho g = \frac{mg}{2abh} + \rho g$$
+
+- **Geschwindigkeitsverteilung einsetzen:**
+  $$v(x) = \frac{1}{2 \mu} \left(\frac{mg}{2abh} + \rho g - \rho g \right) (x^2 - h^2) = \frac{mg}{4\mu abh} (x^2 - h^2)$$
+
+- **Volumenstrom berechnen:**
+  $$Q = b \int_{-h}^{+h} v(x) \, dx = b \int_{-h}^{+h} \frac{mg}{4\mu abh} (x^2 - h^2) \, dx$$
+
+- **Integration durchführen:**
+  $$Q = b \frac{mg}{4\mu abh} \left[ \frac{x^3}{3} - h^2 x \right]_{-h}^{h} = b \frac{mg}{4\mu abh} \left( \frac{2h^3}{3} - 2h^3 \right)$$
+
+:::
+
+## Aufgabe 4e)
+
+$$Q = b \frac{mg}{4\mu abh} \left( \frac{2h^3}{3} - 2h^3 \right)$$
+
+**Finaler Volumenstrom:**
+  $$Q = -\frac{mgh^2}{3\mu a}$$
 
