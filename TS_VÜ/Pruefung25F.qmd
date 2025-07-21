@@ -314,7 +314,7 @@ Bestimmen Sie die sich einstellende Höhe der Fontäne.
   - $\frac{p_{0}}{\rho g}$: Atmosphärendruck an der Fontäne
   - $H_{F}$: Fontänenhöhe (gesucht)
   - $\lambda \frac{L_{2}}{D} \frac{v^2}{2g}$: Reibungsverluste in der Leitung
-  - $\Delta h$: Weitere Verluste
+  - $\Delta h$: Verlust Leckage
 
 :::
 
