@@ -397,7 +397,7 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 
 :::
 
-:::{.fragment .fade-in-then-out fragment-index=11 .absolute top=50 left=50}
+:::{.fragment .fade-in fragment-index=11 .absolute top=50 left=50}
 
 gesucht: $\frac{\partial p}{\partial x}$ damit $Q = 0$
 
@@ -452,7 +452,7 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 
 
 
-:::{.fragment .fade-in-then-out fragment-index=3 .absolute top=50 left=50}
+:::{.fragment .fade-in fragment-index=3 .absolute top=50 left=50}
 
 - $Q = 0$
 - $u(y) = \frac{1}{2 \mu} \frac{\partial p}{\partial x} \left( y^2 -by\right) + \frac{v_0}{b}y$
@@ -513,7 +513,7 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 :::
 
 
-:::{.fragment .fade-in-then-out fragment-index=6 .absolute top=50 left=50}
+:::{.fragment .fade-in fragment-index=6 .absolute top=50 left=50}
 
 - gesucht: $u(y)$, $\tau (y)$ => Kurvendiskussion 
 - $\tau = \mu \frac{\partial u}{\partial y} = \frac{\partial p}{\partial x} \left( y -\frac{b}{2}\right) +\mu \frac{v_0}{b}$
@@ -576,7 +576,7 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 
 
 
-:::{.fragment .fade-in-then-out fragment-index=8 .absolute top=250 left=50}
+:::{.fragment .fade-in fragment-index=8 .absolute top=250 left=50}
 
 ![](./assets/DGL_Spalt/aufgabe16_08.png)
 :::
@@ -678,7 +678,7 @@ Randbedingungen zur bestimmung der Integrationskonstanten $c_1$ & $c_2$:
 
 
 
-:::{.fragment .fade-in-then-out fragment-index=17 .absolute top=50 left=50}
+:::{.fragment .fade-in fragment-index=17 .absolute top=50 left=50}
 
 - Bestimmung von $\tau(x)$ und $v(x)$:
 - $\int \frac{\partial \tau}{\partial x} dx => \tau(x) = \frac{\partial p}{\partial y}x - \rho g x + c_1$

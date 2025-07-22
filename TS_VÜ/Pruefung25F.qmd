@@ -65,6 +65,7 @@ Berechnen Sie das von der Druckkraft $F_p$ erzeugte Moment um den Drehpunkt M.
 Nun wirke die Kraft $F_1 \neq 0$. Die Positionen der Kolben und des Würfels bleiben gleich.
 
 Wie verändern sich die auf die Ober- und Unterseite des Würfels wirkenden Druckkräfte und die Auftriebskraft?
+
 - $F_o$ und $F_u$ erhöhen sich um den Betrag $\frac{F_1}{A}$
 	
 
@@ -286,12 +287,6 @@ Wellenleistung der Turbine berechnen
 
 - Turbinenhöhe: $h_T = 34{,}2 \, \mathrm{m}$
 - Wellenleistung der Turbine: $P_T = 1{,}9 \, \mathrm{MW}$
-
-- Interpretation:
-   - Die Turbine nutzt den Höhenunterschied zwischen Berg und Speicher 2
-   - Trotz der ungünstigen Druckverhältnisse (niedriger Druck am Berg) kann noch Energie zurückgewonnen werden
-   - Die Energierückgewinnung beträgt etwa 17% der zusätzlichen Pumpenleistung aus Teil c)
-
 :::
 
 ## Aufgabe 2e)

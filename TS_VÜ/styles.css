@@ -52,7 +52,7 @@
 
 #title-slide::after {
   content: '';
-  background-image: url('./assets/StatikDerFluide/live_voting_qr.png');
+ Differentialgleichungen /* background-image: url('./assets/StatikDerFluide/live_voting_qr.png'); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
